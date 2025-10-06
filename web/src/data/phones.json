@@ -1,0 +1,35 @@
+[
+  {
+    "id": "iphone-12",
+    "brand": "Apple",
+    "model": "iPhone 12",
+    "year": 2020,
+    "condition": "Refurbished",
+    "price": 349,
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8f4f8f8b2c2b6c6c6c6c6c6c6c6c6c6",
+    "specs": { "ram": "4GB", "storage": "64GB", "screen": "6.1\"" }
+  },
+  {
+    "id": "pixel-5",
+    "brand": "Google",
+    "model": "Pixel 5",
+    "year": 2020,
+    "condition": "Refurbished",
+    "price": 299,
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2",
+    "specs": { "ram": "8GB", "storage": "128GB", "screen": "6.0\"" }
+  },
+  {
+    "id": "samsung-s20",
+    "brand": "Samsung",
+    "model": "Galaxy S20",
+    "year": 2020,
+    "condition": "Refurbished",
+    "price": 329,
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1510557880182-3bd7dd5a1d94?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3",
+    "specs": { "ram": "8GB", "storage": "128GB", "screen": "6.2\"" }
+  }
+]
