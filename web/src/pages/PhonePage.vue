@@ -1,101 +1,115 @@
 <template>
   <div class="page phone">
-    <div class="controls">
-      <input v-model="q" placeholder="Search phones (brand or model)" />
-      <select v-model="sort">
-        <option value="popular">Most popular</option>
-        <option value="price-asc">Price: Low → High</option>
-        <option value="price-desc">Price: High → Low</option>
-      </select>
-      <div class="spacer"></div>
-      <button @click="showFavs = !showFavs">{{ showFavs ? 'Show All' : 'Show Favorites' }}</button>
-    </div>
-
-    <div class="grid">
-      <ProductCard
-        v-for="p in visible"
-        :key="p.id"
-        :product="p"
-        :favs="favs"
-        @open="openProduct"
-        @toggle-fav="toggleFav"
-      />
-    </div>
-
-    <div v-if="visible.length===0" class="empty">No phones found.</div>
-
-    <ProductModal v-if="active" :product="active" @close="active=null" @add-compare="addToCompare" />
-
-    <div class="compare-bar" v-if="compare.length">
-      <small>Compare ({{ compare.length }})</small>
-      <div class="compare-list">
-        <div v-for="c in compare" :key="c.id" class="compare-item">
-          {{ c.brand }} {{ c.model }}
-        </div>
+    <div class="container">
+      <div class="controls">
+        <h2>Phones</h2>
+        <label>
+          Brand:
+          <select v-model="brand" @change="loadPhones">
+            <option value="all">All (latest mix)</option>
+            <option value="apple">Apple</option>
+            <option value="samsung">Samsung</option>
+            <option value="google">Google</option>
+            <option value="oneplus">OnePlus</option>
+          </select>
+        </label>
       </div>
-      <button @click="openCompare">Open comparison</button>
-      <button @click="clearCompare">Clear</button>
+      <div v-if="loading">Loading…</div>
+      <div v-else-if="error" class="error">{{ error }}</div>
+      <ul v-else class="phones">
+        <li v-for="phone in phones" :key="phone.link">
+          <img :src="phone.image" :alt="phone.title" />
+          <div>
+            <h3>{{ phone.title }}</h3>
+            <a :href="phone.full_url" target="_blank" rel="noreferrer"
+              >View specs</a
+            >
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import ProductCard from '../components/ProductCard.vue'
-import ProductModal from '../components/ProductModal.vue'
-import phonesData from '../data/phones.json'
+import { ref, onMounted } from "vue";
 
-const q = ref('')
-const sort = ref('popular')
-const showFavs = ref(false)
-const favs = ref(JSON.parse(localStorage.getItem('favs')||'[]'))
-const active = ref(null)
-const compare = ref([])
+const phones = ref([]);
+const loading = ref(true);
+const error = ref("");
 
-const list = ref([...phonesData])
-
-function toggleFav(id){
-  const idx = favs.value.indexOf(id)
-  if(idx>=0) favs.value.splice(idx,1)
-  else favs.value.push(id)
-  localStorage.setItem('favs', JSON.stringify(favs.value))
+async function loadPhones() {
+  loading.value = true;
+  try {
+    const res = await fetch(
+      `/api/phones?brand=${encodeURIComponent(brand.value)}`
+    );
+    if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+    const data = await res.json();
+    phones.value = (data.phones || []).slice(0, 60); // cap for UI
+  } catch (err) {
+    console.error(err);
+    error.value = "Unable to fetch phones.";
+  } finally {
+    loading.value = false;
+  }
 }
 
-function openProduct(p){ active.value = p }
-
-function addToCompare(p){
-  if(!compare.value.find(x=>x.id===p.id)) compare.value.push(p)
-}
-
-function openCompare(){
-  alert('Compare: ' + compare.value.map(p=>p.model).join(', '))
-}
-
-function clearCompare(){ compare.value = [] }
-
-const visible = computed(()=>{
-  let out = list.value.filter(p=>{
-    const matchesQ = (p.brand + ' ' + p.model).toLowerCase().includes(q.value.toLowerCase())
-    return matchesQ && (!showFavs.value || favs.value.includes(p.id))
-  })
-  if(sort.value==='price-asc') out.sort((a,b)=>a.price-b.price)
-  if(sort.value==='price-desc') out.sort((a,b)=>b.price-a.price)
-  return out
-})
-
-onMounted(()=>{
-  // placeholder for eventual API fetch
-})
+const brand = ref("all");
+onMounted(loadPhones);
 </script>
 
 <style scoped>
-.controls{display:flex;gap:0.5rem;align-items:center;margin-bottom:1rem}
-.controls input{flex:1;padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
-.controls select{padding:0.5rem;border-radius:8px}
-.controls .spacer{flex:1}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
-.empty{padding:2rem;color:#94a3b8;text-align:center}
-.compare-bar{position:sticky;bottom:12px;left:0;right:0;margin-top:1rem;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:0.6rem;border-radius:8px;display:flex;gap:1rem;align-items:center}
-.compare-list{display:flex;gap:0.5rem}
-.compare-item{background:rgba(255,255,255,0.03);padding:0.3rem 0.5rem;border-radius:6px}
+.phone {
+  /* vertical breathing room; side padding comes from .container */
+  padding-block: 1.25rem 2rem;
+}
+.container {
+  /* center content and limit line length on large screens */
+  max-width: 1200px;
+  margin-inline: auto;
+  /* responsive side padding: 16px on mobile up to 48px on wide screens */
+  padding-inline: clamp(16px, 5vw, 48px);
+  width: 100%;
+  box-sizing: border-box;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.controls select {
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+.error {
+  color: crimson;
+}
+.phones {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.phones li {
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 1rem;
+  color: #e2e8f0;
+  display: grid;
+  gap: 0.6rem;
+  text-align: left;
+}
+.phones img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.phones a {
+  color: #38bdf8;
+}
 </style>

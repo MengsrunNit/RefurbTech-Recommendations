@@ -33,10 +33,31 @@
 </template>
 
 <style>
+:root {
+  --bg: #0b1220;
+  --bg-soft: #0e1526;
+  --text: #e6edf7;
+  --muted: #9fb0c3;
+  --brand-1: #22d3ee;
+  --brand-2: #60a5fa;
+}
+
 body,
 #app {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: var(--text);
+  background: radial-gradient(
+      1200px 600px at 10% -10%,
+      rgba(96, 165, 250, 0.12),
+      transparent
+    ),
+    radial-gradient(
+      900px 500px at 100% 0%,
+      rgba(34, 211, 238, 0.1),
+      transparent
+    ),
+    var(--bg);
 }
 .app-shell {
   min-height: 100vh;
@@ -44,34 +65,52 @@ body,
   flex-direction: column;
 }
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: #0f172a;
-  color: white;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 21, 38, 0.9),
+    rgba(14, 21, 38, 0.8)
+  );
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.15);
 }
 .brand h1 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
 }
 .brand small {
   display: block;
-  color: #cbd5e1;
+  color: var(--muted);
 }
 .nav {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .nav-link {
-  color: #cbd5e1;
+  color: var(--muted);
   text-decoration: none;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+}
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
 }
 .nav-link.router-link-active {
-  background: #1e293b;
+  background: linear-gradient(
+    90deg,
+    rgba(34, 211, 238, 0.18),
+    rgba(96, 165, 250, 0.18)
+  );
   color: #fff;
+  border: 1px solid rgba(96, 165, 250, 0.25);
 }
 .login-link {
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -82,7 +121,14 @@ body,
 }
 .footer {
   padding: 1rem 2rem;
-  background: #f8fafc;
-  text-align: center;
+  background: var(--bg-soft);
+  color: var(--muted);
+  border-top: 1px solid rgba(96, 165, 250, 0.12);
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 1rem;
+  }
 }
 </style>
