@@ -4,223 +4,2545 @@
     "link": "google_pixel_10_pro_fold-14014.php",
     "full_url": "https://www.gsmarena.com/google_pixel_10_pro_fold-14014.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-10-pro-fold--.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "10 Pro Fold",
+      "model_number": "GU0NP, GM66V",
+      "release_date": null,
+      "msrp_usd": 2.0,
+      "discontinued": false,
+      "color_options": ["Moonstone", "Jade"],
+      "dimensions_mm": "Unfolded: 155.2 x 150.4 x 5.2 mmFolded: 155.2 x 76.3 x 10.8 mm",
+      "weight_g": 258,
+      "build_materials": "Glass front (Gorilla Glass Victus 2) (folded), plastic front (unfolded), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 8.0,
+        "resolution": "2076 x 2152",
+        "ppi": 374,
+        "type": "Foldable LTPO OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Mohs level 5"
+      },
+      "platform": {
+        "os": "Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G5 (3 nm)",
+        "cpu": "Octa-core (1x3.78 GHz Cortex-X4 & 5x3.05 GHz Cortex-A725 & 2x2.25 GHz Cortex-A520)",
+        "gpu": "PowerVR DXT-48-1536",
+        "ram_gb": [16]
+      },
+      "storage_options_gb": [256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 5015,
+      "charging_wired_w": 30,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.0\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 8,
+          "aperture": "f/3.1",
+          "ois": true,
+          "sensor_size": "1/3.2\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 5,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/3.4\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 10,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band",
+        "bluetooth": "6.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (side-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_10_pro_fold-14014.php",
+      "last_verified": "2025-10-09T00:30:14.581431"
+    }
   },
   {
     "title": "Pixel 10 Pro XL",
     "link": "google_pixel_10_pro_xl_5g-13988.php",
     "full_url": "https://www.gsmarena.com/google_pixel_10_pro_xl_5g-13988.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-10-pro-xl-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "10 Pro XL",
+      "model_number": "G45RY, GUL82, GYPW4",
+      "release_date": "2025-08-28",
+      "msrp_usd": 1.0,
+      "discontinued": false,
+      "color_options": ["Moonstone", "Jade", "Porcelain", "Obsidian"],
+      "dimensions_mm": "162.8 x 76.6 x 8.5 mm",
+      "weight_g": 232,
+      "build_materials": "Glass front (Gorilla Glass Victus 2), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 6.8,
+        "resolution": "1344 x 2992",
+        "ppi": 486,
+        "type": "LTPO OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus 2, Mohs level 4"
+      },
+      "platform": {
+        "os": "Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G5 (3 nm)",
+        "cpu": "Octa-core (1x3.78 GHz Cortex-X4 & 5x3.05 GHz Cortex-A725 & 2x2.25 GHz Cortex-A520)",
+        "gpu": "PowerVR DXT-48-1536",
+        "ram_gb": [16]
+      },
+      "storage_options_gb": [256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 5200,
+      "charging_wired_w": 45,
+      "charging_wireless_w": 25,
+      "fast_charging_details": "70% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/2.55\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 42,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMeSIM + eSIM (8 or more, max 2 at a time; USA)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band",
+        "bluetooth": "6.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "ultrasonic)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer",
+        "thermometer (skin temperature)"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_10_pro_xl_5g-13988.php",
+      "last_verified": "2025-10-09T00:30:16.356673"
+    }
   },
   {
     "title": "Pixel 10 Pro",
     "link": "google_pixel_10_pro_5g-13987.php",
     "full_url": "https://www.gsmarena.com/google_pixel_10_pro_5g-13987.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-10-pro-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "10 Pro",
+      "model_number": "GEHN3, G4QUR, GN4F5",
+      "release_date": "2025-08-28",
+      "msrp_usd": 1.0,
+      "discontinued": false,
+      "color_options": ["Moonstone", "Jade", "Porcelain", "Obsidian"],
+      "dimensions_mm": "152.8 x 72 x 8.5 mm",
+      "weight_g": 207,
+      "build_materials": "Glass front (Gorilla Glass Victus 2), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1280 x 2856",
+        "ppi": 495,
+        "type": "LTPO OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus 2, Mohs level 4"
+      },
+      "platform": {
+        "os": "Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G5 (3 nm)",
+        "cpu": "Octa-core (1x3.78 GHz Cortex-X4 & 5x3.05 GHz Cortex-A725 & 2x2.25 GHz Cortex-A520)",
+        "gpu": "PowerVR DXT-48-1536",
+        "ram_gb": [16]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4870,
+      "charging_wired_w": 30,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "55% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/2.55\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 42,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMeSIM + eSIM (8 or more, max 2 at a time; USA)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band",
+        "bluetooth": "6.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "ultrasonic)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer",
+        "thermometer (skin temperature)"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_10_pro_5g-13987.php",
+      "last_verified": "2025-10-09T00:30:18.065852"
+    }
   },
   {
     "title": "Pixel 10",
     "link": "google_pixel_10_5g-13979.php",
     "full_url": "https://www.gsmarena.com/google_pixel_10_5g-13979.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-10-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "10",
+      "model_number": "GK2MP, GLBW0, GL066",
+      "release_date": "2025-08-28",
+      "msrp_usd": 999.99,
+      "discontinued": false,
+      "color_options": ["Indigo", "Frost", "Lemongrass", "Obsidian"],
+      "dimensions_mm": "152.8 x 72 x 8.6 mm",
+      "weight_g": 204,
+      "build_materials": "Glass front (Gorilla Glass Victus 2), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1080 x 2424",
+        "ppi": 422,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus 2, Mohs level 4"
+      },
+      "platform": {
+        "os": "Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G5 (3 nm)",
+        "cpu": "Octa-core (1x3.78 GHz Cortex-X4 & 5x3.05 GHz Cortex-A725 & 2x2.25 GHz Cortex-A520)",
+        "gpu": "PowerVR DXT-48-1536",
+        "ram_gb": [12]
+      },
+      "storage_options_gb": [128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4970,
+      "charging_wired_w": 30,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "55% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.0\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 8,
+          "aperture": "f/3.1",
+          "ois": true,
+          "sensor_size": "1/3.2\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 13,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/3.1\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMeSIM + eSIM (8 or more, max 2 at a time; USA)",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, dual-band",
+        "bluetooth": "6.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "ultrasonic)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_10_5g-13979.php",
+      "last_verified": "2025-10-09T00:30:19.777037"
+    }
   },
   {
     "title": "Pixel 9a",
     "link": "google_pixel_9a-13478.php",
     "full_url": "https://www.gsmarena.com/google_pixel_9a-13478.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9a.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "9a",
+      "model_number": "GXQ96, GTF7P, G3Y12",
+      "release_date": "2025-04-10",
+      "msrp_usd": 529.99,
+      "discontinued": false,
+      "color_options": ["Obsidian", "Porcelain", "Iris", "Peony"],
+      "dimensions_mm": "154.7 x 73.3 x 8.9 mm",
+      "weight_g": 186,
+      "build_materials": "Glass front (Gorilla Glass 3), aluminum frame, plastic back",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1080 x 2424",
+        "ppi": 422,
+        "type": "P-OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 3, Mohs level 4"
+      },
+      "platform": {
+        "os": "Android 15, upgradable to Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G4 (4 nm)",
+        "cpu": "Octa-core (1x3.1 GHz Cortex-X4 & 3x2.6 GHz Cortex-A720 & 4x1.9 GHz Cortex-A520)",
+        "gpu": "Mali-G715 MP7",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 5100,
+      "charging_wired_w": 23,
+      "charging_wireless_w": 5,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.0\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 13,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/3.1\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 13,
+        "aperture": "f/2.2",
+        "video_max": "4K@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, dual/tri-band (market/region dependent)",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_9a-13478.php",
+      "last_verified": "2025-10-09T00:30:21.564892"
+    }
   },
   {
     "title": "Pixel 9 Pro XL",
     "link": "google_pixel_9_pro_xl-13217.php",
     "full_url": "https://www.gsmarena.com/google_pixel_9_pro_xl-13217.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9-pro-xl-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "9 Pro XL",
+      "model_number": "GGX8B, GZC4K, GQ57S",
+      "release_date": "2024-08-22",
+      "msrp_usd": 1.0,
+      "discontinued": false,
+      "color_options": ["Porcelain", "Rose Quartz", "Hazel", "Obsidian"],
+      "dimensions_mm": "162.8 x 76.6 x 8.5 mm",
+      "weight_g": 221,
+      "build_materials": "Glass front (Gorilla Glass Victus 2), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 6.8,
+        "resolution": "1344 x 2992",
+        "ppi": 486,
+        "type": "LTPO OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus 2, Mohs level 4"
+      },
+      "platform": {
+        "os": "Android 14, upgradable to Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G4 (4 nm)",
+        "cpu": "Octa-core (1x3.1 GHz Cortex-X4 & 3x2.6 GHz Cortex-A720 & 4x1.92 GHz Cortex-A520)",
+        "gpu": "Mali-G715 MC7",
+        "ram_gb": [16]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 5060,
+      "charging_wired_w": 37,
+      "charging_wireless_w": 23,
+      "fast_charging_details": "70% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/2.55\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 42,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band",
+        "bluetooth": "5.3, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "ultrasonic)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer",
+        "thermometer (skin temperature)"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_9_pro_xl-13217.php",
+      "last_verified": "2025-10-09T00:30:23.259938"
+    }
   },
   {
     "title": "Pixel 9 Pro",
     "link": "google_pixel_9_pro-13218.php",
     "full_url": "https://www.gsmarena.com/google_pixel_9_pro-13218.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9-pro-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "9 Pro",
+      "model_number": "GR83Y, GEC77, GWVK6",
+      "release_date": "2024-09-09",
+      "msrp_usd": 787.99,
+      "discontinued": false,
+      "color_options": ["Porcelain", "Rose Quartz", "Hazel", "Obsidian"],
+      "dimensions_mm": "152.8 x 72 x 8.5 mm",
+      "weight_g": 199,
+      "build_materials": "Glass front (Gorilla Glass Victus 2), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1280 x 2856",
+        "ppi": 495,
+        "type": "LTPO OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus 2, Mohs level 4"
+      },
+      "platform": {
+        "os": "Android 14, upgradable to Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G4 (4 nm)",
+        "cpu": "Octa-core (1x3.1 GHz Cortex-X4 & 3x2.6 GHz Cortex-A720 & 4x1.92 GHz Cortex-A520)",
+        "gpu": "Mali-G715 MC7",
+        "ram_gb": [16]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4700,
+      "charging_wired_w": 27,
+      "charging_wireless_w": 21,
+      "fast_charging_details": "55% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/2.55\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 42,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band",
+        "bluetooth": "5.3, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "ultrasonic)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer",
+        "thermometer (skin temperature)"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_9_pro-13218.php",
+      "last_verified": "2025-10-09T00:30:24.969773"
+    }
   },
   {
     "title": "Pixel 9",
     "link": "google_pixel_9-13219.php",
     "full_url": "https://www.gsmarena.com/google_pixel_9-13219.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "9",
+      "model_number": "G2YBB, GUR25, G1B60",
+      "release_date": "2024-08-22",
+      "msrp_usd": 766.46,
+      "discontinued": false,
+      "color_options": ["Obsidian", "Porcelain", "Wintergreen", "Peony"],
+      "dimensions_mm": "152.8 x 72 x 8.5 mm",
+      "weight_g": 198,
+      "build_materials": "Glass front (Gorilla Glass Victus 2), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1080 x 2424",
+        "ppi": 422,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus 2, Mohs level 4"
+      },
+      "platform": {
+        "os": "Android 14, upgradable to Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G4 (4 nm)",
+        "cpu": "Octa-core (1x3.1 GHz Cortex-X4 & 3x2.6 GHz Cortex-A720 & 4x1.92 GHz Cortex-A520)",
+        "gpu": "Mali-G715 MC7",
+        "ram_gb": [12]
+      },
+      "storage_options_gb": [128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4700,
+      "charging_wired_w": 27,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "55% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band",
+        "bluetooth": "5.3, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "ultrasonic)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_9-13219.php",
+      "last_verified": "2025-10-09T00:30:26.663087"
+    }
   },
   {
     "title": "Pixel 9 Pro Fold",
     "link": "google_pixel_9_pro_fold-13220.php",
     "full_url": "https://www.gsmarena.com/google_pixel_9_pro_fold-13220.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9-pro-fold-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "9 Pro Fold",
+      "model_number": "GGH2X, GC15S",
+      "release_date": "2024-09-04",
+      "msrp_usd": 1.0,
+      "discontinued": false,
+      "color_options": ["Obsidian", "Porcelain"],
+      "dimensions_mm": "Unfolded: 155.2 x 150.2 x 5.1 mmFolded: 155.2 x 77.1 x 10.5 mm",
+      "weight_g": 257,
+      "build_materials": "Glass front (Gorilla Glass Victus 2) (folded), plastic front (unfolded), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 8.0,
+        "resolution": "2076 x 2152",
+        "ppi": 373,
+        "type": "Foldable LTPO OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": ""
+      },
+      "platform": {
+        "os": "Android 14, upgradable to Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G4 (4 nm)",
+        "cpu": "Octa-core (1x3.1 GHz Cortex-X4 & 3x2.6 GHz Cortex-A720 & 4x1.92 GHz Cortex-A520)",
+        "gpu": "Mali-G715 MC7",
+        "ram_gb": [16]
+      },
+      "storage_options_gb": [256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4650,
+      "charging_wired_w": 21,
+      "charging_wireless_w": 5,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.0\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 8,
+          "aperture": "f/3.1",
+          "ois": true,
+          "sensor_size": "1/3.2\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 5,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/3.4\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 10,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band",
+        "bluetooth": "5.3, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (side-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/google_pixel_9_pro_fold-13220.php",
+      "last_verified": "2025-10-09T00:30:28.338540"
+    }
   },
   {
     "title": "Pixel 8a",
     "link": "google_pixel_8a-12937.php",
     "full_url": "https://www.gsmarena.com/google_pixel_8a-12937.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8a.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "8a",
+      "model_number": "GKV4X, G6GPR, G8HHN, G576D",
+      "release_date": "2024-05-14",
+      "msrp_usd": 396.99,
+      "discontinued": false,
+      "color_options": ["Obsidian", "Porcelain", "Bay", "Aloe"],
+      "dimensions_mm": "152.1 x 72.7 x 8.9 mm",
+      "weight_g": 188,
+      "build_materials": "Glass front (Gorilla Glass 3), aluminum frame, plastic back",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1080 x 2400",
+        "ppi": 430,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 3, Mohs level 5"
+      },
+      "platform": {
+        "os": "Android 14, upgradable to Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G3 (4 nm)",
+        "cpu": "Nona-core (1x3.0 GHz Cortex-X3 & 4x2.45 GHz Cortex-A715 & 4x2.15 GHz Cortex-A510)",
+        "gpu": "Immortalis-G715s MC10",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4492,
+      "charging_wired_w": 18,
+      "charging_wireless_w": 5,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 64,
+          "aperture": null,
+          "ois": false,
+          "sensor_size": null
+        },
+        {
+          "type": "main",
+          "sensor_mp": 16,
+          "aperture": "f/1.9",
+          "ois": true,
+          "sensor_size": "1/1.73\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 13,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 13,
+        "aperture": "f/2.2",
+        "video_max": "4K@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, dual/tri-band (market/region dependent)",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/google_pixel_8a-12937.php",
+      "last_verified": "2025-10-09T00:30:30.040897"
+    }
   },
   {
     "title": "Pixel 8 Pro",
     "link": "google_pixel_8_pro-12545.php",
     "full_url": "https://www.gsmarena.com/google_pixel_8_pro-12545.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "8 Pro",
+      "model_number": "GC3VE, G1MNW",
+      "release_date": "2023-10-12",
+      "msrp_usd": 598.75,
+      "discontinued": false,
+      "color_options": ["Obsidian", "Porcelain", "Bay", "Mint"],
+      "dimensions_mm": "162.6 x 76.5 x 8.8 mm",
+      "weight_g": 213,
+      "build_materials": "Glass front (Gorilla Glass Victus 2), glass back (Gorilla Glass Victus 2), aluminum frame",
+      "display": {
+        "size_in": 6.7,
+        "resolution": "1344 x 2992",
+        "ppi": 489,
+        "type": "LTPO OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus 2"
+      },
+      "platform": {
+        "os": "Android 14, upgradable to Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G3 (4 nm)",
+        "cpu": "Nona-core (1x3.0 GHz Cortex-X3 & 4x2.45 GHz Cortex-A715 & 4x2.15 GHz Cortex-A510)",
+        "gpu": "Immortalis-G715s MC10",
+        "ram_gb": [12]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 5050,
+      "charging_wired_w": 30,
+      "charging_wireless_w": 23,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/2.55\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/2.0",
+          "ois": false,
+          "sensor_size": "1/2.0\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, Wi-Fi Direct",
+        "bluetooth": "5.3, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer",
+        "thermometer (skin temperature)"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_8_pro-12545.php",
+      "last_verified": "2025-10-09T00:30:31.800407"
+    }
   },
   {
     "title": "Pixel 8",
     "link": "google_pixel_8-12546.php",
     "full_url": "https://www.gsmarena.com/google_pixel_8-12546.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "8",
+      "model_number": "GKWS6, G9BQD, GA04851-US, GZPFO, GPJ41",
+      "release_date": "2023-10-12",
+      "msrp_usd": 430.0,
+      "discontinued": false,
+      "color_options": ["Obsidian", "Hazel", "Rose", "Mint"],
+      "dimensions_mm": "150.5 x 70.8 x 8.9 mm",
+      "weight_g": 187,
+      "build_materials": "Glass front (Gorilla Glass Victus), glass back (Gorilla Glass Victus), aluminum frame",
+      "display": {
+        "size_in": 6.2,
+        "resolution": "1080 x 2400",
+        "ppi": 428,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus"
+      },
+      "platform": {
+        "os": "Android 14, upgradable to Android 16, up to 7 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G3 (4 nm)",
+        "cpu": "Nona-core (1x3.0 GHz Cortex-X3 & 4x2.45 GHz Cortex-A715 & 4x2.15 GHz Cortex-A510)",
+        "gpu": "Immortalis-G715s MC10",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4575,
+      "charging_wired_w": 27,
+      "charging_wireless_w": 18,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 50,
+          "aperture": null,
+          "ois": false,
+          "sensor_size": null
+        },
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.9\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, Wi-Fi Direct",
+        "bluetooth": "5.3, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_8-12546.php",
+      "last_verified": "2025-10-09T00:30:33.493075"
+    }
   },
   {
     "title": "Pixel 7a",
     "link": "google_pixel_7a-12170.php",
     "full_url": "https://www.gsmarena.com/google_pixel_7a-12170.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-7a.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "7a",
+      "model_number": "GWKK3, GHL1X, G0DZQ, G82U8",
+      "release_date": "2023-05-10",
+      "msrp_usd": 310.74,
+      "discontinued": false,
+      "color_options": ["Charcoal", "Snow", "Sea", "Coral"],
+      "dimensions_mm": "152 x 72.9 x 9 mm",
+      "weight_g": null,
+      "build_materials": "Glass front (Gorilla Glass 3), aluminum frame, plastic back",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1080 x 2400",
+        "ppi": 429,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": 90,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 3"
+      },
+      "platform": {
+        "os": "Android 13, upgradable to Android 15, up to 5 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G2 (5 nm)",
+        "cpu": "Octa-core (2x2.85 GHz Cortex-X1 & 2x2.35 GHz Cortex-A78 & 4x1.80 GHz Cortex-A55)",
+        "gpu": "Mali-G710 MP7",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4385,
+      "charging_wired_w": 18,
+      "charging_wireless_w": 5,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 64,
+          "aperture": "f/1.9",
+          "ois": true,
+          "sensor_size": "1/1.73\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 13,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 13,
+        "aperture": "f/2.2",
+        "video_max": "4K@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, tri-band",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/google_pixel_7a-12170.php",
+      "last_verified": "2025-10-09T00:30:35.193578"
+    }
   },
   {
     "title": "Pixel 7 Pro",
     "link": "google_pixel_7_pro-11908.php",
     "full_url": "https://www.gsmarena.com/google_pixel_7_pro-11908.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel7-pro-new.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "7 Pro",
+      "model_number": "GP4BC, GE2AE, GFE4J",
+      "release_date": "2022-10-13",
+      "msrp_usd": 399.99,
+      "discontinued": false,
+      "color_options": ["Obsidian", "Snow", "Hazel"],
+      "dimensions_mm": "162.9 x 76.6 x 8.9 mm",
+      "weight_g": 212,
+      "build_materials": "Glass front (Gorilla Glass Victus), glass back (Gorilla Glass Victus), aluminum frame",
+      "display": {
+        "size_in": 6.7,
+        "resolution": "1440 x 3120",
+        "ppi": 512,
+        "type": "LTPO AMOLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus"
+      },
+      "platform": {
+        "os": "Android 13, upgradable to Android 15, up to 5 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G2 (5 nm)",
+        "cpu": "Octa-core (2x2.85 GHz Cortex-X1 & 2x2.35 GHz Cortex-A78 & 4x1.80 GHz Cortex-A55)",
+        "gpu": "Mali-G710 MP7",
+        "ram_gb": [8, 12]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 5000,
+      "charging_wired_w": 23,
+      "charging_wireless_w": 23,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.9",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/3.5",
+          "ois": true,
+          "sensor_size": "1/2.55\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.9\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, tri-band, Wi-Fi Direct",
+        "bluetooth": "5.2, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_7_pro-11908.php",
+      "last_verified": "2025-10-09T00:30:37.014520"
+    }
   },
   {
     "title": "Pixel 7",
     "link": "google_pixel_7-11903.php",
     "full_url": "https://www.gsmarena.com/google_pixel_7-11903.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel7-new.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "7",
+      "model_number": "GVU6C, GQML3, GO3Z5",
+      "release_date": "2022-10-13",
+      "msrp_usd": 288.5,
+      "discontinued": false,
+      "color_options": ["Obsidian", "Lemongrass", "Snow"],
+      "dimensions_mm": "155.6 x 73.2 x 8.7 mm",
+      "weight_g": 197,
+      "build_materials": "Glass front (Gorilla Glass Victus), glass back (Gorilla Glass Victus), aluminum frame",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1080 x 2400",
+        "ppi": 416,
+        "type": "AMOLED",
+        "refresh_rate": {
+          "max_hz": 90,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus"
+      },
+      "platform": {
+        "os": "Android 13, upgradable to Android 15, up to 5 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor G2 (5 nm)",
+        "cpu": "Octa-core (2x2.85 GHz Cortex-X1 & 2x2.35 GHz Cortex-A78 & 4x1.80 GHz Cortex-A55)",
+        "gpu": "Mali-G710 MP7",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4355,
+      "charging_wired_w": 20,
+      "charging_wireless_w": 20,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.9",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.9\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.2",
+        "video_max": "4K@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, tri-band, Wi-Fi Direct",
+        "bluetooth": "5.2, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_7-11903.php",
+      "last_verified": "2025-10-09T00:30:38.732477"
+    }
   },
   {
     "title": "Pixel 6a",
     "link": "google_pixel_6a-11229.php",
     "full_url": "https://www.gsmarena.com/google_pixel_6a-11229.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-6a.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "6a",
+      "model_number": "GX7AS, GB62Z, G1AZG, GB17L",
+      "release_date": "2022-07-21",
+      "msrp_usd": 199.75,
+      "discontinued": false,
+      "color_options": ["Chalk", "Charcoal", "Sage"],
+      "dimensions_mm": "152.2 x 71.8 x 8.9 mm",
+      "weight_g": 178,
+      "build_materials": "Glass front (Gorilla Glass 3), aluminum frame, plastic back",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1080 x 2400",
+        "ppi": 429,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 3"
+      },
+      "platform": {
+        "os": "Android 12, upgradable to Android 15, up to 5 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor (5 nm)",
+        "cpu": "Octa-core (2x2.80 GHz Cortex-X1 & 2x2.25 GHz Cortex-A76 & 4x1.80 GHz Cortex-A55)",
+        "gpu": "Mali-G78 MP20",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4410,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, dual-band, Wi-Fi Direct",
+        "bluetooth": "5.2, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/google_pixel_6a-11229.php",
+      "last_verified": "2025-10-09T00:30:40.710107"
+    }
   },
   {
     "title": "Pixel 6 Pro",
     "link": "google_pixel_6_pro-10918.php",
     "full_url": "https://www.gsmarena.com/google_pixel_6_pro-10918.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-6-pro.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "6 Pro",
+      "model_number": "GLUOG, G8VOU, GF5KQ",
+      "release_date": "2021-10-28",
+      "msrp_usd": 315.0,
+      "discontinued": false,
+      "color_options": ["Cloudy White", "Sorta Sunny", "Stormy Black"],
+      "dimensions_mm": "163.9 x 75.9 x 8.9 mm",
+      "weight_g": 210,
+      "build_materials": "Glass front (Gorilla Glass Victus), glass back (Gorilla Glass Victus), aluminum frame",
+      "display": {
+        "size_in": 6.7,
+        "resolution": "1440 x 3120",
+        "ppi": 512,
+        "type": "LTPO AMOLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus"
+      },
+      "platform": {
+        "os": "Android 12, upgradable to Android 15, up to 5 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor (5 nm)",
+        "cpu": "Octa-core (2x2.80 GHz Cortex-X1 & 2x2.25 GHz Cortex-A76 & 4x1.80 GHz Cortex-A55)",
+        "gpu": "Mali-G78 MP20",
+        "ram_gb": [12]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 5003,
+      "charging_wired_w": 23,
+      "charging_wireless_w": 23,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.9",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/3.5",
+          "ois": true,
+          "sensor_size": "1/2.0\"",
+          "optical_zoom": "4x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.2",
+        "video_max": "4K@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, dual-band, Wi-Fi Direct",
+        "bluetooth": "5.2, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_6_pro-10918.php",
+      "last_verified": "2025-10-09T00:30:42.419534"
+    }
   },
   {
     "title": "Pixel 6",
     "link": "google_pixel_6-11037.php",
     "full_url": "https://www.gsmarena.com/google_pixel_6-11037.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-6.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "6",
+      "model_number": "GB7N6, G9S9B16, G9S9B, GR1YH",
+      "release_date": "2021-10-28",
+      "msrp_usd": 273.77,
+      "discontinued": false,
+      "color_options": ["Sorta Seafoam", "Kinda Coral", "Stormy Black"],
+      "dimensions_mm": "158.6 x 74.8 x 8.9 mm",
+      "weight_g": 207,
+      "build_materials": "Glass front (Gorilla Glass Victus), glass back (Gorilla Glass 6), aluminum frame",
+      "display": {
+        "size_in": 6.4,
+        "resolution": "1080 x 2400",
+        "ppi": 411,
+        "type": "AMOLED",
+        "refresh_rate": {
+          "max_hz": 90,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass Victus"
+      },
+      "platform": {
+        "os": "Android 12, upgradable to Android 15, up to 5 major Android upgrades",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Google Tensor (5 nm)",
+        "cpu": "Octa-core (2x2.80 GHz Cortex-X1 & 2x2.25 GHz Cortex-A76 & 4x1.80 GHz Cortex-A55)",
+        "gpu": "Mali-G78 MP20",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4614,
+      "charging_wired_w": null,
+      "charging_wireless_w": 21,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 50,
+          "aperture": "f/1.9",
+          "ois": true,
+          "sensor_size": "1/1.31\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, dual-band, Wi-Fi Direct",
+        "bluetooth": "5.2, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (under display",
+        "optical)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_6-11037.php",
+      "last_verified": "2025-10-09T00:30:44.165975"
+    }
   },
   {
     "title": "Pixel 5a 5G",
     "link": "google_pixel_5a_5g-11059.php",
     "full_url": "https://www.gsmarena.com/google_pixel_5a_5g-11059.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-5a-5g.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "5a 5G",
+      "model_number": "G1F8F, G4S1M",
+      "release_date": "2021-08-26",
+      "msrp_usd": 279.99,
+      "discontinued": false,
+      "color_options": ["Mostly Black"],
+      "dimensions_mm": "156.2 x 73.2 x 8.8 mm",
+      "weight_g": 183,
+      "build_materials": "Glass front (Gorilla Glass 3), aluminum frame, aluminum back",
+      "display": {
+        "size_in": 6.34,
+        "resolution": "1080 x 2400",
+        "ppi": 415,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 3"
+      },
+      "platform": {
+        "os": "Android 11, upgradable to Android 14",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SM7250 Snapdragon 765G 5G (7 nm)",
+        "cpu": "Octa-core (1x2.4 GHz Kryo 475 Prime & 1x2.2 GHz Kryo 475 Gold & 6x1.8 GHz Kryo 475 Silver)",
+        "gpu": "Adreno 620",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4680,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 16,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/google_pixel_5a_5g-11059.php",
+      "last_verified": "2025-10-09T00:30:45.855469"
+    }
   },
   {
     "title": "Pixel 5",
     "link": "google_pixel_5-10386.php",
     "full_url": "https://www.gsmarena.com/google_pixel_5-10386.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-5-5g.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "5",
+      "model_number": "GD1YQ, GTT9Q, G5NZ6",
+      "release_date": "2020-10-15",
+      "msrp_usd": 199.0,
+      "discontinued": false,
+      "color_options": ["Just Black", "Sorta Sage"],
+      "dimensions_mm": "144.7 x 70.4 x 8 mm",
+      "weight_g": 151,
+      "build_materials": "Glass front (Gorilla Glass 6), aluminum back, aluminum frame",
+      "display": {
+        "size_in": 6.0,
+        "resolution": "1080 x 2340",
+        "ppi": 432,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": 90,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Corning Gorilla Glass 6"
+      },
+      "platform": {
+        "os": "Android 11, upgradable to Android 14",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SM7250 Snapdragon 765G 5G (7 nm)",
+        "cpu": "Octa-core (1x2.4 GHz Kryo 475 Prime & 1x2.2 GHz Kryo 475 Gold & 6x1.8 GHz Kryo 475 Silver)",
+        "gpu": "Adreno 620",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4080,
+      "charging_wired_w": 18,
+      "charging_wireless_w": 12,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 16,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_5-10386.php",
+      "last_verified": "2025-10-09T00:30:47.574075"
+    }
   },
   {
     "title": "Pixel 4a 5G",
     "link": "google_pixel_4a_5g-10385.php",
     "full_url": "https://www.gsmarena.com/google_pixel_4a_5g-10385.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-4a-5g.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "Pixel 4a",
-    "link": "google_pixel_4a-10123.php",
-    "full_url": "https://www.gsmarena.com/google_pixel_4a-10123.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-4a.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "4a 5G",
+      "model_number": "GD1YQ, G025I, G025E, G025H, G6QU3",
+      "release_date": "2020-11-05",
+      "msrp_usd": 140.0,
+      "discontinued": false,
+      "color_options": ["Just Black", "Clearly White"],
+      "dimensions_mm": "153.9 x 74 x 8.2 mm",
+      "weight_g": 168,
+      "build_materials": "Glass front (Gorilla Glass 3), plastic back, plastic frame",
+      "display": {
+        "size_in": 6.2,
+        "resolution": "1080 x 2340",
+        "ppi": 413,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 3"
+      },
+      "platform": {
+        "os": "Android 11, upgradable to Android 14",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SM7250 Snapdragon 765G 5G (7 nm)",
+        "cpu": "Octa-core (1x2.4 GHz Kryo 475 Prime & 1x2.2 GHz Kryo 475 Gold & 6x1.8 GHz Kryo 475 Silver)",
+        "gpu": "Adreno 620",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3885,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 16,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/google_pixel_4a_5g-10385.php",
+      "last_verified": "2025-10-09T00:30:49.241078"
+    }
   },
   {
     "title": "Pixel 4 XL",
     "link": "google_pixel_4_xl-9895.php",
     "full_url": "https://www.gsmarena.com/google_pixel_4_xl-9895.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-4-r1.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "4 XL",
+      "model_number": "G020P, G020, GA01181-US, GA01182-US, GA01180-US",
+      "release_date": "2019-10-22",
+      "msrp_usd": 180.0,
+      "discontinued": false,
+      "color_options": ["Clearly White", "Just Black", "Oh So Orange"],
+      "dimensions_mm": "160.4 x 75.1 x 8.2 mm",
+      "weight_g": 193,
+      "build_materials": "Glass front (Gorilla Glass 5), glass back (Gorilla Glass 5), aluminum frame",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1440 x 3040",
+        "ppi": 537,
+        "type": "P-OLED",
+        "refresh_rate": {
+          "max_hz": 90,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 5"
+      },
+      "platform": {
+        "os": "Android 10, upgradable to Android 13",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SM8150 Snapdragon 855 (7 nm)",
+        "cpu": "Octa-core (1x2.84 GHz Kryo 485 & 3x2.42 GHz Kryo 485 & 4x1.78 GHz Kryo 485)",
+        "gpu": "Adreno 640",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [64, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3700,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 16,
+          "aperture": "f/2.4",
+          "ois": true,
+          "sensor_size": "1/3.6\"",
+          "optical_zoom": "2x"
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_4_xl-9895.php",
+      "last_verified": "2025-10-09T00:30:52.552801"
+    }
   },
   {
     "title": "Pixel 4",
     "link": "google_pixel_4-9896.php",
     "full_url": "https://www.gsmarena.com/google_pixel_4-9896.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-4-r1.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "4",
+      "model_number": "G020M, G020I, GA01188-US, GA01187-US, GA01189-US, GA01191-US, GA01189-US",
+      "release_date": "2019-10-22",
+      "msrp_usd": 200.0,
+      "discontinued": false,
+      "color_options": ["Clearly White", "Just Black", "Oh So Orange"],
+      "dimensions_mm": "147.1 x 68.8 x 8.2 mm",
+      "weight_g": 162,
+      "build_materials": "Glass front (Gorilla Glass 5), glass back (Gorilla Glass 5), aluminum frame",
+      "display": {
+        "size_in": 5.7,
+        "resolution": "1080 x 2280",
+        "ppi": 444,
+        "type": "P-OLED",
+        "refresh_rate": {
+          "max_hz": 90,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 5"
+      },
+      "platform": {
+        "os": "Android 10, upgradable to Android 13",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SM8150 Snapdragon 855 (7 nm)",
+        "cpu": "Octa-core (1x2.84 GHz Kryo 485 & 3x2.42 GHz Kryo 485 & 4x1.78 GHz Kryo 485)",
+        "gpu": "Adreno 640",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [64, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2800,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 16,
+          "aperture": "f/2.4",
+          "ois": true,
+          "sensor_size": "1/3.6\"",
+          "optical_zoom": "2x"
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_4-9896.php",
+      "last_verified": "2025-10-09T00:30:54.207187"
+    }
   },
   {
     "title": "Pixel 3a XL",
     "link": "google_pixel_3a_xl-9690.php",
     "full_url": "https://www.gsmarena.com/google_pixel_3a_xl-9690.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-3a-xl-.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "Pixel 3a",
-    "link": "google_pixel_3a-9408.php",
-    "full_url": "https://www.gsmarena.com/google_pixel_3a-9408.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-3a.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "3a XL",
+      "model_number": "G020C, G020G, G020F, G020A, G020B, G020D",
+      "release_date": "2019-05-15",
+      "msrp_usd": 290.0,
+      "discontinued": false,
+      "color_options": ["Just Black", "Clearly White", "Purple-ish"],
+      "dimensions_mm": "160.1 x 76.1 x 8.2 mm",
+      "weight_g": 167,
+      "build_materials": "Glass front (Asahi Dragontrail), plastic back, plastic frame",
+      "display": {
+        "size_in": 6.0,
+        "resolution": "1080 x 2160",
+        "ppi": 402,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Asahi Dragontrail Glass"
+      },
+      "platform": {
+        "os": "Android 9.0 (Pie), upgradable to Android 12",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SDM670 Snapdragon 670 (10 nm)",
+        "cpu": "Octa-core (2x2.0 GHz 360 Gold & 6x1.7 GHz Kryo 360 Silver)",
+        "gpu": "Adreno 615",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3700,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 2.0",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/google_pixel_3a_xl-9690.php",
+      "last_verified": "2025-10-09T00:30:55.859512"
+    }
   },
   {
     "title": "Pixel 3 XL",
     "link": "google_pixel_3_xl-9257.php",
     "full_url": "https://www.gsmarena.com/google_pixel_3_xl-9257.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-3xl-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "3 XL",
+      "model_number": "G013C",
+      "release_date": null,
+      "msrp_usd": 260.0,
+      "discontinued": true,
+      "color_options": ["Clearly White", "Just Black", "Not Pink"],
+      "dimensions_mm": "158 x 76.7 x 7.9 mm",
+      "weight_g": 184,
+      "build_materials": "Glass front (Gorilla Glass 5), glass back (Gorilla Glass 5), aluminum frame",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1440 x 2960",
+        "ppi": 523,
+        "type": "P-OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 5"
+      },
+      "platform": {
+        "os": "Android 9.0 (Pie), upgradable to Android 12",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SDM845 Snapdragon 845 (10 nm)",
+        "cpu": "Octa-core (4x2.5 GHz Kryo 385 Gold & 4x1.6 GHz Kryo 385 Silver)",
+        "gpu": "Adreno 630",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3430,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": null,
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_3_xl-9257.php",
+      "last_verified": "2025-10-09T00:30:59.061561"
+    }
   },
   {
     "title": "Pixel 3",
     "link": "google_pixel_3-9256.php",
     "full_url": "https://www.gsmarena.com/google_pixel_3-9256.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-3-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "3",
+      "model_number": "G013A",
+      "release_date": null,
+      "msrp_usd": 450.0,
+      "discontinued": true,
+      "color_options": ["Clearly White", "Just Black", "Not Pink"],
+      "dimensions_mm": "145.6 x 68.2 x 7.9 mm",
+      "weight_g": 148,
+      "build_materials": "Glass front (Gorilla Glass 5), glass back (Gorilla Glass 5), aluminum frame",
+      "display": {
+        "size_in": 5.5,
+        "resolution": "1080 x 2160",
+        "ppi": 443,
+        "type": "P-OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 5"
+      },
+      "platform": {
+        "os": "Android 9.0 (Pie), upgradable to Android 12",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SDM845 Snapdragon 845 (10 nm)",
+        "cpu": "Octa-core (4x2.5 GHz Kryo 385 Gold & 4x1.6 GHz Kryo 385 Silver)",
+        "gpu": "Adreno 630",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2915,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": null,
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/google_pixel_3-9256.php",
+      "last_verified": "2025-10-09T00:31:00.733843"
+    }
   },
   {
     "title": "Pixel 2",
     "link": "google_pixel_2-8733.php",
     "full_url": "https://www.gsmarena.com/google_pixel_2-8733.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-2.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "Pixel 2 XL",
-    "link": "google_pixel_2_xl-8720.php",
-    "full_url": "https://www.gsmarena.com/google_pixel_2_xl-8720.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-xl2-.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "Pixel XL",
-    "link": "google_pixel_xl-8345.php",
-    "full_url": "https://www.gsmarena.com/google_pixel_xl-8345.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-xl.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "Pixel",
-    "link": "google_pixel-8346.php",
-    "full_url": "https://www.gsmarena.com/google_pixel-8346.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "2",
+      "model_number": "G011A",
+      "release_date": null,
+      "msrp_usd": 610.0,
+      "discontinued": true,
+      "color_options": ["Kinda Blue", "Just Black", "Clearly White"],
+      "dimensions_mm": "145.7 x 69.7 x 7.8 mm",
+      "weight_g": 143,
+      "build_materials": "Glass front (Gorilla Glass 5), aluminum/glass back, aluminum frame",
+      "display": {
+        "size_in": 5.0,
+        "resolution": "1080 x 1920",
+        "ppi": 441,
+        "type": "AMOLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 5"
+      },
+      "platform": {
+        "os": "Android 8.0 (Oreo), upgradable to Android 11",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm MSM8998 Snapdragon 835 (10 nm)",
+        "cpu": "Octa-core (4x2.35 GHz Kryo & 4x1.9 GHz Kryo)",
+        "gpu": "Adreno 540",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2700,
+      "charging_wired_w": 5,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.4",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/google_pixel_2-8733.php",
+      "last_verified": "2025-10-09T00:31:02.392306"
+    }
   }
 ]

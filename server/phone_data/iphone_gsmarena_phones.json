@@ -4,349 +4,3459 @@
     "link": "apple_iphone_17_pro_max-13964.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_17_pro_max-13964.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro-max.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 17 Pro Max",
+      "model_number": "iPhone18,2, A3526, A3257, A3527, A3525",
+      "release_date": "2025-09-19",
+      "msrp_usd": 2000.0,
+      "discontinued": false,
+      "color_options": ["Silver", "Cosmic Orange", "Deep Blue"],
+      "dimensions_mm": "163.4 x 78 x 8.8 mm",
+      "weight_g": 233,
+      "build_materials": "Glass front (Ceramic Shield 2), aluminum alloy frame, aluminum alloy back/ glass back (Ceramic Shield)",
+      "display": {
+        "size_in": 6.9,
+        "resolution": "1320 x 2868",
+        "ppi": 460,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield 2, Mohs level 5"
+      },
+      "platform": {
+        "os": "iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A19 Pro (3 nm)",
+        "cpu": "Hexa-core (2x4.26 GHz + 4xX.X GHz)",
+        "gpu": "Apple GPU (6-core graphics)",
+        "ram_gb": [12]
+      },
+      "storage_options_gb": [256, 512, 1024, 2048],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4823,
+      "charging_wired_w": null,
+      "charging_wireless_w": 25,
+      "fast_charging_details": "50% in 20 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/1.28\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/2.55\"",
+          "optical_zoom": "4x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 18,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+        "bluetooth": "6.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2 Gen 2, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_17_pro_max-13964.php",
+      "last_verified": "2025-10-09T00:09:37.606043"
+    }
   },
   {
     "title": "AppleiPhone 17",
     "link": "apple_iphone_17-14050.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_17-14050.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 17",
+      "model_number": "iPhone18,3, A3520, A3258, A3519, A3521",
+      "release_date": "2025-09-19",
+      "msrp_usd": 949.0,
+      "discontinued": false,
+      "color_options": ["Black", "White", "Mist Blue", "Sage", "Lavender"],
+      "dimensions_mm": "149.6 x 71.5 x 8 mm",
+      "weight_g": 177,
+      "build_materials": "Glass front (Ceramic Shield 2), aluminum frame, glass back",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1206 x 2622",
+        "ppi": 460,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield 2, Mohs level 5"
+      },
+      "platform": {
+        "os": "iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A19 (3 nm)",
+        "cpu": "Hexa-core (2x4.26 GHz + 4xX.X GHz)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3692,
+      "charging_wired_w": null,
+      "charging_wireless_w": 25,
+      "fast_charging_details": "50% in 20 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": "1/1.56\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 18,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6/7, tri-band, hotspot",
+        "bluetooth": "6.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 2.0, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_17-14050.php",
+      "last_verified": "2025-10-09T00:09:39.261580"
+    }
   },
   {
     "title": "AppleiPhone Air",
     "link": "apple_iphone_17_air-13502.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_17_air-13502.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-air.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone Air",
+      "model_number": "iPhone18,4, A3517, A3260, A3518, A3516",
+      "release_date": "2025-09-19",
+      "msrp_usd": 1.0,
+      "discontinued": false,
+      "color_options": ["Space Black", "Cloud White", "Light Gold", "Sky Blue"],
+      "dimensions_mm": "156.2 x 74.7 x 5.6 mm",
+      "weight_g": 165,
+      "build_materials": "Glass front (Ceramic Shield 2), titanium frame (grade 5), glass back (Ceramic Shield)",
+      "display": {
+        "size_in": 6.5,
+        "resolution": "1260 x 2736",
+        "ppi": 460,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield 2, Mohs level 5"
+      },
+      "platform": {
+        "os": "iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A19 Pro (3 nm)",
+        "cpu": "Hexa-core (2x4.26 GHz + 4xX.X GHz)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [12]
+      },
+      "storage_options_gb": [256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3149,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": "1/1.56\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 18,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "eSIM+ eSIM (8 or more, max 2 at a time)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+        "bluetooth": "6.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_17_air-13502.php",
+      "last_verified": "2025-10-09T00:09:40.923063"
+    }
   },
   {
     "title": "AppleiPhone 17 Pro",
     "link": "apple_iphone_17_pro-14049.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_17_pro-14049.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 17 Pro",
+      "model_number": "iPhone18,1, A3256, A3523, A3522, A3524",
+      "release_date": "2025-09-19",
+      "msrp_usd": 1.0,
+      "discontinued": false,
+      "color_options": ["Silver", "Cosmic Orange", "Deep Blue"],
+      "dimensions_mm": "150 x 71.9 x 8.8 mm",
+      "weight_g": 206,
+      "build_materials": "Glass front (Ceramic Shield 2), aluminum alloy frame, aluminum alloy back/ glass back (Ceramic Shield)",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1206 x 2622",
+        "ppi": 460,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield 2, Mohs level 5"
+      },
+      "platform": {
+        "os": "iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A19 Pro (3 nm)",
+        "cpu": "Hexa-core (2x4.26 GHz + 4xX.X GHz)",
+        "gpu": "Apple GPU (6-core graphics)",
+        "ram_gb": [12]
+      },
+      "storage_options_gb": [256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3998,
+      "charging_wired_w": null,
+      "charging_wireless_w": 25,
+      "fast_charging_details": "50% in 20 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/1.28\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 48,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/2.55\"",
+          "optical_zoom": "4x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 18,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+        "bluetooth": "6.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2 Gen 2, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_17_pro-14049.php",
+      "last_verified": "2025-10-09T00:09:42.606983"
+    }
   },
   {
     "title": "AppleiPhone 13",
     "link": "apple_iphone_13-11103.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_13-11103.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 13",
+      "model_number": "A2633, A2482, A2631, A2634, A2635, iphone14,5",
+      "release_date": "2021-09-24",
+      "msrp_usd": 317.0,
+      "discontinued": false,
+      "color_options": [
+        "Starlight",
+        "Midnight",
+        "Blue",
+        "Pink",
+        "Red",
+        "Green"
+      ],
+      "dimensions_mm": "146.7 x 71.5 x 7.7 mm",
+      "weight_g": 174,
+      "build_materials": "Glass front, glass back, aluminum frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1170 x 2532",
+        "ppi": 460,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 15, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A15 Bionic (5 nm)",
+        "cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3240,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": "1/1.9\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.4\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_13-11103.php",
+      "last_verified": "2025-10-09T00:09:44.264866"
+    }
   },
   {
     "title": "AppleiPhone 16 Pro Max",
     "link": "apple_iphone_16_pro_max-13123.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_16_pro_max-13123.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 16 Pro Max",
+      "model_number": "A3296, A3084, A3295, A3297, iPhone17,2",
+      "release_date": "2024-09-20",
+      "msrp_usd": 974.83,
+      "discontinued": false,
+      "color_options": [
+        "Black Titanium",
+        "White Titanium",
+        "Natural Titanium",
+        "Desert Titanium"
+      ],
+      "dimensions_mm": "163 x 77.6 x 8.3 mm",
+      "weight_g": 227,
+      "build_materials": "Glass front (Ceramic Shield), glass back, titanium frame (grade 5)",
+      "display": {
+        "size_in": 6.9,
+        "resolution": "1320 x 2868",
+        "ppi": 460,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass (2024 gen), Mohs level 4"
+      },
+      "platform": {
+        "os": "iOS 18, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A18 Pro (3 nm)",
+        "cpu": "Hexa-core (2x4.05 GHz + 4x2.42 GHz)",
+        "gpu": "Apple GPU (6-core graphics)",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4685,
+      "charging_wired_w": null,
+      "charging_wireless_w": 25,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/1.28\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/3.06\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2 Gen 2, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_16_pro_max-13123.php",
+      "last_verified": "2025-10-09T00:09:45.915861"
+    }
   },
   {
     "title": "AppleiPhone 15",
     "link": "apple_iphone_15-12559.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_15-12559.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 15",
+      "model_number": "A3090, A2846, A3089, A3092, iPhone15,4",
+      "release_date": "2023-09-22",
+      "msrp_usd": 532.0,
+      "discontinued": false,
+      "color_options": ["Black", "Blue", "Green", "Yellow", "Pink"],
+      "dimensions_mm": "147.6 x 71.6 x 7.8 mm",
+      "weight_g": 171,
+      "build_materials": "Glass front, glass back, aluminum frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1179 x 2556",
+        "ppi": 461,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 17, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A16 Bionic (4 nm)",
+        "cpu": "Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3349,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": "1/1.56\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 2.0, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_15-12559.php",
+      "last_verified": "2025-10-09T00:09:47.663397"
+    }
   },
   {
     "title": "AppleiPhone 16",
     "link": "apple_iphone_16-13317.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_16-13317.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 16",
+      "model_number": "A3287, A3081, A3286, A3288, iPhone17,3",
+      "release_date": "2024-09-20",
+      "msrp_usd": 656.0,
+      "discontinued": false,
+      "color_options": ["Black", "White", "Pink", "Teal", "Ultramarine"],
+      "dimensions_mm": "147.6 x 71.6 x 7.8 mm",
+      "weight_g": 170,
+      "build_materials": "Glass front (Ceramic Shield), glass back, aluminum frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1179 x 2556",
+        "ppi": 460,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass (2024 gen), Mohs level 4"
+      },
+      "platform": {
+        "os": "iOS 18, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A18 (3 nm)",
+        "cpu": "Hexa-core (2x4.04 GHz + 4x2.20 GHz)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3561,
+      "charging_wired_w": null,
+      "charging_wireless_w": 25,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": "1/1.56\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6/7, tri-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 2.0, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_16-13317.php",
+      "last_verified": "2025-10-09T00:09:49.425363"
+    }
   },
   {
     "title": "AppleiPhone 11",
     "link": "apple_iphone_11-9848.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_11-9848.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 11",
+      "model_number": "A2221, A2111, A2223, iPhone12,1",
+      "release_date": "2019-09-20",
+      "msrp_usd": 188.0,
+      "discontinued": false,
+      "color_options": ["Black", "Green", "Yellow", "Purple", "Red", "White"],
+      "dimensions_mm": "150.9 x 75.7 x 8.3 mm",
+      "weight_g": 194,
+      "build_materials": "Glass front (Corning-made glass), glass back (Corning-made glass), aluminum frame (7000 series)",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "828 x 1792",
+        "ppi": 326,
+        "type": "Liquid Retina IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Scratch-resistant glass"
+      },
+      "platform": {
+        "os": "iOS 13, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A13 Bionic (7 nm+)",
+        "cpu": "Hexa-core (2x2.65 GHz Lightning + 4x1.8 GHz Thunder)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3110,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.6\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM (China)",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_11-9848.php",
+      "last_verified": "2025-10-09T00:09:51.144581"
+    }
   },
   {
     "title": "AppleiPhone 13 Pro Max",
     "link": "apple_iphone_13_pro_max-11089.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 15 Pro Max",
-    "link": "apple_iphone_15_pro_max-12548.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_15_pro_max-12548.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro-max.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 13 Pro Max",
+      "model_number": "A2643, A2484, A2641, A2644, A2645, iphone14,3",
+      "release_date": "2021-09-24",
+      "msrp_usd": 469.99,
+      "discontinued": false,
+      "color_options": [
+        "Graphite",
+        "Gold",
+        "Silver",
+        "Sierra Blue",
+        "Alpine Green"
+      ],
+      "dimensions_mm": "160.8 x 78.1 x 7.7 mm",
+      "weight_g": 240,
+      "build_materials": "Glass front, glass back, stainless steel frame",
+      "display": {
+        "size_in": 6.7,
+        "resolution": "1284 x 2778",
+        "ppi": 458,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 15, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A15 Bionic (5 nm)",
+        "cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4352,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.5",
+          "ois": true,
+          "sensor_size": "1/1.7\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/3.4\"",
+          "optical_zoom": "3x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": false,
+          "sensor_size": "1/3.4\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_13_pro_max-11089.php",
+      "last_verified": "2025-10-09T00:09:52.800549"
+    }
   },
   {
     "title": "AppleiPhone 16 Pro",
     "link": "apple_iphone_16_pro-13315.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_16_pro-13315.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 16 Pro",
+      "model_number": "A3293, A3083, A3292, A3294, iPhone17,1",
+      "release_date": "2024-09-20",
+      "msrp_usd": 894.26,
+      "discontinued": false,
+      "color_options": [
+        "Black Titanium",
+        "White Titanium",
+        "Natural Titanium",
+        "Desert Titanium"
+      ],
+      "dimensions_mm": "149.6 x 71.5 x 8.3 mm",
+      "weight_g": 199,
+      "build_materials": "Glass front (Ceramic Shield), glass back, titanium frame (grade 5)",
+      "display": {
+        "size_in": 6.3,
+        "resolution": "1206 x 2622",
+        "ppi": 460,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass (2024 gen), Mohs level 4"
+      },
+      "platform": {
+        "os": "iOS 18, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A18 Pro (3 nm)",
+        "cpu": "Hexa-core (2x4.05 GHz + 4x2.42 GHz)",
+        "gpu": "Apple GPU (6-core graphics)",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3582,
+      "charging_wired_w": null,
+      "charging_wireless_w": 25,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/1.28\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/3.06\"",
+          "optical_zoom": "5x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 48,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7, tri-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2 Gen 2, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_16_pro-13315.php",
+      "last_verified": "2025-10-09T00:09:56.040589"
+    }
   },
   {
     "title": "AppleiPhone 14 Pro Max",
     "link": "apple_iphone_14_pro_max-11773.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_14_pro_max-11773.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 14 Pro Max",
+      "model_number": "A2894, A2651, A2893, A2895, iphone15,3",
+      "release_date": "2022-09-16",
+      "msrp_usd": 592.74,
+      "discontinued": false,
+      "color_options": ["Space Black", "Silver", "Gold", "Deep Purple"],
+      "dimensions_mm": "160.7 x 77.6 x 7.9 mm",
+      "weight_g": 240,
+      "build_materials": "Glass front, glass back, stainless steel frame",
+      "display": {
+        "size_in": 6.7,
+        "resolution": "1290 x 2796",
+        "ppi": 460,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 16, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A16 Bionic (4 nm)",
+        "cpu": "Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4323,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/1.28\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/3.5\"",
+          "optical_zoom": "3x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_14_pro_max-11773.php",
+      "last_verified": "2025-10-09T00:09:57.762551"
+    }
   },
   {
     "title": "AppleiPhone 12",
     "link": "apple_iphone_12-10509.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_12-10509.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 12",
+      "model_number": "A2403, A2172, A2402, A2404, iPhone13,2",
+      "release_date": "2020-10-23",
+      "msrp_usd": 216.0,
+      "discontinued": false,
+      "color_options": ["Black", "White", "Red", "Green", "Blue", "Purple"],
+      "dimensions_mm": "146.7 x 71.5 x 7.4 mm",
+      "weight_g": 164,
+      "build_materials": "Glass front, glass back, aluminum frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1170 x 2532",
+        "ppi": 460,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 14.1, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A14 Bionic (5 nm)",
+        "cpu": "Hexa-core (2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2815,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": null
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.6\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_12-10509.php",
+      "last_verified": "2025-10-09T00:09:59.440217"
+    }
   },
   {
     "title": "AppleiPhone 14",
     "link": "apple_iphone_14-11861.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_14-11861.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 14",
+      "model_number": "A2882, A2649, A2881, A2884, A2883, iphone14,7",
+      "release_date": "2022-09-16",
+      "msrp_usd": 379.0,
+      "discontinued": false,
+      "color_options": [
+        "Midnight",
+        "Purple",
+        "Starlight",
+        "Blue",
+        "Red",
+        "Yellow"
+      ],
+      "dimensions_mm": "146.7 x 71.5 x 7.8 mm",
+      "weight_g": 172,
+      "build_materials": "Glass front, glass back, aluminum frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1170 x 2532",
+        "ppi": 460,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 16, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A15 Bionic (5 nm)",
+        "cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3279,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.5",
+          "ois": true,
+          "sensor_size": "1/1.7\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_14-11861.php",
+      "last_verified": "2025-10-09T00:10:01.157789"
+    }
   },
   {
     "title": "AppleiPhone 14 Pro",
     "link": "apple_iphone_14_pro-11860.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_14_pro-11860.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 14 Pro",
+      "model_number": "A2890, A2650, A2889, A2892, iphone15,2",
+      "release_date": "2022-09-16",
+      "msrp_usd": 550.0,
+      "discontinued": false,
+      "color_options": ["Space Black", "Silver", "Gold", "Deep Purple"],
+      "dimensions_mm": "147.5 x 71.5 x 7.9 mm",
+      "weight_g": 206,
+      "build_materials": "Glass front, glass back, stainless steel frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1179 x 2556",
+        "ppi": 460,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 16, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A16 Bionic (4 nm)",
+        "cpu": "Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3200,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/1.28\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/3.5\"",
+          "optical_zoom": "3x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_14_pro-11860.php",
+      "last_verified": "2025-10-09T00:10:02.905370"
+    }
   },
   {
     "title": "AppleiPhone 13 Pro",
     "link": "apple_iphone_13_pro-11102.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_13_pro-11102.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 12 Pro Max",
-    "link": "apple_iphone_12_pro_max-10237.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_12_pro_max-10237.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro-max-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 13 Pro",
+      "model_number": "A2638, A2483, A2636, A2639, A2640, iPhone14,2",
+      "release_date": "2021-09-24",
+      "msrp_usd": 418.0,
+      "discontinued": false,
+      "color_options": [
+        "Graphite",
+        "Gold",
+        "Silver",
+        "Sierra Blue",
+        "Alpine Green"
+      ],
+      "dimensions_mm": "146.7 x 71.5 x 7.7 mm",
+      "weight_g": 204,
+      "build_materials": "Glass front, glass back, stainless steel frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1170 x 2532",
+        "ppi": 460,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 15, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A15 Bionic (5 nm)",
+        "cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3095,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.5",
+          "ois": true,
+          "sensor_size": "1/1.7\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/3.4\"",
+          "optical_zoom": "3x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": false,
+          "sensor_size": "1/3.4\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_13_pro-11102.php",
+      "last_verified": "2025-10-09T00:10:04.557035"
+    }
   },
   {
     "title": "AppleiPhone 15 Pro",
     "link": "apple_iphone_15_pro-12557.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_15_pro-12557.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 11 Pro Max",
-    "link": "apple_iphone_11_pro_max-9846.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_11_pro_max-9846.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 15 Pro",
+      "model_number": "A2848, A3101, A3102, A3104, iPhone16,1",
+      "release_date": "2023-09-22",
+      "msrp_usd": 688.11,
+      "discontinued": false,
+      "color_options": [
+        "Black Titanium",
+        "White Titanium",
+        "Blue Titanium",
+        "Natural Titanium"
+      ],
+      "dimensions_mm": "146.6 x 70.6 x 8.3 mm",
+      "weight_g": 187,
+      "build_materials": "Glass front, glass back, titanium frame (grade 5)",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1179 x 2556",
+        "ppi": 461,
+        "type": "LTPO Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": 120,
+          "min_hz": 1,
+          "adaptive": true
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 17, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A17 Pro (3 nm)",
+        "cpu": "Hexa-core (2x3.78 GHz + 4x2.11 GHz)",
+        "gpu": "Apple GPU (6-core graphics)",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256, 512, 1024],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3274,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/1.28\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.8",
+          "ois": true,
+          "sensor_size": "1/3.5\"",
+          "optical_zoom": "3x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e, tri-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.2 Gen 2, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_15_pro-12557.php",
+      "last_verified": "2025-10-09T00:10:07.870650"
+    }
   },
   {
     "title": "AppleiPhone 16e",
     "link": "apple_iphone_16e-13395.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_16e-13395.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16e.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 16e",
+      "model_number": "A3212, A3409, A3410, A3408, iPhone17,5",
+      "release_date": "2025-02-28",
+      "msrp_usd": 538.11,
+      "discontinued": false,
+      "color_options": ["Black", "White"],
+      "dimensions_mm": "146.7 x 71.5 x 7.8 mm",
+      "weight_g": 167,
+      "build_materials": "Glass front (Ceramic Shield), glass back, aluminum frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1170 x 2532",
+        "ppi": 460,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10"],
+        "protection": "Ceramic Shield glass, Mohs level 4"
+      },
+      "platform": {
+        "os": "iOS 18.3.1, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A18 (3 nm)",
+        "cpu": "Hexa-core (2x4.04 GHz + 4x2.20 GHz)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4005,
+      "charging_wired_w": null,
+      "charging_wireless_w": 5,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_16e-13395.php",
+      "last_verified": "2025-10-09T00:10:11.121750"
+    }
   },
   {
     "title": "AppleiPhone 12 Pro",
     "link": "apple_iphone_12_pro-10508.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_12_pro-10508.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro--.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 12 Pro",
+      "model_number": "A2407, A2341, A2406, A2408, iPhone13,3",
+      "release_date": "2020-10-23",
+      "msrp_usd": 309.0,
+      "discontinued": false,
+      "color_options": ["Silver", "Graphite", "Gold", "Pacific Blue"],
+      "dimensions_mm": "146.7 x 71.5 x 7.4 mm",
+      "weight_g": 189,
+      "build_materials": "Glass front, glass back, stainless steel frame",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "1170 x 2532",
+        "ppi": 460,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 14.1, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A14 Bionic (5 nm)",
+        "cpu": "Hexa-core (2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2815,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.0",
+          "ois": true,
+          "sensor_size": "1/3.4\"",
+          "optical_zoom": "2x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.4\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_12_pro-10508.php",
+      "last_verified": "2025-10-09T00:10:12.768201"
+    }
   },
   {
     "title": "AppleiPhone X",
     "link": "apple_iphone_x-8858.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_x-8858.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-x.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone X",
+      "model_number": "A1865, A1901, A1902, A1903, iPhone10,3, iPhone10,6",
+      "release_date": null,
+      "msrp_usd": 100.0,
+      "discontinued": true,
+      "color_options": ["Space Gray", "Silver"],
+      "dimensions_mm": "143.6 x 70.9 x 7.7 mm",
+      "weight_g": 174,
+      "build_materials": "Glass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame",
+      "display": {
+        "size_in": 5.8,
+        "resolution": "1125 x 2436",
+        "ppi": 458,
+        "type": "Super Retina OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Scratch-resistant glass"
+      },
+      "platform": {
+        "os": "iOS 11.1.1, up to iOS 16.7.12",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A11 Bionic (10 nm)",
+        "cpu": "Hexa-core 2.39 GHz (2x Monsoon + 4x Mistral)",
+        "gpu": "Apple GPU (three-core graphics)",
+        "ram_gb": [3]
+      },
+      "storage_options_gb": [64, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2716,
+      "charging_wired_w": 15,
+      "charging_wireless_w": null,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/3.0\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": true,
+          "sensor_size": "1/3.4\"",
+          "optical_zoom": "2x"
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 7,
+        "aperture": "f/2.2",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/apple_iphone_x-8858.php",
+      "last_verified": "2025-10-09T00:10:14.410461"
+    }
   },
   {
     "title": "AppleiPhone XR",
     "link": "apple_iphone_xr-9320.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_xr-9320.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xr-new.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone XR",
+      "model_number": "A2105, A1984, A2107, A2108, A2106, iPhone11,8",
+      "release_date": null,
+      "msrp_usd": 150.0,
+      "discontinued": true,
+      "color_options": ["Black", "Red", "Yellow", "Blue", "Coral", "White"],
+      "dimensions_mm": "150.9 x 75.7 x 8.3 mm",
+      "weight_g": 194,
+      "build_materials": "Glass front (Corning-made glass), glass back (Corning-made glass), aluminum frame (7000 series)",
+      "display": {
+        "size_in": 6.1,
+        "resolution": "828 x 1792",
+        "ppi": 326,
+        "type": "Liquid Retina IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Scratch-resistant glass"
+      },
+      "platform": {
+        "os": "iOS 12, upgradable to iOS 18.7",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A12 Bionic (7 nm)",
+        "cpu": "Hexa-core (2x2.5 GHz Vortex + 4x1.6 GHz Tempest)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [3]
+      },
+      "storage_options_gb": [64, 128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2942,
+      "charging_wired_w": 15,
+      "charging_wireless_w": null,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 7,
+        "aperture": "f/2.2",
+        "video_max": "1080p@60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM (China)",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/apple_iphone_xr-9320.php",
+      "last_verified": "2025-10-09T00:10:16.088795"
+    }
   },
   {
     "title": "AppleiPhone XS Max",
     "link": "apple_iphone_xs_max-9319.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_xs_max-9319.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone XS Max",
+      "model_number": "A1921, A2101, A2102, A2104, iPhone11,6",
+      "release_date": null,
+      "msrp_usd": 210.0,
+      "discontinued": true,
+      "color_options": ["Space Gray", "Silver", "Gold"],
+      "dimensions_mm": "157.5 x 77.4 x 7.7 mm",
+      "weight_g": 208,
+      "build_materials": "Glass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame",
+      "display": {
+        "size_in": 6.5,
+        "resolution": "1242 x 2688",
+        "ppi": 458,
+        "type": "Super Retina OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Scratch-resistant glass"
+      },
+      "platform": {
+        "os": "iOS 12, upgradable to iOS 18.7",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A12 Bionic (7 nm)",
+        "cpu": "Hexa-core (2x2.5 GHz Vortex + 4x1.6 GHz Tempest)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3174,
+      "charging_wired_w": 15,
+      "charging_wireless_w": null,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": true,
+          "sensor_size": "1/3.4\"",
+          "optical_zoom": "2x"
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 7,
+        "aperture": "f/2.2",
+        "video_max": "1080p@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM (China)",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_xs_max-9319.php",
+      "last_verified": "2025-10-09T00:10:17.740612"
+    }
   },
   {
     "title": "AppleiPhone 11 Pro",
     "link": "apple_iphone_11_pro-9847.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_11_pro-9847.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro-max-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 11 Pro",
+      "model_number": "A2215, A2160, A2217, iPhone12,3",
+      "release_date": "2019-09-20",
+      "msrp_usd": 240.0,
+      "discontinued": false,
+      "color_options": [
+        "Matte Space Gray",
+        "Matte Silver",
+        "Matte Gold",
+        "Matte Midnight Green"
+      ],
+      "dimensions_mm": "144 x 71.4 x 8.1 mm",
+      "weight_g": 188,
+      "build_materials": "Glass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame",
+      "display": {
+        "size_in": 5.8,
+        "resolution": "1125 x 2436",
+        "ppi": 458,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Scratch-resistant glass"
+      },
+      "platform": {
+        "os": "iOS 13, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A13 Bionic (7 nm+)",
+        "cpu": "Hexa-core (2x2.65 GHz Lightning + 4x1.8 GHz Thunder)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3046,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.0",
+          "ois": true,
+          "sensor_size": "1/3.4\"",
+          "optical_zoom": "2x"
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.6\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM (China)",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_11_pro-9847.php",
+      "last_verified": "2025-10-09T00:10:19.477829"
+    }
   },
   {
     "title": "AppleiPhone 16 Plus",
     "link": "apple_iphone_16_plus-13316.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_16_plus-13316.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-plus.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 15 Plus",
-    "link": "apple_iphone_15_plus-12558.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_15_plus-12558.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-plus-.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 16 Plus",
+      "model_number": "A3290, A3082, A3289, A3291, iPhone17,4",
+      "release_date": "2024-09-20",
+      "msrp_usd": 713.68,
+      "discontinued": false,
+      "color_options": ["Black", "White", "Pink", "Teal", "Ultramarine"],
+      "dimensions_mm": "160.9 x 77.8 x 7.8 mm",
+      "weight_g": 199,
+      "build_materials": "Glass front (Ceramic Shield), glass back, aluminum frame",
+      "display": {
+        "size_in": 6.7,
+        "resolution": "1290 x 2796",
+        "ppi": 460,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass (2024 gen), Mohs level 4"
+      },
+      "platform": {
+        "os": "iOS 18, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A18 (3 nm)",
+        "cpu": "Hexa-core (2x4.04 GHz + 4x2.20 GHz)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [8]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4674,
+      "charging_wired_w": null,
+      "charging_wireless_w": 25,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 48,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": "1/1.56\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6/7, tri-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "USB Type-C 2.0, DisplayPort",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_16_plus-13316.php",
+      "last_verified": "2025-10-09T00:10:21.168069"
+    }
   },
   {
     "title": "AppleiPhone XS",
     "link": "apple_iphone_xs-9318.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_xs-9318.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-new.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 13 mini",
-    "link": "apple_iphone_13_mini-11104.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_13_mini-11104.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone XS",
+      "model_number": "A2097, A1920, A2100, A2098, iPhone11,2",
+      "release_date": null,
+      "msrp_usd": 190.0,
+      "discontinued": true,
+      "color_options": ["Space Gray", "Silver", "Gold"],
+      "dimensions_mm": "143.6 x 70.9 x 7.7 mm",
+      "weight_g": 177,
+      "build_materials": "Glass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame",
+      "display": {
+        "size_in": 5.8,
+        "resolution": "1125 x 2436",
+        "ppi": 458,
+        "type": "Super Retina OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Scratch-resistant glass"
+      },
+      "platform": {
+        "os": "iOS 12, upgradable to iOS 18.7",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A12 Bionic (7 nm)",
+        "cpu": "Hexa-core (2x2.5 GHz Vortex + 4x1.6 GHz Tempest)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2658,
+      "charging_wired_w": 15,
+      "charging_wireless_w": null,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        },
+        {
+          "type": "telephoto",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": true,
+          "sensor_size": "1/3.4\"",
+          "optical_zoom": "2x"
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 7,
+        "aperture": "f/2.2",
+        "video_max": "1080p@30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_xs-9318.php",
+      "last_verified": "2025-10-09T00:10:24.493404"
+    }
   },
   {
     "title": "AppleiPhone 14 Plus",
     "link": "apple_iphone_14_plus-11862.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_14_plus-11862.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-plus.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 14 Plus",
+      "model_number": "A2886, A2632, A2885, A2896, A2887, iphone14,8",
+      "release_date": "2022-10-07",
+      "msrp_usd": 449.0,
+      "discontinued": false,
+      "color_options": [
+        "Midnight",
+        "Purple",
+        "Starlight",
+        "Blue",
+        "Red",
+        "Yellow"
+      ],
+      "dimensions_mm": "160.8 x 78.1 x 7.8 mm",
+      "weight_g": 203,
+      "build_materials": "Glass front, glass back, aluminum frame",
+      "display": {
+        "size_in": 6.7,
+        "resolution": "1284 x 2778",
+        "ppi": 458,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 16, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A15 Bionic (5 nm)",
+        "cpu": "Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)",
+        "gpu": "Apple GPU (5-core graphics)",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128, 256, 512],
+      "expandable_storage": false,
+      "battery_capacity_mah": 4323,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.5",
+          "ois": true,
+          "sensor_size": "1/1.7\""
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/1.9",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM+ eSIM (max 2 at a time; International)eSIM + eSIM (8 or more, max 2 at a time; USA)Nano-SIM + Nano-SIM (China)",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.3, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_14_plus-11862.php",
+      "last_verified": "2025-10-09T00:10:27.780105"
+    }
   },
   {
     "title": "AppleiPhone 12 mini",
     "link": "apple_iphone_12_mini-10510.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_12_mini-10510.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-mini.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 7",
-    "link": "apple_iphone_7-8064.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_7-8064.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7r4.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone SE (2022)",
-    "link": "apple_iphone_se_(2022)-11410.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_se_(2022)-11410.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2022.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 7 Plus",
-    "link": "apple_iphone_7_plus-8065.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_7_plus-8065.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7-plus-r2.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 12 mini",
+      "model_number": "A2399, A2176, A2398, A2400, A2399, iPhone13,1",
+      "release_date": "2020-11-13",
+      "msrp_usd": 185.0,
+      "discontinued": false,
+      "color_options": ["Black", "White", "Red", "Green", "Blue", "Purple"],
+      "dimensions_mm": "131.5 x 64.2 x 7.4 mm",
+      "weight_g": 135,
+      "build_materials": "Glass front, glass back, aluminum frame",
+      "display": {
+        "size_in": 5.4,
+        "resolution": "1080 x 2340",
+        "ppi": 476,
+        "type": "Super Retina XDR OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": ["HDR10", "Dolby Vision"],
+        "protection": "Ceramic Shield glass"
+      },
+      "platform": {
+        "os": "iOS 14.1, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A14 Bionic (5 nm)",
+        "cpu": "Hexa-core (2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2227,
+      "charging_wired_w": null,
+      "charging_wireless_w": 15,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.6",
+          "ois": true,
+          "sensor_size": null
+        },
+        {
+          "type": "ultrawide",
+          "sensor_mp": 12,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.6\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 12,
+        "aperture": "f/2.2",
+        "video_max": "4K@24/25/30/60fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIMNano-SIM + Nano-SIM",
+        "5g": true,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["face id"],
+      "sensors": [
+        "Face ID",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP68",
+      "source": "https://www.gsmarena.com/apple_iphone_12_mini-10510.php",
+      "last_verified": "2025-10-09T00:10:29.510252"
+    }
   },
   {
     "title": "AppleiPhone SE (2020)",
     "link": "apple_iphone_se_(2020)-10170.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_se_(2020)-10170.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2020.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 8 Plus",
-    "link": "apple_iphone_8_plus-8131.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_8_plus-8131.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-8-plus-new.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone SE (2020)",
+      "model_number": "A2275, A2296, A2298, iPhone12,8",
+      "release_date": "2020-04-24",
+      "msrp_usd": 114.0,
+      "discontinued": false,
+      "color_options": ["Black", "White", "Red"],
+      "dimensions_mm": "138.4 x 67.3 x 7.3 mm",
+      "weight_g": 148,
+      "build_materials": "Glass front, glass back, aluminum frame",
+      "display": {
+        "size_in": 4.7,
+        "resolution": "750 x 1334",
+        "ppi": 326,
+        "type": "Retina IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Ion-strengthened glass"
+      },
+      "platform": {
+        "os": "iOS 13, upgradable to iOS 26",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A13 Bionic (7 nm+)",
+        "cpu": "Hexa-core (2x2.65 GHz Lightning + 4x1.8 GHz Thunder)",
+        "gpu": "Apple GPU (4-core graphics)",
+        "ram_gb": [3]
+      },
+      "storage_options_gb": [64, 128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1821,
+      "charging_wired_w": 18,
+      "charging_wireless_w": 5,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 7,
+        "aperture": "f/2.2",
+        "video_max": "1080p@30fps; gyro-EIS"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (front-mounted)",
+        "accelerometer",
+        "proximity",
+        "gyro",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/apple_iphone_se_(2020)-10170.php",
+      "last_verified": "2025-10-09T00:10:35.969903"
+    }
   },
   {
     "title": "AppleiPhone 8",
     "link": "apple_iphone_8-8573.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_8-8573.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-8-new.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 8",
+      "model_number": "A1863, A1905, A1906, A1907, iPhone10,1, iPhone10,4",
+      "release_date": null,
+      "msrp_usd": 210.0,
+      "discontinued": true,
+      "color_options": ["Silver", "Space Gray", "Gold", "Red"],
+      "dimensions_mm": "138.4 x 67.3 x 7.3 mm",
+      "weight_g": 148,
+      "build_materials": "Glass front (Corning-made glass), glass back (Corning-made glass), aluminum frame",
+      "display": {
+        "size_in": 4.7,
+        "resolution": "750 x 1334",
+        "ppi": 326,
+        "type": "Retina IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Ion-strengthened glass"
+      },
+      "platform": {
+        "os": "iOS 11, up to iOS 16.7.12",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A11 Bionic (10 nm)",
+        "cpu": "Hexa-core (2x Monsoon + 4x Mistral)",
+        "gpu": "Apple GPU (three-core graphics)",
+        "ram_gb": [2]
+      },
+      "storage_options_gb": [64, 128, 256],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1821,
+      "charging_wired_w": 15,
+      "charging_wireless_w": null,
+      "fast_charging_details": "50% in 30 min",
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 12,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 7,
+        "aperture": "f/2.2",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot",
+        "bluetooth": "5.0, A2DP, LE",
+        "nfc": true,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (front-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/apple_iphone_8-8573.php",
+      "last_verified": "2025-10-09T00:10:39.157523"
+    }
   },
   {
     "title": "AppleiPhone 6",
     "link": "apple_iphone_6-6378.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_6-6378.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-6-4.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 6s",
-    "link": "apple_iphone_6s-7242.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_6s-7242.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-6s1.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 6",
+      "model_number": "A1549, A1586, A1589, A1522, A1524, A1593, iPhone7,2",
+      "release_date": null,
+      "msrp_usd": 100.0,
+      "discontinued": true,
+      "color_options": ["Space Gray", "Silver", "Gold"],
+      "dimensions_mm": "138.1 x 67 x 6.9 mm",
+      "weight_g": 129,
+      "build_materials": "Glass front (Corning-made glass), aluminum back, aluminum frame",
+      "display": {
+        "size_in": 4.7,
+        "resolution": "750 x 1334",
+        "ppi": 326,
+        "type": "IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Ion-strengthened glass, oleophobic coating"
+      },
+      "platform": {
+        "os": "iOS 8, upgradable to iOS 12.5.7",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A8 (20 nm)",
+        "cpu": "Dual-core 1.4 GHz Typhoon (ARM v8-based)",
+        "gpu": "PowerVR GX6450 (quad-core graphics)",
+        "ram_gb": [1]
+      },
+      "storage_options_gb": [16, 32, 64, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1810,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 8,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/3.0\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.2",
+        "video_max": "720p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, hotspot",
+        "bluetooth": "4.0, A2DP, LE",
+        "nfc": false,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (front-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_6-6378.php",
+      "last_verified": "2025-10-09T00:10:41.161573"
+    }
   },
   {
     "title": "AppleiPhone SE",
     "link": "apple_iphone_se-7969.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_se-7969.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-5se-ofic.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 6s Plus",
-    "link": "apple_iphone_6s_plus-7243.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_6s_plus-7243.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-6s-plus.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone SE",
+      "model_number": "A1662, A1723, A1724, iPhone8,4",
+      "release_date": null,
+      "msrp_usd": 140.0,
+      "discontinued": true,
+      "color_options": ["Space Gray", "Silver", "Gold", "Rose Gold"],
+      "dimensions_mm": "123.8 x 58.6 x 7.6 mm",
+      "weight_g": 113,
+      "build_materials": "Glass front (Corning-made glass), aluminum back, aluminum frame",
+      "display": {
+        "size_in": 4.0,
+        "resolution": "640 x 1136",
+        "ppi": 326,
+        "type": "IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": ""
+      },
+      "platform": {
+        "os": "iOS 9.3.2, upgradable to iOS 15.8.5",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A9 (14 nm)",
+        "cpu": "Dual-core 1.84 GHz Twister",
+        "gpu": "PowerVR GT7600 (six-core graphics)",
+        "ram_gb": [2]
+      },
+      "storage_options_gb": [16, 32, 64, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1624,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 12,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/3.0\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.4",
+        "video_max": "720p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, hotspot",
+        "bluetooth": "4.2, A2DP, LE",
+        "nfc": false,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (front-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_se-7969.php",
+      "last_verified": "2025-10-09T00:10:45.236400"
+    }
   },
   {
     "title": "AppleiPhone 5s",
     "link": "apple_iphone_5s-5685.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_5s-5685.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-5s-ofic.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 5s",
+      "model_number": "A1453, A1457, A1518, A1528, A1530, A1533, iPhone6,1, iPhone6,2",
+      "release_date": null,
+      "msrp_usd": 330.0,
+      "discontinued": true,
+      "color_options": ["Space Gray", "White/Silver", "Gold"],
+      "dimensions_mm": "123.8 x 58.6 x 7.6 mm",
+      "weight_g": 112,
+      "build_materials": "Glass front (Corning-made glass), aluminum back, aluminum frame",
+      "display": {
+        "size_in": 4.0,
+        "resolution": "640 x 1136",
+        "ppi": 326,
+        "type": "IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass, oleophobic coating"
+      },
+      "platform": {
+        "os": "iOS 7, upgradable to iOS 12.5.7",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A7 (28 nm)",
+        "cpu": "Dual-core 1.3 GHz Cyclone (ARM v8-based)",
+        "gpu": "PowerVR G6430 (quad-core graphics)",
+        "ram_gb": [1]
+      },
+      "storage_options_gb": [16, 32, 64],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1560,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 8,
+          "aperture": "f/2.2",
+          "ois": false,
+          "sensor_size": "1/3.0\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.4",
+        "video_max": "720p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n, dual-band, hotspot",
+        "bluetooth": "4.0, A2DP",
+        "nfc": false,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (front-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_5s-5685.php",
+      "last_verified": "2025-10-09T00:10:48.990075"
+    }
   },
   {
     "title": "AppleiPhone 5",
     "link": "apple_iphone_5-4910.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_5-4910.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-5-ofic.jpg",
-    "page_number": 1
-  },
-  {
-    "title": "AppleiPhone 6 Plus",
-    "link": "apple_iphone_6_plus-6665.php",
-    "full_url": "https://www.gsmarena.com/apple_iphone_6_plus-6665.php",
-    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-6-plus2.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 5",
+      "model_number": "A1428, A1429, A1442, iPhone5,1, iPhone5,2",
+      "release_date": null,
+      "msrp_usd": 340.0,
+      "discontinued": true,
+      "color_options": ["Black/Slate", "White/Silver"],
+      "dimensions_mm": "123.8 x 58.6 x 7.6 mm",
+      "weight_g": 112,
+      "build_materials": "Glass front (Corning-made glass), aluminum back, aluminum frame",
+      "display": {
+        "size_in": 4.0,
+        "resolution": "640 x 1136",
+        "ppi": 326,
+        "type": "IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass, oleophobic coating"
+      },
+      "platform": {
+        "os": "iOS 6, upgradable to iOS 10.3.4",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A6 (32 nm)",
+        "cpu": "Dual-core 1.3 GHz Swift (ARM v7-based)",
+        "gpu": "PowerVR SGX 543MP3 (triple-core graphics)",
+        "ram_gb": [1]
+      },
+      "storage_options_gb": [16, 32, 64],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1440,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 8,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.2\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": "f/2.4",
+        "video_max": "720p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n, dual-band, hotspot",
+        "bluetooth": "4.0, A2DP, LE",
+        "nfc": false,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": true
+      },
+      "biometrics": [],
+      "sensors": ["Accelerometer", "gyro", "proximity", "compass"],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_5-4910.php",
+      "last_verified": "2025-10-09T00:10:50.836352"
+    }
   },
   {
     "title": "AppleiPhone 4",
     "link": "apple_iphone_4-3275.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_4-3275.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-4-ofic-final.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 4",
+      "model_number": "A1349, A1332, iPhone 3,1",
+      "release_date": null,
+      "msrp_usd": 200.0,
+      "discontinued": true,
+      "color_options": ["Black", "White"],
+      "dimensions_mm": "115.2 x 58.6 x 9.3 mm",
+      "weight_g": 137,
+      "build_materials": "Glass front (Corning-made glass), glass back, stainless steel frame",
+      "display": {
+        "size_in": 3.5,
+        "resolution": "640 x 960",
+        "ppi": 330,
+        "type": "IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass, oleophobic coating"
+      },
+      "platform": {
+        "os": "iOS 4, upgradable to iOS 7.1.2",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A4 (45 nm)",
+        "cpu": "1.0 GHz Cortex-A8",
+        "gpu": "PowerVR SGX535",
+        "ram_gb": null
+      },
+      "storage_options_gb": [8, 16, 32],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1420,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 5,
+          "aperture": "f/2.8",
+          "ois": false,
+          "sensor_size": "1/3.2\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": null,
+        "video_max": "480p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Micro-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 b/g/n, hotspot",
+        "bluetooth": "2.1, A2DP",
+        "nfc": false,
+        "usb_port": "2.0",
+        "headphone_jack": true
+      },
+      "biometrics": [],
+      "sensors": ["Accelerometer", "gyro", "proximity", "compass"],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_4-3275.php",
+      "last_verified": "2025-10-09T00:10:54.541442"
+    }
   },
   {
     "title": "AppleiPhone 4s",
     "link": "apple_iphone_4s-4212.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_4s-4212.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-4s-new.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 4s",
+      "model_number": "A1431, A1387, iPhone4,1",
+      "release_date": null,
+      "msrp_usd": 190.0,
+      "discontinued": true,
+      "color_options": ["Black", "White"],
+      "dimensions_mm": "115.2 x 58.6 x 9.3 mm",
+      "weight_g": 140,
+      "build_materials": "Glass front (Corning-made glass), glass back, stainless steel frame",
+      "display": {
+        "size_in": 3.5,
+        "resolution": "640 x 960",
+        "ppi": 330,
+        "type": "IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass, oleophobic coating"
+      },
+      "platform": {
+        "os": "iOS 5, upgradable to iOS 9.3.6",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A5 (45 nm)",
+        "cpu": "Dual-core 1.0 GHz Cortex-A9",
+        "gpu": "PowerVR SGX543MP2",
+        "ram_gb": null
+      },
+      "storage_options_gb": [8, 16, 32, 64],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1432,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 8,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.2\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 3,
+        "aperture": null,
+        "video_max": "480p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Micro-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 b/g/n, hotspot",
+        "bluetooth": "4.0, A2DP, LE",
+        "nfc": false,
+        "usb_port": "2.0",
+        "headphone_jack": true
+      },
+      "biometrics": [],
+      "sensors": ["Accelerometer", "gyro", "proximity", "compass"],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_4s-4212.php",
+      "last_verified": "2025-10-09T00:10:56.407429"
+    }
   },
   {
     "title": "AppleiPhone 3GS",
     "link": "apple_iphone_3gs-2826.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_3gs-2826.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-3gs-ofic.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 3GS",
+      "model_number": "A1325, A1303, iPhone2,1",
+      "release_date": null,
+      "msrp_usd": 110.0,
+      "discontinued": true,
+      "color_options": ["Black", "White"],
+      "dimensions_mm": "115.5 x 62.1 x 12.3 mm",
+      "weight_g": 135,
+      "build_materials": "",
+      "display": {
+        "size_in": 3.5,
+        "resolution": "320 x 480",
+        "ppi": 165,
+        "type": "TFT",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass, oleophobic coating"
+      },
+      "platform": {
+        "os": "iOS 3, upgradable to iOS 6.1.6",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "",
+        "cpu": "600 MHz Cortex-A8",
+        "gpu": "PowerVR SGX535",
+        "ram_gb": null
+      },
+      "storage_options_gb": [8, 16, 32],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1400,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 15,
+          "aperture": "f/2.8",
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": null,
+        "video_max": ""
+      },
+      "connectivity": {
+        "sim_type": "Mini-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 b/g",
+        "bluetooth": "2.1, A2DP (headset support only)",
+        "nfc": false,
+        "usb_port": "2.0",
+        "headphone_jack": true
+      },
+      "biometrics": [],
+      "sensors": ["Accelerometer", "proximity", "compass"],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_3gs-2826.php",
+      "last_verified": "2025-10-09T00:10:58.251256"
+    }
   },
   {
     "title": "AppleiPhone 5c",
     "link": "apple_iphone_5c-5690.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_5c-5690.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-5c-new2.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 5c",
+      "model_number": "A1456, A1507, A1516, A1529, A1532, iPhone5,3, iPhone5,4",
+      "release_date": null,
+      "msrp_usd": 300.0,
+      "discontinued": true,
+      "color_options": ["White", "Blue", "Green", "Yellow", "Pink"],
+      "dimensions_mm": "124.4 x 59.2 x 9 mm",
+      "weight_g": 132,
+      "build_materials": "Glass front, plastic back, plastic frame",
+      "display": {
+        "size_in": 4.0,
+        "resolution": "640 x 1136",
+        "ppi": 326,
+        "type": "IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": ""
+      },
+      "platform": {
+        "os": "iOS 7, upgradable to iOS 10.3.3",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A6 (32 nm)",
+        "cpu": "Dual-core 1.3 GHz Swift (ARM v7-based)",
+        "gpu": "PowerVR SGX 543MP3 (triple-core graphics)",
+        "ram_gb": [1]
+      },
+      "storage_options_gb": [8, 16, 32],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1510,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 8,
+          "aperture": "f/2.4",
+          "ois": false,
+          "sensor_size": "1/3.2\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": null,
+        "video_max": "720p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n, dual-band",
+        "bluetooth": "4.0, A2DP, LE",
+        "nfc": false,
+        "usb_port": "Lightning, USB 2.0",
+        "headphone_jack": true
+      },
+      "biometrics": [],
+      "sensors": ["Accelerometer", "gyro", "proximity", "compass"],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_5c-5690.php",
+      "last_verified": "2025-10-09T00:11:01.245513"
+    }
   },
   {
     "title": "AppleiPhone 4 CDMA",
     "link": "apple_iphone_4_cdma-3716.php",
     "full_url": "https://www.gsmarena.com/apple_iphone_4_cdma-3716.php",
     "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone4-cdma.jpg",
-    "page_number": 1
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Apple",
+      "brand": "iPhone",
+      "model_name": "iPhone 4 CDMA",
+      "model_number": "iPhone 3,3",
+      "release_date": null,
+      "msrp_usd": 150.0,
+      "discontinued": true,
+      "color_options": ["Black", "White"],
+      "dimensions_mm": "115.2 x 58.6 x 9.3 mm",
+      "weight_g": 137,
+      "build_materials": "",
+      "display": {
+        "size_in": 3.5,
+        "resolution": "640 x 960",
+        "ppi": 330,
+        "type": "IPS LCD",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass, oleophobic coating"
+      },
+      "platform": {
+        "os": "iOS 4, upgradable to iOS 7.1.1",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Apple A4 (45 nm)",
+        "cpu": "1.0 GHz Cortex-A8",
+        "gpu": "PowerVR SGX535",
+        "ram_gb": null
+      },
+      "storage_options_gb": [16, 32],
+      "expandable_storage": false,
+      "battery_capacity_mah": 1420,
+      "charging_wired_w": null,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 5,
+          "aperture": null,
+          "ois": false,
+          "sensor_size": null
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": null,
+        "aperture": null,
+        "video_max": ""
+      },
+      "connectivity": {
+        "sim_type": "Micro-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 b/g/n",
+        "bluetooth": "2.1, A2DP",
+        "nfc": false,
+        "usb_port": "2.0",
+        "headphone_jack": true
+      },
+      "biometrics": [],
+      "sensors": ["Accelerometer", "gyro", "proximity", "compass"],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/apple_iphone_4_cdma-3716.php",
+      "last_verified": "2025-10-09T00:11:02.883933"
+    }
   }
 ]
