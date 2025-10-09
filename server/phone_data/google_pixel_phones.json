@@ -11,7 +11,7 @@
       "model_name": "10 Pro Fold",
       "model_number": "GU0NP, GM66V",
       "release_date": null,
-      "msrp_usd": 2.0,
+      "msrp_usd": 1.0,
       "discontinued": false,
       "color_options": ["Moonstone", "Jade"],
       "dimensions_mm": "Unfolded: 155.2 x 150.4 x 5.2 mmFolded: 155.2 x 76.3 x 10.8 mm",
@@ -95,7 +95,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_10_pro_fold-14014.php",
-      "last_verified": "2025-10-09T00:30:14.581431"
+      "last_verified": "2025-10-09T01:08:32.115742"
     }
   },
   {
@@ -196,7 +196,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_10_pro_xl_5g-13988.php",
-      "last_verified": "2025-10-09T00:30:16.356673"
+      "last_verified": "2025-10-09T01:08:37.463016"
     }
   },
   {
@@ -211,7 +211,7 @@
       "model_name": "10 Pro",
       "model_number": "GEHN3, G4QUR, GN4F5",
       "release_date": "2025-08-28",
-      "msrp_usd": 1.0,
+      "msrp_usd": 994.0,
       "discontinued": false,
       "color_options": ["Moonstone", "Jade", "Porcelain", "Obsidian"],
       "dimensions_mm": "152.8 x 72 x 8.5 mm",
@@ -297,7 +297,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_10_pro_5g-13987.php",
-      "last_verified": "2025-10-09T00:30:18.065852"
+      "last_verified": "2025-10-09T01:08:42.210833"
     }
   },
   {
@@ -312,7 +312,7 @@
       "model_name": "10",
       "model_number": "GK2MP, GLBW0, GL066",
       "release_date": "2025-08-28",
-      "msrp_usd": 999.99,
+      "msrp_usd": 715.86,
       "discontinued": false,
       "color_options": ["Indigo", "Frost", "Lemongrass", "Obsidian"],
       "dimensions_mm": "152.8 x 72 x 8.6 mm",
@@ -397,7 +397,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_10_5g-13979.php",
-      "last_verified": "2025-10-09T00:30:19.777037"
+      "last_verified": "2025-10-09T01:08:45.151169"
     }
   },
   {
@@ -412,7 +412,7 @@
       "model_name": "9a",
       "model_number": "GXQ96, GTF7P, G3Y12",
       "release_date": "2025-04-10",
-      "msrp_usd": 529.99,
+      "msrp_usd": 415.0,
       "discontinued": false,
       "color_options": ["Obsidian", "Porcelain", "Iris", "Peony"],
       "dimensions_mm": "154.7 x 73.3 x 8.9 mm",
@@ -489,7 +489,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_9a-13478.php",
-      "last_verified": "2025-10-09T00:30:21.564892"
+      "last_verified": "2025-10-09T01:08:47.821552"
     }
   },
   {
@@ -504,7 +504,7 @@
       "model_name": "9 Pro XL",
       "model_number": "GGX8B, GZC4K, GQ57S",
       "release_date": "2024-08-22",
-      "msrp_usd": 1.0,
+      "msrp_usd": 698.99,
       "discontinued": false,
       "color_options": ["Porcelain", "Rose Quartz", "Hazel", "Obsidian"],
       "dimensions_mm": "162.8 x 76.6 x 8.5 mm",
@@ -590,7 +590,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_9_pro_xl-13217.php",
-      "last_verified": "2025-10-09T00:30:23.259938"
+      "last_verified": "2025-10-09T01:09:08.960256"
     }
   },
   {
@@ -605,7 +605,7 @@
       "model_name": "9 Pro",
       "model_number": "GR83Y, GEC77, GWVK6",
       "release_date": "2024-09-09",
-      "msrp_usd": 787.99,
+      "msrp_usd": 736.0,
       "discontinued": false,
       "color_options": ["Porcelain", "Rose Quartz", "Hazel", "Obsidian"],
       "dimensions_mm": "152.8 x 72 x 8.5 mm",
@@ -691,7 +691,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_9_pro-13218.php",
-      "last_verified": "2025-10-09T00:30:24.969773"
+      "last_verified": "2025-10-09T01:09:12.857240"
     }
   },
   {
@@ -706,7 +706,7 @@
       "model_name": "9",
       "model_number": "G2YBB, GUR25, G1B60",
       "release_date": "2024-08-22",
-      "msrp_usd": 766.46,
+      "msrp_usd": 455.67,
       "discontinued": false,
       "color_options": ["Obsidian", "Porcelain", "Wintergreen", "Peony"],
       "dimensions_mm": "152.8 x 72 x 8.5 mm",
@@ -783,7 +783,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_9-13219.php",
-      "last_verified": "2025-10-09T00:30:26.663087"
+      "last_verified": "2025-10-09T01:09:16.851669"
     }
   },
   {
@@ -882,7 +882,7 @@
       ],
       "water_resistance_rating": null,
       "source": "https://www.gsmarena.com/google_pixel_9_pro_fold-13220.php",
-      "last_verified": "2025-10-09T00:30:28.338540"
+      "last_verified": "2025-10-09T01:09:21.941016"
     }
   },
   {
@@ -897,7 +897,7 @@
       "model_name": "8a",
       "model_number": "GKV4X, G6GPR, G8HHN, G576D",
       "release_date": "2024-05-14",
-      "msrp_usd": 396.99,
+      "msrp_usd": 323.0,
       "discontinued": false,
       "color_options": ["Obsidian", "Porcelain", "Bay", "Aloe"],
       "dimensions_mm": "152.1 x 72.7 x 8.9 mm",
@@ -981,7 +981,7 @@
       ],
       "water_resistance_rating": "IP67",
       "source": "https://www.gsmarena.com/google_pixel_8a-12937.php",
-      "last_verified": "2025-10-09T00:30:30.040897"
+      "last_verified": "2025-10-09T01:10:04.026213"
     }
   },
   {
@@ -996,7 +996,7 @@
       "model_name": "8 Pro",
       "model_number": "GC3VE, G1MNW",
       "release_date": "2023-10-12",
-      "msrp_usd": 598.75,
+      "msrp_usd": 444.0,
       "discontinued": false,
       "color_options": ["Obsidian", "Porcelain", "Bay", "Mint"],
       "dimensions_mm": "162.6 x 76.5 x 8.8 mm",
@@ -1082,7 +1082,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_8_pro-12545.php",
-      "last_verified": "2025-10-09T00:30:31.800407"
+      "last_verified": "2025-10-09T01:10:09.537851"
     }
   },
   {
@@ -1097,7 +1097,7 @@
       "model_name": "8",
       "model_number": "GKWS6, G9BQD, GA04851-US, GZPFO, GPJ41",
       "release_date": "2023-10-12",
-      "msrp_usd": 430.0,
+      "msrp_usd": 353.0,
       "discontinued": false,
       "color_options": ["Obsidian", "Hazel", "Rose", "Mint"],
       "dimensions_mm": "150.5 x 70.8 x 8.9 mm",
@@ -1181,7 +1181,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_8-12546.php",
-      "last_verified": "2025-10-09T00:30:33.493075"
+      "last_verified": "2025-10-09T01:10:12.592111"
     }
   },
   {
@@ -1196,7 +1196,7 @@
       "model_name": "7a",
       "model_number": "GWKK3, GHL1X, G0DZQ, G82U8",
       "release_date": "2023-05-10",
-      "msrp_usd": 310.74,
+      "msrp_usd": 190.0,
       "discontinued": false,
       "color_options": ["Charcoal", "Snow", "Sea", "Coral"],
       "dimensions_mm": "152 x 72.9 x 9 mm",
@@ -1273,7 +1273,7 @@
       ],
       "water_resistance_rating": "IP67",
       "source": "https://www.gsmarena.com/google_pixel_7a-12170.php",
-      "last_verified": "2025-10-09T00:30:35.193578"
+      "last_verified": "2025-10-09T01:10:53.699154"
     }
   },
   {
@@ -1288,7 +1288,7 @@
       "model_name": "7 Pro",
       "model_number": "GP4BC, GE2AE, GFE4J",
       "release_date": "2022-10-13",
-      "msrp_usd": 399.99,
+      "msrp_usd": 241.07,
       "discontinued": false,
       "color_options": ["Obsidian", "Snow", "Hazel"],
       "dimensions_mm": "162.9 x 76.6 x 8.9 mm",
@@ -1373,7 +1373,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_7_pro-11908.php",
-      "last_verified": "2025-10-09T00:30:37.014520"
+      "last_verified": "2025-10-09T01:11:02.808278"
     }
   },
   {
@@ -1388,7 +1388,7 @@
       "model_name": "7",
       "model_number": "GVU6C, GQML3, GO3Z5",
       "release_date": "2022-10-13",
-      "msrp_usd": 288.5,
+      "msrp_usd": 205.0,
       "discontinued": false,
       "color_options": ["Obsidian", "Lemongrass", "Snow"],
       "dimensions_mm": "155.6 x 73.2 x 8.7 mm",
@@ -1465,7 +1465,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_7-11903.php",
-      "last_verified": "2025-10-09T00:30:38.732477"
+      "last_verified": "2025-10-09T01:11:13.141042"
     }
   },
   {
@@ -1480,7 +1480,7 @@
       "model_name": "6a",
       "model_number": "GX7AS, GB62Z, G1AZG, GB17L",
       "release_date": "2022-07-21",
-      "msrp_usd": 199.75,
+      "msrp_usd": 176.89,
       "discontinued": false,
       "color_options": ["Chalk", "Charcoal", "Sage"],
       "dimensions_mm": "152.2 x 71.8 x 8.9 mm",
@@ -1557,7 +1557,7 @@
       ],
       "water_resistance_rating": "IP67",
       "source": "https://www.gsmarena.com/google_pixel_6a-11229.php",
-      "last_verified": "2025-10-09T00:30:40.710107"
+      "last_verified": "2025-10-09T01:11:17.126776"
     }
   },
   {
@@ -1572,7 +1572,7 @@
       "model_name": "6 Pro",
       "model_number": "GLUOG, G8VOU, GF5KQ",
       "release_date": "2021-10-28",
-      "msrp_usd": 315.0,
+      "msrp_usd": 229.0,
       "discontinued": false,
       "color_options": ["Cloudy White", "Sorta Sunny", "Stormy Black"],
       "dimensions_mm": "163.9 x 75.9 x 8.9 mm",
@@ -1657,7 +1657,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_6_pro-10918.php",
-      "last_verified": "2025-10-09T00:30:42.419534"
+      "last_verified": "2025-10-09T01:11:20.459359"
     }
   },
   {
@@ -1672,7 +1672,7 @@
       "model_name": "6",
       "model_number": "GB7N6, G9S9B16, G9S9B, GR1YH",
       "release_date": "2021-10-28",
-      "msrp_usd": 273.77,
+      "msrp_usd": 153.87,
       "discontinued": false,
       "color_options": ["Sorta Seafoam", "Kinda Coral", "Stormy Black"],
       "dimensions_mm": "158.6 x 74.8 x 8.9 mm",
@@ -1749,7 +1749,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_6-11037.php",
-      "last_verified": "2025-10-09T00:30:44.165975"
+      "last_verified": "2025-10-09T01:11:25.799828"
     }
   },
   {
@@ -1764,7 +1764,7 @@
       "model_name": "5a 5G",
       "model_number": "G1F8F, G4S1M",
       "release_date": "2021-08-26",
-      "msrp_usd": 279.99,
+      "msrp_usd": 173.99,
       "discontinued": false,
       "color_options": ["Mostly Black"],
       "dimensions_mm": "156.2 x 73.2 x 8.8 mm",
@@ -1840,7 +1840,7 @@
       ],
       "water_resistance_rating": "IP67",
       "source": "https://www.gsmarena.com/google_pixel_5a_5g-11059.php",
-      "last_verified": "2025-10-09T00:30:45.855469"
+      "last_verified": "2025-10-09T01:11:30.747636"
     }
   },
   {
@@ -1855,7 +1855,7 @@
       "model_name": "5",
       "model_number": "GD1YQ, GTT9Q, G5NZ6",
       "release_date": "2020-10-15",
-      "msrp_usd": 199.0,
+      "msrp_usd": 235.0,
       "discontinued": false,
       "color_options": ["Just Black", "Sorta Sage"],
       "dimensions_mm": "144.7 x 70.4 x 8 mm",
@@ -1931,7 +1931,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_5-10386.php",
-      "last_verified": "2025-10-09T00:30:47.574075"
+      "last_verified": "2025-10-09T01:11:35.622476"
     }
   },
   {
@@ -2022,7 +2022,91 @@
       ],
       "water_resistance_rating": null,
       "source": "https://www.gsmarena.com/google_pixel_4a_5g-10385.php",
-      "last_verified": "2025-10-09T00:30:49.241078"
+      "last_verified": "2025-10-09T01:11:39.944421"
+    }
+  },
+  {
+    "title": "Pixel 4a",
+    "link": "google_pixel_4a-10123.php",
+    "full_url": "https://www.gsmarena.com/google_pixel_4a-10123.php",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-4a.jpg",
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "4a",
+      "model_number": "G025J, GA02099, G025N",
+      "release_date": "2020-08-20",
+      "msrp_usd": 124.44,
+      "discontinued": false,
+      "color_options": ["Just Black", "Barely Blue"],
+      "dimensions_mm": "144 x 69.4 x 8.2 mm",
+      "weight_g": 143,
+      "build_materials": "Glass front (Gorilla Glass 3), plastic back, plastic frame",
+      "display": {
+        "size_in": 5.81,
+        "resolution": "1080 x 2340",
+        "ppi": 443,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 3"
+      },
+      "platform": {
+        "os": "Android 10, upgradable to Android 13",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SDM730 Snapdragon 730G (8 nm)",
+        "cpu": "Octa-core (2x2.2 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver)",
+        "gpu": "Adreno 618",
+        "ram_gb": [6]
+      },
+      "storage_options_gb": [128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3140,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.7",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/google_pixel_4a-10123.php",
+      "last_verified": "2025-10-09T01:11:43.835282"
     }
   },
   {
@@ -2114,7 +2198,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_4_xl-9895.php",
-      "last_verified": "2025-10-09T00:30:52.552801"
+      "last_verified": "2025-10-09T01:11:52.733553"
     }
   },
   {
@@ -2206,7 +2290,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_4-9896.php",
-      "last_verified": "2025-10-09T00:30:54.207187"
+      "last_verified": "2025-10-09T01:11:56.775478"
     }
   },
   {
@@ -2290,7 +2374,91 @@
       ],
       "water_resistance_rating": null,
       "source": "https://www.gsmarena.com/google_pixel_3a_xl-9690.php",
-      "last_verified": "2025-10-09T00:30:55.859512"
+      "last_verified": "2025-10-09T01:12:00.796566"
+    }
+  },
+  {
+    "title": "Pixel 3a",
+    "link": "google_pixel_3a-9408.php",
+    "full_url": "https://www.gsmarena.com/google_pixel_3a-9408.php",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-3a.jpg",
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "3a",
+      "model_number": "G020A, G020E, G020B, G020G, G020H",
+      "release_date": "2019-05-15",
+      "msrp_usd": 120.0,
+      "discontinued": false,
+      "color_options": ["Just Black", "Clearly White", "Purple-ish"],
+      "dimensions_mm": "151.3 x 70.1 x 8.2 mm",
+      "weight_g": 147,
+      "build_materials": "Glass front (Asahi Dragontrail), plastic back, plastic frame",
+      "display": {
+        "size_in": 5.6,
+        "resolution": "1080 x 2220",
+        "ppi": 441,
+        "type": "OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Asahi Dragontrail Glass"
+      },
+      "platform": {
+        "os": "Android 9.0 (Pie), upgradable to Android 12",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm SDM670 Snapdragon 670 (10 nm)",
+        "cpu": "Octa-core (2x2.0 GHz 360 Gold & 6x1.7 GHz Kryo 360 Silver)",
+        "gpu": "Adreno 615",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3000,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.0",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 2.0",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/google_pixel_3a-9408.php",
+      "last_verified": "2025-10-09T01:12:04.628914"
     }
   },
   {
@@ -2374,7 +2542,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_3_xl-9257.php",
-      "last_verified": "2025-10-09T00:30:59.061561"
+      "last_verified": "2025-10-09T01:12:09.324266"
     }
   },
   {
@@ -2458,7 +2626,7 @@
       ],
       "water_resistance_rating": "IP68",
       "source": "https://www.gsmarena.com/google_pixel_3-9256.php",
-      "last_verified": "2025-10-09T00:31:00.733843"
+      "last_verified": "2025-10-09T01:12:14.776043"
     }
   },
   {
@@ -2542,7 +2710,259 @@
       ],
       "water_resistance_rating": "IP67",
       "source": "https://www.gsmarena.com/google_pixel_2-8733.php",
-      "last_verified": "2025-10-09T00:31:02.392306"
+      "last_verified": "2025-10-09T01:12:19.597609"
+    }
+  },
+  {
+    "title": "Pixel 2 XL",
+    "link": "google_pixel_2_xl-8720.php",
+    "full_url": "https://www.gsmarena.com/google_pixel_2_xl-8720.php",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-xl2-.jpg",
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "2 XL",
+      "model_number": "G011C",
+      "release_date": null,
+      "msrp_usd": 520.0,
+      "discontinued": true,
+      "color_options": ["Just Black", "Black & White"],
+      "dimensions_mm": "157.9 x 76.7 x 7.9 mm",
+      "weight_g": 175,
+      "build_materials": "Glass front (Gorilla Glass 5), aluminum/glass back, aluminum frame",
+      "display": {
+        "size_in": 6.0,
+        "resolution": "1440 x 2880",
+        "ppi": 538,
+        "type": "P-OLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 5"
+      },
+      "platform": {
+        "os": "Android 8.0 (Oreo), upgradable to Android 11",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm MSM8998 Snapdragon 835 (10 nm)",
+        "cpu": "Octa-core (4x2.35 GHz Kryo & 4x1.9 GHz Kryo)",
+        "gpu": "Adreno 540",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [64, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3520,
+      "charging_wired_w": 5,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "main",
+          "sensor_mp": 2,
+          "aperture": "f/1.8",
+          "ois": true,
+          "sensor_size": "1/2.55\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.4",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM +eSIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "5.0, A2DP, LE, aptX HD",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.1",
+        "headphone_jack": false
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": "IP67",
+      "source": "https://www.gsmarena.com/google_pixel_2_xl-8720.php",
+      "last_verified": "2025-10-09T01:12:22.630275"
+    }
+  },
+  {
+    "title": "Pixel XL",
+    "link": "google_pixel_xl-8345.php",
+    "full_url": "https://www.gsmarena.com/google_pixel_xl-8345.php",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-xl.jpg",
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "XL",
+      "model_number": "",
+      "release_date": null,
+      "msrp_usd": 400.0,
+      "discontinued": true,
+      "color_options": ["Quite Black", "Very Silver", "Really Blue"],
+      "dimensions_mm": "154.7 x 75.7 x 8.5 mm",
+      "weight_g": 168,
+      "build_materials": "Glass front (Gorilla Glass 4), aluminum/glass back, aluminum frame",
+      "display": {
+        "size_in": 5.5,
+        "resolution": "1440 x 2560",
+        "ppi": 534,
+        "type": "AMOLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 4"
+      },
+      "platform": {
+        "os": "Android 7.1 (Nougat), upgradable to Android 10",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm MSM8996 Snapdragon 821 (14 nm)",
+        "cpu": "Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)",
+        "gpu": "Adreno 530",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [32, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 3450,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 3,
+          "aperture": "f/2.0",
+          "ois": false,
+          "sensor_size": "1/2.3\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.4",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "4.2, A2DP, LE, aptX",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.0",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/google_pixel_xl-8345.php",
+      "last_verified": "2025-10-09T01:12:31.040300"
+    }
+  },
+  {
+    "title": "Pixel",
+    "link": "google_pixel-8346.php",
+    "full_url": "https://www.gsmarena.com/google_pixel-8346.php",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel.jpg",
+    "page_number": 1,
+    "specs": {
+      "manufacturer": "Google",
+      "brand": "Pixel",
+      "model_name": "",
+      "model_number": "",
+      "release_date": null,
+      "msrp_usd": 290.0,
+      "discontinued": true,
+      "color_options": ["Quite Black", "Very Silver", "Really Blue"],
+      "dimensions_mm": "143.8 x 69.5 x 8.5 mm",
+      "weight_g": 143,
+      "build_materials": "Glass front (Gorilla Glass 4), aluminum/glass back, aluminum frame",
+      "display": {
+        "size_in": 5.0,
+        "resolution": "1080 x 1920",
+        "ppi": 441,
+        "type": "AMOLED",
+        "refresh_rate": {
+          "max_hz": null,
+          "min_hz": null,
+          "adaptive": false
+        },
+        "hdr_support": [],
+        "protection": "Corning Gorilla Glass 4"
+      },
+      "platform": {
+        "os": "Android 7.1 (Nougat), upgradable to Android 10",
+        "ui_skin": null
+      },
+      "performance": {
+        "soc": "Qualcomm MSM8996 Snapdragon 821 (14 nm)",
+        "cpu": "Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)",
+        "gpu": "Adreno 530",
+        "ram_gb": [4]
+      },
+      "storage_options_gb": [32, 128],
+      "expandable_storage": false,
+      "battery_capacity_mah": 2770,
+      "charging_wired_w": 18,
+      "charging_wireless_w": null,
+      "fast_charging_details": null,
+      "rear_camera_setup": [
+        {
+          "type": "unknown",
+          "sensor_mp": 3,
+          "aperture": "f/2.0",
+          "ois": false,
+          "sensor_size": "1/2.3\""
+        }
+      ],
+      "front_camera": {
+        "sensor_mp": 8,
+        "aperture": "f/2.4",
+        "video_max": "1080p@30fps"
+      },
+      "connectivity": {
+        "sim_type": "Nano-SIM",
+        "5g": false,
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, DLNA",
+        "bluetooth": "4.2, A2DP, LE, aptX",
+        "nfc": true,
+        "usb_port": "USB Type-C 3.0",
+        "headphone_jack": true
+      },
+      "biometrics": ["fingerprint"],
+      "sensors": [
+        "Fingerprint (rear-mounted)",
+        "accelerometer",
+        "gyro",
+        "proximity",
+        "compass",
+        "barometer"
+      ],
+      "water_resistance_rating": null,
+      "source": "https://www.gsmarena.com/google_pixel-8346.php",
+      "last_verified": "2025-10-09T01:12:34.135868"
     }
   }
 ]
