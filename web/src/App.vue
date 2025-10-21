@@ -11,6 +11,7 @@
       </div>
       <nav class="nav">
         <router-link to="/" class="nav-link">Home</router-link>
+        <router-link to="/survey" class="nav-link">Find My Phone</router-link>
         <router-link to="/phone" class="nav-link">Phone</router-link>
         <router-link to="/price-track" class="nav-link"
           >Price Track</router-link
