@@ -1,0 +1,7 @@
+# Environment files (keep secrets out of git)
+/server/.env
+/.env
+
+# Optional local overrides
+/server/.env.local
+/.env.local

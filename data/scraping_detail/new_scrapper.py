@@ -5,9 +5,18 @@ import re
 from datetime import datetime
 import time
 import sys
+import random
 
-# --- Helper Functions for Parsing and Cleaning (No changes here) ---
+# --- FIX 1: Add a list of User-Agents to rotate ---
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+]
 
+# --- Helper Functions (No changes here) ---
 def find_first_number(text, num_type=float):
     if not text: return None
     match = re.search(r'(\d+\.?\d*)', str(text))
@@ -48,26 +57,40 @@ def parse_camera_setup(text):
         cameras.append(cam_data)
     return cameras
 
-
 # --- Main Scraping and Transformation Logic ---
-
 def scrape_and_format_phone(url):
-    headers = {"User-Agent": "Mozilla/5.0"}
-    try:
-        r = requests.get(url, headers=headers, timeout=15); r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
-    except requests.exceptions.RequestException as e:
-        print(f"    - Error fetching URL {url}: {e}")
+    # --- FIX 2: Implement Retries with Exponential Backoff ---
+    for attempt in range(4): # Try up to 4 times
+        headers = {"User-Agent": random.choice(USER_AGENTS)} # Rotate user-agent
+        try:
+            r = requests.get(url, headers=headers, timeout=15)
+            # If we get a rate-limit error, raise an exception to trigger the retry logic
+            if r.status_code == 429:
+                r.raise_for_status() # This will be caught by the except block
+            # If any other bad status, just fail for this URL
+            if r.status_code != 200:
+                print(f"    - Received status code {r.status_code}. Aborting for this URL.")
+                return None
+            
+            soup = BeautifulSoup(r.text, "html.parser")
+            break # If request was successful, exit the retry loop
+        except requests.exceptions.RequestException as e:
+            if attempt < 3:
+                backoff_time = 5 * (2 ** attempt) # 5s, 10s, 20s
+                print(f"    - Rate limited or network error. Retrying in {backoff_time} seconds...")
+                time.sleep(backoff_time)
+            else:
+                print(f"    - Error fetching URL {url} after multiple retries: {e}")
+                return None
+    else: # This 'else' belongs to the 'for' loop, runs if the loop completes without 'break'
         return None
 
     try:
         raw_data = {}
         phone_name_elem = soup.select_one("h1.specs-phone-name-title")
         if not phone_name_elem:
-            print(f"    - Could not find phone name on {url}")
-            return None
+            print(f"    - Could not find phone name on {url}"); return None
         phone_name = phone_name_elem.get_text(strip=True)
-        
         specs_container = soup.select_one("#specs-list")
         if specs_container:
             for table in specs_container.find_all("table"):
@@ -76,21 +99,16 @@ def scrape_and_format_phone(url):
                 for row in table.find_all("tr"):
                     cells = row.find_all("td")
                     if len(cells) == 2:
-                        key = cells[0].get_text(strip=True)
-                        value = cells[1].get_text(strip=True)
+                        key = cells[0].get_text(strip=True); value = cells[1].get_text(strip=True)
                         raw_data[category][key] = value
-
         def get_spec(category, key): return raw_data.get(category, {}).get(key, "")
-
         manufacturer, brand, model_name = parse_name(phone_name)
-
         release_str = get_spec("Launch", "Status"); release_date = None
         date_match = re.search(r'Released (\d{4}), (\w+) (\d+)', release_str)
         if date_match:
             year, month_str, day = date_match.groups()
             month_num = datetime.strptime(month_str, '%B').month
             release_date = f"{year}-{month_num:02d}-{int(day):02d}"
-
         dim_str = get_spec("Body", "Dimensions"); dimensions_mm = dim_str.split('(')[0].strip() if dim_str else None
         display_type_str = get_spec("Display", "Type")
         refresh_rate_match = re.search(r'(\d+)Hz', display_type_str)
@@ -140,71 +158,50 @@ def scrape_and_format_phone(url):
 
 # --- Main Execution Block for Batch Processing ---
 def main(input_filename, output_filename):
-    """Loads a list of phones from a file, scrapes them, and saves the results."""
     try:
-        with open(input_filename, 'r') as f:
-            json_data = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: Input file not found at '{input_filename}'")
-        return
-    except json.JSONDecodeError:
-        print(f"Error: Could not decode JSON from '{input_filename}'. Please check the file format.")
-        return
+        with open(input_filename, 'r') as f: json_data = json.load(f)
+    except FileNotFoundError: print(f"Error: Input file not found at '{input_filename}'"); return
+    except json.JSONDecodeError: print(f"Error: Could not decode JSON from '{input_filename}'."); return
 
-    all_phones_data = []
-    failed_phones = []
+    all_phones_data = []; failed_phones = []
     
-    # --- FIX APPLIED HERE ---
-    # This logic now correctly handles both a direct list and a dictionary with a "phones" key.
-    if isinstance(json_data, dict):
-        phone_list = json_data.get("phones", [])
-    elif isinstance(json_data, list):
-        phone_list = json_data
-    else:
-        print("Error: JSON data is not in a recognized format (expected a list or a dictionary with a 'phones' key).")
-        return
-    # --- END OF FIX ---
+    if isinstance(json_data, dict): phone_list = json_data.get("phones", [])
+    elif isinstance(json_data, list): phone_list = json_data
+    else: print("Error: JSON data is not in a recognized format."); return
 
-    if not phone_list:
-        print("Error: Could not find a list of phones in the JSON file.")
-        return
+    if not phone_list: print("Error: Could not find a list of phones in the JSON file."); return
         
-    total_phones = len(phone_list)
-    print(f"📱 Found {total_phones} phones to process...")
+    total_phones = len(phone_list); print(f"📱 Found {total_phones} phones to process...")
     
     for i, phone in enumerate(phone_list, 1):
         print(f"[{i}/{total_phones}] 📄 Scraping: {phone['title']}")
         
         url_to_scrape = phone.get('full_url')
         if not url_to_scrape:
-            print(f"    - ❌ FAILED: Missing 'full_url' for {phone['title']}")
-            failed_phones.append(phone)
-            continue
+            print(f"    - ❌ FAILED: Missing 'full_url' for {phone['title']}"); failed_phones.append(phone); continue
 
         scraped_data = scrape_and_format_phone(url_to_scrape)
         
         if scraped_data:
-            print(f"    - ✅ Success!")
-            phone['specs'] = scraped_data
-            all_phones_data.append(phone)
+            print(f"    - ✅ Success!"); phone['specs'] = scraped_data; all_phones_data.append(phone)
         else:
-            print(f"    - ❌ FAILED!")
-            failed_phones.append(phone)
+            print(f"    - ❌ FAILED!"); failed_phones.append(phone)
             
-        time.sleep(1)
+        # --- FIX 3: Use a longer, randomized delay ---
+        if i < total_phones:
+            sleep_time = random.uniform(2, 5) # Wait a random time between 2 and 5 seconds
+            print(f"    - Waiting for {sleep_time:.2f} seconds...")
+            time.sleep(sleep_time)
 
-    with open(output_filename, "w") as f:
-        json.dump(all_phones_data, f, indent=2)
+    with open(output_filename, "w") as f: json.dump(all_phones_data, f, indent=2)
 
     print("\n" + "="*50); print("📊 SCRAPING COMPLETE"); print("="*50)
     print(f"Total Phones Processed: {total_phones}")
-    print(f"✅ Successful: {len(all_phones_data)}")
-    print(f"❌ Failed: {len(failed_phones)}")
+    print(f"✅ Successful: {len(all_phones_data)}"); print(f"❌ Failed: {len(failed_phones)}")
     
     if failed_phones:
         print("\nFailed Phones/URLs:")
-        for phone in failed_phones:
-            print(f"- {phone.get('title', 'Unknown Title')}: {phone.get('full_url', 'No URL')}")
+        for phone in failed_phones: print(f"- {phone.get('title', 'Unknown Title')}: {phone.get('full_url', 'No URL')}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
