@@ -158,6 +158,30 @@ export default {
   },
 
   methods: {
+    // Format Month YYYY label given release date (YYYY-MM-DD) and age in months (can be fractional)
+    formatMonthYear(ageMonths) {
+      const relStr = this.meta.release || this.params.release;
+      const rel = new Date(relStr);
+      if (isNaN(rel.getTime())) return String(ageMonths);
+      const monthsOffset = Math.round(Number(ageMonths || 0));
+      const d = new Date(rel);
+      d.setMonth(d.getMonth() + monthsOffset);
+      const monthNames = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      return `${monthNames[d.getMonth()]} ${d.getFullYear()}`;
+    },
     handleModelChange() {
       const info = PIXEL_MODELS[this.params.model];
       if (info) {
@@ -304,6 +328,7 @@ export default {
       const xMax =
         Math.max(todayAge, Number(this.params.horizon || 0) + todayAge) || 12;
 
+      const formatTick = (v) => this.formatMonthYear(v);
       const options = {
         responsive: false,
         maintainAspectRatio: true,
@@ -311,9 +336,19 @@ export default {
           legend: { position: "bottom" },
           title: {
             display: true,
-            text: "Resale price vs months since release",
+            text: "Resale price vs calendar month since release",
           },
-          tooltip: { mode: "index", intersect: false },
+          tooltip: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              title: (items) => {
+                const x = items?.[0]?.parsed?.x;
+                if (x == null) return "";
+                return formatTick(x);
+              },
+            },
+          },
           annotation: {
             annotations: {
               todayLine: {
@@ -338,9 +373,15 @@ export default {
         scales: {
           x: {
             type: "linear",
-            title: { display: true, text: "Months since release" },
+            title: { display: true, text: "Month since release" },
             min: 0,
             max: xMax,
+            ticks: {
+              callback: (value) => formatTick(value),
+              // autoSkip keeps labels readable; stepSize controls density on dense ranges
+              autoSkip: true,
+              maxRotation: 0,
+            },
           },
           y: {
             title: { display: true, text: "Price (USD)" },
