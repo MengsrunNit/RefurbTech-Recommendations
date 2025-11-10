@@ -1,5 +1,6 @@
 <script setup>
 // Simple app shell — navigation is handled by vue-router
+import Chatbot from './components/Chatbot.vue'
 </script>
 
 <template>
@@ -30,6 +31,9 @@
     <footer class="footer">
       <small>© RefurbishTech</small>
     </footer>
+
+    <!-- Floating chatbot widget -->
+    <Chatbot />
   </div>
 </template>
 
