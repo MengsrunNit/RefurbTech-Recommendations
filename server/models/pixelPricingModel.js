@@ -1,8 +1,15 @@
 // models/pixelPricingModel.js
 
 // === Pixel Model Fit (Age + categorical Storage + Condition) ===
+// === Pixel Model Fit (Age + categorical Storage + Condition) ===
+// INTERCEPT here acts as an approximate ratio near launch (age ~0)
 const INTERCEPT = 0.7102739207997484;
-const B_AGE = -0.010343;
+
+// We stop using a linear age term and instead model age with an
+// exponential decay in ratio space.
+const FLOOR_RATIO = 0.30;        // long-run floor ratio (tweak as desired)
+const HALF_LIFE_MONTHS = 18;     // ~months until (ratio - floor) halves
+
 const STORAGE = { 128: -0.014967, 256: 0.014967, 512: 0.0 };
 const CONDITION = {
   Excellent: 0.041479,
@@ -22,14 +29,27 @@ function monthsBetween(fromDate, toDate) {
   return days / 30.44;
 }
 
-function computeRatio(ageMonths, storageGb, condition) {
-  return (
-    INTERCEPT +
-    B_AGE * ageMonths +
-    (STORAGE[storageGb] || 0) +
-    (CONDITION[condition] || 0)
-  );
+function baseAgeRatio(ageMonths) {
+  const age = Math.max(0, ageMonths);
+  const k = Math.log(2) / HALF_LIFE_MONTHS; // decay rate
+
+  // Exponential decay from INTERCEPT down toward FLOOR_RATIO:
+  // ratio_age(age) = FLOOR + (INTERCEPT - FLOOR) * exp(-k * age)
+  return FLOOR_RATIO + (INTERCEPT - FLOOR_RATIO) * Math.exp(-k * age);
 }
+
+function computeRatio(ageMonths, storageGb, condition) {
+  const ageComponent = baseAgeRatio(ageMonths);
+  const storageAdj = STORAGE[storageGb] || 0;
+  const condAdj = CONDITION[condition] || 0;
+
+  // Preserve your original "small additive bumps" behavior:
+  const ratio = ageComponent + storageAdj + condAdj;
+
+  // Safety: clamp to [0, 1.2] or so to avoid weirdness
+  return Math.max(0, Math.min(1.2, ratio));
+}
+
 
 /**
  * Compute prediction series (time curve).
