@@ -4,8 +4,7 @@ import PhoneRouter from "./routes/PhoneRouter.js";
 import ChatRouter from "./routes/ChatRouter.js";
 import PixelRouter from "./routes/PixelRoutes.js";
 import PixelModelRouter from "./routes/PixelModelRouter.js";
-import IphoneBaseRouter from "./routes/IphoneBaseRouter.js";
-import IphoneProRouter from "./routes/IphoneProRouter.js";
+import iphoneRouter from "./routes/iphoneRouter.js";
 import { config as dotenvConfig } from "dotenv";
 // Load .env and override any existing env var (helps when a stale OPENAI_API_KEY is exported in shell)
 dotenvConfig({ override: true });
@@ -39,9 +38,10 @@ app.use(express.json());
 app.use("/api", PhoneRouter);
 app.use("/api", ChatRouter);
 app.use("/api", PixelRouter);
+app.use("/api", iphoneRouter);
 app.use("/api", PixelModelRouter);
-app.use("/api", IphoneBaseRouter);
-app.use("/api", IphoneProRouter);
+// app.use("/api", IphoneBaseRouter);
+// app.use("/api", IphoneProRouter);
 
 
 app.use((err, req, res, next) => {

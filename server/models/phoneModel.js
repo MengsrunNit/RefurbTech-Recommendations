@@ -1,52 +1,41 @@
 // models/phoneModel.js
-import { readFile } from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const dataDir = path.join(__dirname, "../phone_data");
-
-const iphoneDataPath = path.join(dataDir, "iphone_gsmarena_phones.json");
-const samsungDataPath = path.join(dataDir, "samsung_major_series_phones.json");
-const googleDataPath = path.join(dataDir, "google_pixel_phones.json");
-const oneplusDataPath = path.join(dataDir, "oneplus_phones.json");
+import { getDb } from "../utils/database.js";
 
 // Helper to score items
-const getScore = (p) => {
+export const getScore = (p) => {
   if (typeof p.page_number === "number") return p.page_number;
-  const m = /-(\d+)\.php$/.exec(p.link || "");
-  return m ? Number(m[1]) : 0;
+
+  const match = /-(\d+)\.php$/.exec(p.link || "");
+  return match ? Number(match[1]) : 0;
 };
 
 export async function getPhones() {
-  const [appleRaw, samsungRaw, googleRaw, oneplusRaw] = await Promise.all([
-    readFile(iphoneDataPath, "utf-8"),
-    readFile(samsungDataPath, "utf-8"),
-    readFile(googleDataPath, "utf-8"),
-    readFile(oneplusDataPath, "utf-8"),
-  ]);
+  const db = await getDb();
+  const phonesCollection = db.collection("phones");
 
-  const apple = JSON.parse(appleRaw).map((p) => ({ ...p, brand: "apple" }));
-  const samsung = JSON.parse(samsungRaw).map((p) => ({
-    ...p,
-    brand: "samsung",
-  }));
-  const google = JSON.parse(googleRaw).map((p) => ({ ...p, brand: "google" }));
-  const oneplus = JSON.parse(oneplusRaw).map((p) => ({
-    ...p,
-    brand: "oneplus",
-  }));
+  // Get ALL phones from MongoDB
+  const phones = await phonesCollection.find({}).toArray();
 
   const sortByScoreDesc = (a, b) => getScore(b) - getScore(a);
 
-  return {
-    apple: apple.sort(sortByScoreDesc),
-    samsung: samsung.sort(sortByScoreDesc),
-    google: google.sort(sortByScoreDesc),
-    oneplus: oneplus.sort(sortByScoreDesc),
+  // Group into categories based on the `brand` you assigned
+  const brands = {
+    apple: [],
+    samsung: [],
+    google: [],
+    oneplus: [],
   };
-}
 
-export { getScore };
+  for (const phone of phones) {
+    if (brands[phone.brand]) {
+      brands[phone.brand].push(phone);
+    }
+  }
+
+  // Sort each brand’s list
+  for (const brandName of Object.keys(brands)) {
+    brands[brandName] = brands[brandName].sort(sortByScoreDesc);
+  }
+
+  return brands;
+}

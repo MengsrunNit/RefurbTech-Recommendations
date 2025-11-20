@@ -10,7 +10,6 @@
             <option value="apple">Apple</option>
             <option value="samsung">Samsung</option>
             <option value="google">Google</option>
-            <option value="oneplus">OnePlus</option>
           </select>
         </label>
       </div>

@@ -1,7 +1,6 @@
 <template>
   <div class="page survey">
     <div class="container">
-      <!-- Progress Bar -->
       <div class="progress-container">
         <div class="progress-bar">
           <div
@@ -12,132 +11,72 @@
         <p class="progress-text">Step {{ currentStep }} of {{ totalSteps }}</p>
       </div>
 
-      <!-- Step Content -->
       <div class="step-container">
         <transition name="slide" mode="out-in">
-          <!-- Step 1: Budget -->
+          
           <div v-if="currentStep === 1" key="step1" class="step">
             <h2>💰 What's your budget?</h2>
-            <p>Let's start with your price range for a refurbished phone</p>
+            <p>Select all price ranges you are comfortable with (Fair Condition)</p>
 
-            <div class="budget-options">
+            <div class="grid-options">
               <div
                 v-for="option in budgetOptions"
                 :key="option.value"
-                class="budget-card"
-                :class="{ active: survey.budget === option.value }"
-                @click="survey.budget = option.value"
+                class="card-item"
+                :class="{ active: survey.budget.includes(option.value) }"
+                @click="toggleSelection('budget', option.value)"
               >
-                <div class="budget-icon">{{ option.icon }}</div>
+                <div class="check-indicator" v-if="survey.budget.includes(option.value)">✓</div>
+                <div class="card-icon">{{ option.icon }}</div>
                 <h4>{{ option.label }}</h4>
-                <p>{{ option.description }}</p>
+                <p class="small-desc">{{ option.description }}</p>
               </div>
+            </div>
+            <div class="selected-count">
+              {{ survey.budget.length > 0 ? `${survey.budget.length} ranges selected` : 'Select at least 1' }}
             </div>
           </div>
 
-          <!-- Step 2: Priorities -->
           <div v-else-if="currentStep === 2" key="step2" class="step">
-            <h2>👤 Who are you as a phone user?</h2>
-            <p>
-              Pick at least 2 that describe you (choose as many as you like)
-            </p>
+            <h2>🔗 What tech do you already own?</h2>
+            <p>Select all that apply (This helps us match the OS)</p>
 
-            <div class="priorities-grid">
+            <div class="grid-options">
               <div
-                v-for="priority in priorities"
-                :key="priority.value"
-                class="priority-card"
-                :class="{
-                  active: survey.priorities.includes(priority.value),
-                }"
-                @click="togglePriority(priority.value)"
+                v-for="item in ecosystemOptions"
+                :key="item.value"
+                class="card-item"
+                :class="{ active: survey.ecosystem.includes(item.value) }"
+                @click="toggleSelection('ecosystem', item.value)"
               >
-                <div class="priority-icon">{{ priority.icon }}</div>
-                <h4>{{ priority.label }}</h4>
-                <p>{{ priority.description }}</p>
+                <div class="check-indicator" v-if="survey.ecosystem.includes(item.value)">✓</div>
+                <div class="card-icon">{{ item.icon }}</div>
+                <h4>{{ item.label }}</h4>
               </div>
-            </div>
-
-            <div
-              class="selected-count"
-              :class="{ error: survey.priorities.length < 2 }"
-            >
-              <template v-if="survey.priorities.length >= 2">
-                {{ survey.priorities.length }} selected
-              </template>
-              <template v-else> Select at least 2 to continue </template>
             </div>
           </div>
 
-          <!-- Step 3: Usage -->
           <div v-else-if="currentStep === 3" key="step3" class="step">
-            <h2>📱 How do you use your phone?</h2>
-            <p>This helps us recommend the right specs for you</p>
+            <h2>📱 How will you use this phone?</h2>
+            <p>Select your main activities (Pick at least 1)</p>
 
-            <div class="usage-options">
+            <div class="grid-options">
               <div
                 v-for="use in usageOptions"
                 :key="use.value"
-                class="usage-card"
-                :class="{ active: survey.primaryUse === use.value }"
-                @click="survey.primaryUse = use.value"
+                class="card-item"
+                :class="{ active: survey.usage.includes(use.value) }"
+                @click="toggleSelection('usage', use.value)"
               >
-                <div class="usage-icon">{{ use.icon }}</div>
+                <div class="check-indicator" v-if="survey.usage.includes(use.value)">✓</div>
+                <div class="card-icon">{{ use.icon }}</div>
                 <h4>{{ use.label }}</h4>
-                <p>{{ use.description }}</p>
+                <p class="small-desc">{{ use.description }}</p>
               </div>
             </div>
           </div>
 
-          <!-- Step 4: Battery -->
           <div v-else-if="currentStep === 4" key="step4" class="step">
-            <h2>⏱️ How much do you use your phone daily?</h2>
-            <p>Pick your average screen-on time per day</p>
-
-            <div class="battery-options">
-              <div
-                v-for="battery in batteryOptions"
-                :key="battery.value"
-                class="battery-card"
-                :class="{ active: survey.batteryImportance === battery.value }"
-                @click="survey.batteryImportance = battery.value"
-              >
-                <div class="battery-level">
-                  <div class="battery-icon" :class="battery.level">
-                    <div
-                      class="battery-fill"
-                      :style="{ width: battery.fillWidth }"
-                    ></div>
-                  </div>
-                </div>
-                <h4>{{ battery.label }}</h4>
-                <p>{{ battery.description }}</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 5: OS Preference -->
-          <div v-else-if="currentStep === 5" key="step5" class="step">
-            <h2>⚙️ Operating System?</h2>
-            <p>Do you have a preference between iOS and Android?</p>
-
-            <div class="os-options">
-              <div
-                v-for="os in osOptions"
-                :key="os.value"
-                class="os-card"
-                :class="{ active: survey.osPreference === os.value }"
-                @click="survey.osPreference = os.value"
-              >
-                <div class="os-icon">{{ os.icon }}</div>
-                <h4>{{ os.label }}</h4>
-                <p>{{ os.description }}</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 6: Screen Size -->
-          <div v-else-if="currentStep === 6" key="step6" class="step">
             <h2>📐 Screen size preference?</h2>
             <p>What size feels comfortable for you?</p>
 
@@ -149,6 +88,7 @@
                 :class="{ active: survey.screenSize === screen.value }"
                 @click="survey.screenSize = screen.value"
               >
+                <div class="check-indicator" v-if="survey.screenSize === screen.value">✓</div>
                 <div class="phone-mockup" :class="screen.size">
                   <div class="screen"></div>
                 </div>
@@ -158,10 +98,9 @@
             </div>
           </div>
 
-          <!-- Step 7: Storage -->
-          <div v-else-if="currentStep === 7" key="step7" class="step">
+          <div v-else-if="currentStep === 5" key="step5" class="step">
             <h2>💾 Storage needs?</h2>
-            <p>How much space do you need for apps, photos, and files?</p>
+            <p>Refurbished phones usually can't upgrade storage later</p>
 
             <div class="storage-options">
               <div
@@ -171,31 +110,43 @@
                 :class="{ active: survey.storage === storage.value }"
                 @click="survey.storage = storage.value"
               >
+                <div class="check-indicator" v-if="survey.storage === storage.value">✓</div>
                 <div class="storage-icon">{{ storage.icon }}</div>
                 <h4>{{ storage.label }}</h4>
                 <p>{{ storage.description }}</p>
-                <div class="storage-examples">{{ storage.examples }}</div>
               </div>
             </div>
           </div>
 
-          <!-- Step 8: Results -->
-          <div
-            v-else-if="currentStep === 8"
-            key="step8"
-            class="step results-step"
-          >
+          <div v-else-if="currentStep === 6" key="step6" class="step">
+            <h2>📅 How long do you plan to keep this phone?</h2>
+            <p>Older phones are cheaper but stop getting updates sooner</p>
+
+            <div class="grid-options single-col-mobile">
+              <div
+                v-for="opt in longevityOptions"
+                :key="opt.value"
+                class="card-item"
+                :class="{ active: survey.longevity === opt.value }"
+                @click="survey.longevity = opt.value"
+              >
+                <div class="check-indicator" v-if="survey.longevity === opt.value">✓</div>
+                <h4>{{ opt.label }}</h4>
+                <p class="small-desc">{{ opt.description }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div v-else-if="currentStep === 7" key="step7" class="step results-step">
             <div v-if="loading" class="loading-state">
               <div class="loader"></div>
               <h3>Finding your perfect matches...</h3>
-              <p>Analyzing thousands of phones to find the best ones for you</p>
+              <p>Checking ecosystem compatibility and feature lists...</p>
             </div>
 
             <div v-else-if="recommendations.length > 0" class="results">
               <h2>🎉 Your Perfect Phone Matches!</h2>
-              <p>
-                Based on your preferences, here are our top recommendations:
-              </p>
+              <p>Based on your ecosystem and needs:</p>
 
               <div class="recommendations-grid">
                 <div
@@ -206,12 +157,12 @@
                 >
                   <div class="match-badge">{{ rec.score }}% match</div>
                   <div class="phone-image">
-                    <img :src="rec.phone.image" :alt="rec.phone.title" />
+                    <div class="img-placeholder">📱</div> 
                   </div>
                   <div class="phone-info">
                     <h4>{{ rec.phone.title }}</h4>
                     <div class="reasons">
-                      <h5>Perfect for you because:</h5>
+                      <h5>Why this fits:</h5>
                       <ul>
                         <li v-for="reason in rec.reasons" :key="reason">
                           {{ reason }}
@@ -219,13 +170,7 @@
                       </ul>
                     </div>
                     <div class="action-buttons">
-                      <button
-                        @click="$router.push('/phone')"
-                        class="view-specs-btn"
-                      >
-                        View Details
-                      </button>
-                      <button class="compare-btn">Add to Compare</button>
+                      <button class="view-specs-btn">Select Condition</button>
                     </div>
                   </div>
                 </div>
@@ -233,22 +178,20 @@
 
               <div class="survey-actions">
                 <button @click="resetSurvey" class="secondary-btn">
-                  Take Survey Again
-                </button>
-                <button
-                  @click="$router.push('/comparison')"
-                  class="primary-btn"
-                >
-                  Compare All
+                  Start Over
                 </button>
               </div>
+            </div>
+             <div v-else class="results">
+                <h2>No perfect matches found 😕</h2>
+                <p>Try selecting a wider budget range or fewer specific requirements.</p>
+                <button @click="resetSurvey" class="primary-btn">Start Over</button>
             </div>
           </div>
         </transition>
       </div>
 
-      <!-- Navigation -->
-      <div class="navigation" v-if="currentStep < 8">
+      <div class="navigation" v-if="currentStep < 7">
         <button
           @click="previousStep"
           :disabled="currentStep === 1"
@@ -262,7 +205,7 @@
           :disabled="!canProceed"
           class="nav-btn primary"
         >
-          {{ currentStep === 7 ? "Find My Phone!" : "Next →" }}
+          {{ currentStep === 6 ? "Find My Phone!" : "Next →" }}
         </button>
       </div>
     </div>
@@ -273,1374 +216,367 @@
 import { ref, reactive, computed } from "vue";
 
 const currentStep = ref(1);
-const totalSteps = 7;
+const totalSteps = 6; // Reduced from 7 to 6
 const loading = ref(false);
 const recommendations = ref([]);
 
+// Updated State
 const survey = reactive({
-  budget: "",
-  priorities: [], // now stores personas, we'll derive feature priorities
-  primaryUse: "",
-  batteryImportance: "",
-  osPreference: "",
+  budget: [],        // Changed to Array for Multi-select
+  ecosystem: [],
+  usage: [],
   screenSize: "",
   storage: "",
+  longevity: "",
 });
 
-// Options data
+// --- DATA OPTIONS ---
+
 const budgetOptions = [
-  {
-    value: "under-300",
-    label: "Under $300",
-    description: "Budget-friendly options",
-    icon: "💵",
-  },
-  {
-    value: "300-600",
-    label: "$300 - $600",
-    description: "Great value picks",
-    icon: "💰",
-  },
-  {
-    value: "above-600",
-    label: "Above $600",
-    description: "Premium and flagship",
-    icon: "👑",
-  },
+  { value: "budget", label: "Under $250", description: "Great value, older flagships", icon: "🏷️", maxPrice: 250 },
+  { value: "mid", label: "$250 - $500", description: "Modern features, great bang-for-buck", icon: "⚖️", maxPrice: 500 },
+  { value: "premium", label: "$500 - $800", description: "Recent pro models & flagships", icon: "💎", maxPrice: 800 },
+  { value: "flagship", label: "$800+", description: "The absolute latest & greatest", icon: "🚀", maxPrice: 9999 }
 ];
 
-const priorities = [
-  {
-    value: "student",
-    label: "Student",
-    description: "Budget, battery, online classes",
-    icon: "🎒",
-  },
-  {
-    value: "business",
-    label: "Business",
-    description: "Email, docs, reliability",
-    icon: "�",
-  },
-  {
-    value: "creator",
-    label: "Content Creator",
-    description: "Camera, storage, performance",
-    icon: "🎥",
-  },
-  {
-    value: "gamer",
-    label: "Gamer",
-    description: "High performance, cooling",
-    icon: "🎮",
-  },
-  {
-    value: "senior",
-    label: "Senior",
-    description: "Easy to use, clear display",
-    icon: "🧓",
-  },
-  {
-    value: "traveler",
-    label: "Traveler",
-    description: "Battery, durability, dual-SIM",
-    icon: "✈️",
-  },
-  {
-    value: "fashion",
-    label: "Style-focused",
-    description: "Design, premium feel",
-    icon: "✨",
-  },
-  {
-    value: "value",
-    label: "Value Seeker",
-    description: "Best features for price",
-    icon: "�",
-  },
+const ecosystemOptions = [
+  { value: "apple_watch", label: "Apple Watch", icon: "⌚" },
+  { value: "mac_ipad", label: "MacBook / iPad", icon: "💻" },
+  { value: "galaxy_watch", label: "Galaxy Watch", icon: "⌚" },
+  { value: "galaxy_buds", label: "Galaxy Buds", icon: "🎧" },
+  { value: "windows", label: "Windows PC", icon: "🖥️" },
+  { value: "none", label: "None / Starting Fresh", icon: "✨" }
 ];
 
 const usageOptions = [
-  {
-    value: "social-media",
-    label: "Social Media",
-    description: "Instagram, TikTok, messaging",
-    icon: "💬",
-  },
-  {
-    value: "photography",
-    label: "Photography",
-    description: "Taking lots of photos/videos",
-    icon: "📷",
-  },
-  {
-    value: "gaming",
-    label: "Gaming",
-    description: "Mobile games & entertainment",
-    icon: "🎮",
-  },
-  {
-    value: "work",
-    label: "Work",
-    description: "Productivity & business",
-    icon: "💼",
-  },
-  {
-    value: "streaming",
-    label: "Streaming",
-    description: "Videos, music, content",
-    icon: "📺",
-  },
-  {
-    value: "basic",
-    label: "Basic Use",
-    description: "Calls, texts, simple apps",
-    icon: "📞",
-  },
-];
-
-const batteryOptions = [
-  {
-    value: "1-2h",
-    label: "1–2 hours/day",
-    description: "Light use: calls, chat, a bit of browsing",
-    level: "low",
-    fillWidth: "25%",
-  },
-  {
-    value: "3-5h",
-    label: "3–5 hours/day",
-    description: "Moderate use: social, maps, music",
-    level: "medium",
-    fillWidth: "50%",
-  },
-  {
-    value: "5-7h",
-    label: "5–7 hours/day",
-    description: "Heavy use: video, games, multitasking",
-    level: "high",
-    fillWidth: "75%",
-  },
-  {
-    value: "7h-plus",
-    label: "7+ hours/day",
-    description: "Very heavy use: power users & on-the-go",
-    level: "full",
-    fillWidth: "100%",
-  },
-];
-
-const osOptions = [
-  {
-    value: "ios",
-    label: "iOS",
-    description: "iPhone experience",
-    icon: "🍎",
-  },
-  {
-    value: "android",
-    label: "Android",
-    description: "Google ecosystem",
-    icon: "🤖",
-  },
-  {
-    value: "either",
-    label: "Either",
-    description: "I'm flexible",
-    icon: "🤝",
-  },
+  { value: "social_media", label: "Social & Browsing", description: "Instagram, TikTok, Web", icon: "💬" },
+  { value: "pro_photo", label: "Pro Photography", description: "Zoom, Night Mode, RAW", icon: "📸" },
+  { value: "casual_photo", label: "Casual Snaps", description: "Memories & Selfies", icon: "🤳" },
+  { value: "heavy_gaming", label: "Heavy Gaming", description: "Genshin, CoD, Emulation", icon: "🎮" },
+  { value: "light_gaming", label: "Light Gaming", description: "Puzzles, Candy Crush", icon: "🎲" },
+  { value: "media", label: "Streaming Movies", description: "Netflix, YouTube", icon: "🍿" }
 ];
 
 const screenOptions = [
-  {
-    value: "compact",
-    label: "Compact",
-    description: 'Under 6" - Easy one-handed use',
-    size: "small",
-  },
-  {
-    value: "standard",
-    label: "Standard",
-    description: '6" - 6.5" - Perfect balance',
-    size: "medium",
-  },
-  {
-    value: "large",
-    label: "Large",
-    description: 'Over 6.5" - Big screen experience',
-    size: "large",
-  },
+  { value: "compact", label: "Compact (Under 6.1\")", description: "Easy one-handed use", size: "small" },
+  { value: "standard", label: "Standard (6.1\" - 6.6\")", description: "Great balance", size: "medium" },
+  { value: "large", label: "Large (6.7\"+)", description: "Max screen for media", size: "large" }
 ];
 
 const storageOptions = [
-  {
-    value: "basic",
-    label: "64-128GB",
-    description: "Essential apps & photos",
-    examples: "~1,000 photos, basic apps",
-    icon: "📦",
-  },
-  {
-    value: "moderate",
-    label: "256GB",
-    description: "Plenty of room",
-    examples: "~5,000 photos, many apps",
-    icon: "📫",
-  },
-  {
-    value: "high",
-    label: "512GB+",
-    description: "Never worry about space",
-    examples: "~10,000+ photos, unlimited apps",
-    icon: "🗄️",
-  },
+  { value: "64", label: "64GB (Basic)", description: "I stream everything", icon: "☁️" },
+  { value: "128", label: "128GB (Standard)", description: "Good for most users", icon: "📦" },
+  { value: "256_plus", label: "256GB+ (Power User)", description: "Lots of games/videos", icon: "🗄️" }
 ];
 
-// Computed properties
+const longevityOptions = [
+  { value: "1_year", label: "1 Year (Temporary)", description: "I need something cheap now", minYear: 2018 },
+  { value: "2_3_years", label: "2-3 Years", description: "Standard usage", minYear: 2020 },
+  { value: "4_plus_years", label: "4+ Years", description: "Max software updates", minYear: 2022 }
+];
+
+// --- LOGIC ---
+
 const canProceed = computed(() => {
   switch (currentStep.value) {
-    case 1:
-      return !!survey.budget;
-    case 2:
-      return survey.priorities.length >= 2;
-    case 3:
-      return !!survey.primaryUse;
-    case 4:
-      return !!survey.batteryImportance;
-    case 5:
-      return !!survey.osPreference;
-    case 6:
-      return !!survey.screenSize;
-    case 7:
-      return !!survey.storage;
-    default:
-      return true;
+    case 1: return survey.budget.length > 0; // Check for at least 1 selection
+    case 2: return true; 
+    case 3: return survey.usage.length > 0;
+    case 4: return !!survey.screenSize;
+    case 5: return !!survey.storage;
+    case 6: return !!survey.longevity;
+    default: return true;
   }
 });
 
-// Methods
-function togglePriority(value) {
-  const index = survey.priorities.indexOf(value);
+// Generalized toggle for arrays
+function toggleSelection(field, value) {
+  const index = survey[field].indexOf(value);
+  
+  // Logic for 'none' in Ecosystem
+  if (field === 'ecosystem' && value === 'none') {
+      survey.ecosystem = ['none'];
+      return;
+  }
+
   if (index > -1) {
-    survey.priorities.splice(index, 1);
+    survey[field].splice(index, 1);
   } else {
-    survey.priorities.push(value);
+    // Clear 'none' if selecting something else in ecosystem
+    if(field === 'ecosystem' && survey.ecosystem.includes('none')) {
+        survey.ecosystem = []; 
+    }
+    survey[field].push(value);
   }
 }
 
 function nextStep() {
   if (canProceed.value) {
-    if (currentStep.value === 7) {
-      generateRecommendations();
-    }
+    if (currentStep.value === 6) generateRecommendations();
     currentStep.value++;
   }
 }
 
 function previousStep() {
-  if (currentStep.value > 1) {
-    currentStep.value--;
-  }
+  if (currentStep.value > 1) currentStep.value--;
+}
+
+function resetSurvey() {
+  Object.assign(survey, {
+    budget: [],
+    ecosystem: [],
+    usage: [],
+    screenSize: "",
+    storage: "",
+    longevity: "",
+  });
+  currentStep.value = 1;
+  recommendations.value = [];
 }
 
 async function generateRecommendations() {
   loading.value = true;
-
-  // Simulate loading time for better UX
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 1500)); 
 
   try {
-    // Try to fetch from your backend API first
-    let allPhones = [];
-    try {
-      const res = await fetch("http://localhost:3000/api/phones");
-      const data = await res.json();
-      allPhones = data.phones || [];
-    } catch (error) {
-      console.log("Backend not available, using local data");
-      // Fallback to local data
-      const localData = await import("../data/phones.json");
-      allPhones = localData.default || [];
-    }
+    const allPhones = getMockPhones(); 
 
-    // Filter and score phones based on survey responses
     const scoredPhones = allPhones
       .map((phone) => ({
         phone,
         score: calculateMatchScore(phone, survey),
         reasons: generateReasons(phone, survey),
       }))
-      .filter((item) => item.score > 30)
+      .filter((item) => item.score > 0) 
       .sort((a, b) => b.score - a.score)
       .slice(0, 6);
 
     recommendations.value = scoredPhones;
   } catch (error) {
-    console.error("Failed to generate recommendations:", error);
+    console.error("Error:", error);
   } finally {
     loading.value = false;
   }
 }
 
-function resetSurvey() {
-  Object.assign(survey, {
-    budget: "",
-    priorities: [],
-    primaryUse: "",
-    batteryImportance: "",
-    osPreference: "",
-    screenSize: "",
-    storage: "",
-  });
-  currentStep.value = 1;
-  recommendations.value = [];
-}
+// --- SCORING ENGINE ---
 
-// Keep the existing scoring functions
 function calculateMatchScore(phone, survey) {
-  let score = 0;
-  const weights = { budget: 25, os: 20, priorities: 30, usage: 15, specs: 10 };
-
-  score += getBudgetScore(phone, survey.budget) * (weights.budget / 100);
-  score += getOSScore(phone, survey.osPreference) * (weights.os / 100);
-  const derived = deriveFeaturePrioritiesFromPersonas(survey.priorities);
-  score += getPriorityScore(phone, derived) * (weights.priorities / 100);
-  score += getUsageScore(phone, survey) * (weights.usage / 100);
-  score += getSpecsScore(phone, survey) * (weights.specs / 100);
-
-  return Math.round(score);
-}
-
-// Convert personas into feature priorities to reuse scoring logic
-function deriveFeaturePrioritiesFromPersonas(personas) {
-  const map = {
-    student: ["battery", "price", "performance"],
-    business: ["performance", "battery", "security"],
-    creator: ["camera", "storage", "performance", "screen"],
-    gamer: ["performance", "battery", "screen"],
-    senior: ["screen", "battery", "simplicity"],
-    traveler: ["battery", "durability", "dual-sim"],
-    fashion: ["design", "screen"],
-    value: ["price", "battery"],
-  };
-  const features = new Set();
-  personas.forEach((p) => (map[p] || []).forEach((f) => features.add(f)));
-  return Array.from(features);
-}
-
-function getBudgetScore(phone, budget) {
-  const budgetRanges = {
-    "under-300": [0, 300],
-    "300-600": [300, 600],
-    "above-600": [600, Infinity],
-  };
-
-  const brandPriceMap = { apple: 800, samsung: 600, google: 500, oneplus: 400 };
-  const phoneTitle = phone.title?.toLowerCase() || "";
-  let estimatedPrice = 500;
-
-  if (phoneTitle.includes("iphone")) estimatedPrice = brandPriceMap.apple;
-  else if (phoneTitle.includes("samsung"))
-    estimatedPrice = brandPriceMap.samsung;
-  else if (phoneTitle.includes("google") || phoneTitle.includes("pixel"))
-    estimatedPrice = brandPriceMap.google;
-  else if (phoneTitle.includes("oneplus"))
-    estimatedPrice = brandPriceMap.oneplus;
-
-  const range = budgetRanges[budget];
-  return range && estimatedPrice >= range[0] && estimatedPrice <= range[1]
-    ? 100
-    : 50;
-}
-
-function getOSScore(phone, osPreference) {
-  if (osPreference === "either") return 100;
-  const phoneTitle = phone.title?.toLowerCase() || "";
-  const isIPhone = phoneTitle.includes("iphone");
-  if (osPreference === "ios" && isIPhone) return 100;
-  if (osPreference === "android" && !isIPhone) return 100;
-  return 0;
-}
-
-function getPriorityScore(phone, priorities) {
-  if (!priorities.length) return 50;
-
-  let score = 0;
+  let score = 100; 
   const specs = phone.specs || {};
-  const phoneTitle = phone.title?.toLowerCase() || "";
+  
+  // 1. LONGEVITY
+  const minYearObj = longevityOptions.find(l => l.value === survey.longevity);
+  if (minYearObj && phone.release_year < minYearObj.minYear) return 0;
 
-  priorities.forEach((priority) => {
-    switch (priority) {
-      case "camera":
-        if (specs.rear_camera_setup?.length > 2) score += 30;
-        else if (specs.rear_camera_setup?.length > 0) score += 20;
-        else if (phoneTitle.includes("pro") || phoneTitle.includes("camera"))
-          score += 15;
-        break;
-      case "battery":
-        if (specs.battery_capacity_mah > 4000) score += 30;
-        else if (specs.battery_capacity_mah > 3000) score += 20;
-        else if (phoneTitle.includes("max") || phoneTitle.includes("plus"))
-          score += 15;
-        break;
-      case "performance":
-        if (phoneTitle.includes("iphone")) score += 30;
-        else if (specs.performance?.ram_gb?.[0] >= 8) score += 25;
-        else if (phoneTitle.includes("pro") || phoneTitle.includes("gaming"))
-          score += 20;
-        break;
-      case "screen":
-        if (specs.display?.refresh_rate?.max_hz >= 120) score += 30;
-        else if (specs.display?.refresh_rate?.max_hz >= 90) score += 20;
-        else if (phoneTitle.includes("pro") || phoneTitle.includes("display"))
-          score += 15;
-        break;
-      case "price":
-        if (!phoneTitle.includes("iphone") && !phoneTitle.includes("pro"))
-          score += 25;
-        break;
-      case "design":
-        if (phoneTitle.includes("pro") || phoneTitle.includes("premium"))
-          score += 25;
-        break;
-    }
+  // 2. ECOSYSTEM
+  if (survey.ecosystem.includes('apple_watch')) {
+      if (phone.os !== 'ios') score -= 1000; 
+      else score += 50;
+  }
+  if (survey.ecosystem.includes('galaxy_watch')) {
+      if (phone.brand === 'samsung') score += 50;
+      else if (phone.os === 'android') score += 20;
+      else score -= 1000;
+  }
+  if (survey.ecosystem.includes('mac_ipad') && phone.os === 'ios') score += 30;
+  if (survey.ecosystem.includes('windows') && phone.os === 'android') score += 15;
+
+  // 3. USAGE & SPECS
+  if (survey.usage.includes('pro_photo')) {
+      if (specs.has_telephoto) score += 20;
+      else score -= 20;
+  }
+  if (survey.usage.includes('heavy_gaming')) {
+      if (specs.processor_score > 800) score += 20;
+      else score -= 30;
+  }
+  
+  // 4. BUDGET (New Multi-Select Logic)
+  // Check if phone fits into ANY of the selected budget buckets
+  const isWithinBudget = survey.budget.some(budgetKey => {
+      const budgetObj = budgetOptions.find(b => b.value === budgetKey);
+      return budgetObj && phone.base_price <= budgetObj.maxPrice;
   });
 
-  return Math.min(100, score);
-}
+  // Note: We are being lenient here. If a phone is $200, it fits in "Under 250" AND "250-500" technically. 
+  // But usually, users selecting higher tiers are OK with lower tier prices too.
+  // Strict check: 
+  if (!isWithinBudget) return 0;
 
-function getUsageScore(phone, survey) {
-  let score = 50;
-  const specs = phone.specs || {};
-  const phoneTitle = phone.title?.toLowerCase() || "";
-
-  switch (survey.primaryUse) {
-    case "photography":
-      if (specs.rear_camera_setup?.length > 2) score += 30;
-      else if (phoneTitle.includes("pro") || phoneTitle.includes("camera"))
-        score += 20;
-      break;
-    case "gaming":
-      if (phoneTitle.includes("iphone") || specs.performance?.ram_gb?.[0] >= 8)
-        score += 30;
-      else if (phoneTitle.includes("gaming") || phoneTitle.includes("pro"))
-        score += 20;
-      break;
-    case "streaming":
-      if (specs.display?.size_in >= 6.5) score += 20;
-      if (specs.battery_capacity_mah > 4000) score += 20;
-      else if (phoneTitle.includes("max") || phoneTitle.includes("plus"))
-        score += 15;
-      break;
-    case "work":
-      if (phoneTitle.includes("iphone") || phoneTitle.includes("pro"))
-        score += 25;
-      break;
-    case "basic":
-      if (!phoneTitle.includes("pro") && !phoneTitle.includes("max"))
-        score += 20;
-      break;
-  }
-  // Factor in daily usage (battery needs)
-  const usage = survey.batteryImportance; // e.g., '1-2h', '3-5h', '5-7h', '7h-plus'
-  const cap = specs.battery_capacity_mah || 0;
-  if (usage === "1-2h") {
-    if (cap > 3500) score += 10;
-  } else if (usage === "3-5h") {
-    if (cap > 4000) score += 15;
-    else if (cap > 3500) score += 5;
-  } else if (usage === "5-7h") {
-    if (cap > 4500) score += 25;
-    else if (cap > 4000) score += 10;
-  } else if (usage === "7h-plus") {
-    if (cap > 5000) score += 30;
-    else if (cap > 4500) score += 15;
-  }
-
-  return Math.min(100, score);
-}
-
-function getSpecsScore(phone, survey) {
-  let score = 50;
-  const specs = phone.specs || {};
-  const phoneTitle = phone.title?.toLowerCase() || "";
-
-  if (
-    survey.screenSize === "compact" &&
-    (specs.display?.size_in < 6 || phoneTitle.includes("mini"))
-  )
-    score += 20;
-  else if (
-    survey.screenSize === "standard" &&
-    specs.display?.size_in >= 6 &&
-    specs.display?.size_in <= 6.5
-  )
-    score += 20;
-  else if (
-    survey.screenSize === "large" &&
-    (specs.display?.size_in > 6.5 ||
-      phoneTitle.includes("max") ||
-      phoneTitle.includes("plus"))
-  )
-    score += 20;
-
-  if (survey.storage === "basic" && specs.storage_options_gb?.[0] >= 64)
-    score += 15;
-  else if (
-    survey.storage === "moderate" &&
-    specs.storage_options_gb?.some((s) => s >= 256)
-  )
-    score += 15;
-  else if (
-    survey.storage === "high" &&
-    specs.storage_options_gb?.some((s) => s >= 512)
-  )
-    score += 15;
-
-  return Math.min(100, score);
+  return Math.max(0, score);
 }
 
 function generateReasons(phone, survey) {
   const reasons = [];
-  const specs = phone.specs || {};
-  const phoneTitle = phone.title?.toLowerCase() || "";
-
-  const budgetLabel =
-    budgetOptions.find((b) => b.value === survey.budget)?.label || "budget";
-  reasons.push(`Fits your ${budgetLabel} budget range`);
-
-  // Daily usage reason
-  const usageLabel = batteryOptions.find(
-    (b) => b.value === survey.batteryImportance
-  )?.label;
-  if (usageLabel) {
-    reasons.push(`Suited for ${usageLabel}`);
-  }
-
-  const personas = survey.priorities || [];
-  if (personas.length) {
-    const labelMap = {
-      student: "student needs",
-      business: "business productivity",
-      creator: "content creation",
-      gamer: "gaming",
-      senior: "ease of use",
-      traveler: "travel and battery life",
-      fashion: "style preferences",
-      value: "value for money",
-    };
-    const personaLabels = personas
-      .slice(0, 2)
-      .map((p) => labelMap[p] || p)
-      .join(" & ");
-    reasons.push(`Great fit for ${personaLabels}`);
-  }
-
-  const derived = deriveFeaturePrioritiesFromPersonas(survey.priorities);
-  if (derived.includes("camera")) {
-    if (specs.rear_camera_setup?.length > 2) {
-      reasons.push(
-        `Excellent camera system with ${specs.rear_camera_setup.length} lenses`
-      );
-    } else if (phoneTitle.includes("pro")) {
-      reasons.push("Pro-level camera capabilities");
-    }
-  }
-
-  if (derived.includes("battery")) {
-    if (specs.battery_capacity_mah > 4000) {
-      reasons.push(`Long-lasting ${specs.battery_capacity_mah}mAh battery`);
-    } else if (phoneTitle.includes("max") || phoneTitle.includes("plus")) {
-      reasons.push("Extended battery life for all-day use");
-    }
-  }
-
-  if (derived.includes("performance") && phoneTitle.includes("iphone")) {
-    reasons.push("Top-tier performance with Apple Silicon");
-  } else if (
-    derived.includes("performance") &&
-    specs.performance?.ram_gb?.[0] >= 8
-  ) {
-    reasons.push(`High performance with ${specs.performance.ram_gb[0]}GB RAM`);
-  }
-
-  if (survey.primaryUse === "photography") {
-    reasons.push("Optimized for photography enthusiasts");
-  } else if (survey.primaryUse === "gaming") {
-    reasons.push("Great for mobile gaming");
-  } else if (survey.primaryUse === "streaming") {
-    reasons.push("Perfect for video streaming and media");
-  }
-
+  if(survey.ecosystem.includes('apple_watch') && phone.os === 'ios') reasons.push("Works seamlessly with your Apple Watch");
+  if(survey.ecosystem.includes('galaxy_watch') && phone.brand === 'samsung') reasons.push("Best companion for your Galaxy Watch");
+  
+  if(survey.usage.includes('pro_photo') && phone.specs.has_telephoto) reasons.push("Includes Telephoto lens for pro shots");
+  
+  if(phone.base_price < 300) reasons.push("Great value for your budget");
+  
   return reasons.slice(0, 3);
+}
+
+function getMockPhones() {
+    return [
+        { 
+            title: "iPhone 13 Pro", os: "ios", brand: "apple", release_year: 2021, base_price: 450, 
+            specs: { has_jack: false, has_sd_card: false, has_wireless_charging: true, has_telephoto: true, processor_score: 900 },
+            image: "https://via.placeholder.com/100"
+        },
+        { 
+            title: "Samsung S21 Ultra", os: "android", brand: "samsung", release_year: 2021, base_price: 380, 
+            specs: { has_jack: false, has_sd_card: false, has_wireless_charging: true, has_telephoto: true, processor_score: 880 },
+            image: "https://via.placeholder.com/100"
+        },
+        { 
+            title: "Google Pixel 5", os: "android", brand: "google", release_year: 2020, base_price: 200, 
+            specs: { has_jack: false, has_sd_card: false, has_wireless_charging: true, has_telephoto: false, processor_score: 600 },
+            image: "https://via.placeholder.com/100"
+        },
+        { 
+            title: "Sony Xperia 1 III", os: "android", brand: "sony", release_year: 2021, base_price: 400, 
+            specs: { has_jack: true, has_sd_card: true, has_wireless_charging: true, has_telephoto: true, processor_score: 850 },
+            image: "https://via.placeholder.com/100"
+        }
+    ];
 }
 </script>
 
 <style scoped>
-.survey {
-  padding: 1.5rem 0;
-  min-height: 100vh;
-}
+.survey { padding: 1.5rem 0; min-height: 100vh; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
 
-.container {
-  max-width: 900px;
+/* Unified Grid for Options */
+.grid-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
-/* Progress Bar */
-.progress-container {
-  margin-bottom: 3rem;
+.card-item {
+  background: rgba(30, 41, 59, 0.7);
+  border: 2px solid rgba(71, 85, 105, 0.4);
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background: rgba(51, 65, 85, 0.5);
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 0.5rem;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--brand-2), var(--brand-1));
-  border-radius: 20px;
-  transition: width 0.5s ease;
-}
-
-.progress-text {
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-/* Step Container */
-.step-container {
-  min-height: 500px;
+  position: relative;
+  backdrop-filter: blur(10px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.step {
-  width: 100%;
-  text-align: center;
-}
-
-.step h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.step > p {
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin-bottom: 2.5rem;
-}
-
-/* Transitions */
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.3s ease;
-}
-
-.slide-enter-from {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-.slide-leave-to {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-
-/* Budget Options */
-.budget-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.budget-card {
-  background: rgba(30, 41, 59, 0.6);
-  border: 2px solid rgba(51, 65, 85, 0.5);
-  border-radius: 12px;
-  padding: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.budget-card:hover {
+.card-item:hover {
   border-color: var(--brand-2);
   transform: translateY(-4px);
+  background: rgba(30, 41, 59, 0.9);
 }
 
-.budget-card.active {
+/* Active State with Glow */
+.card-item.active {
   border-color: var(--brand-1);
-  background: rgba(34, 211, 238, 0.1);
-  transform: translateY(-4px);
+  background: rgba(34, 211, 238, 0.15);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
 }
 
-.budget-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.budget-card h4 {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-  font-size: 1.1rem;
-}
-
-.budget-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* Priorities Grid */
-.priorities-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto 1rem;
-}
-
-.priority-card {
-  background: rgba(30, 41, 59, 0.6);
-  border: 2px solid rgba(51, 65, 85, 0.5);
-  border-radius: 12px;
-  padding: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.priority-card:hover:not(.disabled) {
-  border-color: var(--brand-2);
-  transform: translateY(-2px);
-}
-
-.priority-card.active {
-  border-color: var(--brand-1);
-  background: rgba(34, 211, 238, 0.1);
-  transform: translateY(-2px);
-}
-
-.priority-card.disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.priority-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.priority-card h4 {
-  margin: 0 0 0.25rem;
-  color: var(--text);
-  font-size: 0.9rem;
-}
-
-.priority-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
-.selected-count {
-  color: var(--brand-1);
-  font-weight: 600;
-  margin-top: 1rem;
-}
-
-.selected-count.error {
-  color: #fca5a5; /* light red */
-}
-
-/* Usage Options */
-.usage-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.usage-card {
-  background: rgba(30, 41, 59, 0.6);
-  border: 2px solid rgba(51, 65, 85, 0.5);
-  border-radius: 12px;
-  padding: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.usage-card:hover {
-  border-color: var(--brand-2);
-  transform: translateY(-4px);
-}
-
-.usage-card.active {
-  border-color: var(--brand-1);
-  background: rgba(34, 211, 238, 0.1);
-  transform: translateY(-4px);
-}
-
-.usage-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.usage-card h4 {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.usage-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-/* Battery Options */
-.battery-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.battery-card {
-  background: rgba(30, 41, 59, 0.6);
-  border: 2px solid rgba(51, 65, 85, 0.5);
-  border-radius: 12px;
-  padding: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.battery-card:hover {
-  border-color: var(--brand-2);
-  transform: translateY(-4px);
-}
-
-.battery-card.active {
-  border-color: var(--brand-1);
-  background: rgba(34, 211, 238, 0.1);
-  transform: translateY(-4px);
-}
-
-.battery-level {
-  margin-bottom: 1rem;
-}
-
-.battery-icon {
-  width: 60px;
-  height: 30px;
-  border: 2px solid var(--muted);
-  border-radius: 4px;
-  position: relative;
-  margin: 0 auto;
-  background: rgba(51, 65, 85, 0.3);
-}
-
-.battery-icon::after {
-  content: "";
+.check-indicator {
   position: absolute;
-  right: -6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 12px;
-  background: var(--muted);
-  border-radius: 0 2px 2px 0;
-}
-
-.battery-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--brand-2), var(--brand-1));
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-.battery-card h4 {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.battery-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-/* OS Options */
-.os-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.os-card {
-  background: rgba(30, 41, 59, 0.6);
-  border: 2px solid rgba(51, 65, 85, 0.5);
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.os-card:hover {
-  border-color: var(--brand-2);
-  transform: translateY(-4px);
-}
-
-.os-card.active {
-  border-color: var(--brand-1);
-  background: rgba(34, 211, 238, 0.1);
-  transform: translateY(-4px);
-}
-
-.os-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.os-card h4 {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-  font-size: 1.1rem;
-}
-
-.os-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* Screen Options */
-.screen-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.screen-card {
-  background: rgba(30, 41, 59, 0.6);
-  border: 2px solid rgba(51, 65, 85, 0.5);
-  border-radius: 12px;
-  padding: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.screen-card:hover {
-  border-color: var(--brand-2);
-  transform: translateY(-4px);
-}
-
-.screen-card.active {
-  border-color: var(--brand-1);
-  background: rgba(34, 211, 238, 0.1);
-  transform: translateY(-4px);
-}
-
-.phone-mockup {
-  margin: 0 auto 1rem;
-  border: 3px solid var(--muted);
-  border-radius: 12px;
-  position: relative;
-  background: rgba(51, 65, 85, 0.5);
-}
-
-.phone-mockup.small {
-  width: 40px;
-  height: 80px;
-}
-
-.phone-mockup.medium {
-  width: 50px;
-  height: 90px;
-}
-
-.phone-mockup.large {
-  width: 60px;
-  height: 100px;
-}
-
-.screen {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  right: 6px;
-  bottom: 6px;
-  background: linear-gradient(45deg, var(--brand-2), var(--brand-1));
-  border-radius: 6px;
-}
-
-.screen-card h4 {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.screen-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-/* Storage Options */
-.storage-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.storage-card {
-  background: rgba(30, 41, 59, 0.6);
-  border: 2px solid rgba(51, 65, 85, 0.5);
-  border-radius: 12px;
-  padding: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.storage-card:hover {
-  border-color: var(--brand-2);
-  transform: translateY(-4px);
-}
-
-.storage-card.active {
-  border-color: var(--brand-1);
-  background: rgba(34, 211, 238, 0.1);
-  transform: translateY(-4px);
-}
-
-.storage-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.storage-card h4 {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.storage-card p {
-  margin: 0 0 0.5rem;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.storage-examples {
-  font-size: 0.75rem;
-  color: var(--brand-1);
-  font-style: italic;
-}
-
-/* Loading State */
-.loading-state {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.loader {
-  width: 60px;
-  height: 60px;
-  border: 4px solid rgba(96, 165, 250, 0.3);
-  border-top: 4px solid var(--brand-2);
+  top: 10px;
+  right: 10px;
+  background: var(--brand-1);
+  color: white;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 2rem;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-state h3 {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-}
-
-.loading-state p {
-  margin: 0;
-  color: var(--muted);
-}
-
-/* Results */
-.results h2 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.results > p {
-  text-align: center;
-  color: var(--muted);
-  margin-bottom: 2rem;
-}
-
-.recommendations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.recommendation-card {
-  background: rgba(30, 41, 59, 0.6);
-  border: 1px solid rgba(51, 65, 85, 0.5);
-  border-radius: 12px;
-  padding: 1.5rem;
-  position: relative;
-  animation: slideInUp 0.6s ease forwards;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@keyframes slideInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.match-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: var(--brand-1);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.phone-image {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.phone-image img {
-  width: 80px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-  background: rgba(51, 65, 85, 0.3);
-}
-
-.phone-info h4 {
-  margin: 0 0 1rem;
-  color: var(--text);
-  font-size: 1.1rem;
-}
-
-.reasons h5 {
-  margin: 0 0 0.5rem;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.reasons ul {
-  margin: 0 0 1rem;
-  padding-left: 1rem;
-  color: var(--text);
-  font-size: 0.8rem;
-}
-
-.action-buttons {
   display: flex;
-  gap: 0.5rem;
-}
-
-.view-specs-btn,
-.compare-btn {
-  flex: 1;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.view-specs-btn {
-  background: var(--brand-2);
-  color: white;
-}
-
-.compare-btn {
-  background: rgba(51, 65, 85, 0.8);
-  color: var(--text);
-}
-
-.view-specs-btn:hover {
-  background: var(--brand-1);
-}
-
-.compare-btn:hover {
-  background: rgba(71, 85, 105, 0.8);
-}
-
-/* Survey Actions */
-.survey-actions {
-  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.primary-btn,
-.secondary-btn {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
+.card-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.card-item h4 { margin: 0 0 0.5rem; color: var(--text); font-size: 1rem; font-weight: 600; }
+.small-desc { font-size: 0.8rem; color: var(--muted); margin: 0; line-height: 1.4; }
+
+/* Reusing grid for Screen/Storage for consistency */
+.screen-options, .storage-options { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 1.5rem; 
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
-.primary-btn {
-  background: linear-gradient(90deg, var(--brand-2), var(--brand-1));
-  color: white;
+.screen-card, .storage-card {
+    /* Inherit the nice card styles */
+    background: rgba(30, 41, 59, 0.7);
+    border: 2px solid rgba(71, 85, 105, 0.4);
+    border-radius: 16px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
 }
+.screen-card:hover, .storage-card:hover { border-color: var(--brand-2); transform: translateY(-4px); }
+.screen-card.active, .storage-card.active { border-color: var(--brand-1); background: rgba(34, 211, 238, 0.15); box-shadow: 0 0 20px rgba(34, 211, 238, 0.15); }
 
-.secondary-btn {
-  background: rgba(51, 65, 85, 0.8);
-  color: var(--text);
+/* Typography & Layout */
+.step h2 { 
+    font-size: 2.2rem; 
+    margin-bottom: 0.5rem; 
+    background: linear-gradient(90deg, var(--brand-1), var(--brand-2)); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-weight: 800;
 }
+.step > p { color: var(--muted); font-size: 1.1rem; margin-bottom: 2.5rem; }
+.selected-count { margin-top: 1.5rem; color: var(--brand-1); font-weight: 600; font-size: 0.9rem; }
 
-.primary-btn:hover {
-  transform: translateY(-2px);
-}
+/* Progress Bar */
+.progress-container { margin-bottom: 3rem; text-align: center; }
+.progress-bar { width: 100%; height: 6px; background: rgba(51, 65, 85, 0.3); border-radius: 20px; overflow: hidden; margin-bottom: 0.5rem; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--brand-2), var(--brand-1)); border-radius: 20px; transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.progress-text { color: var(--muted); font-size: 0.85rem; font-weight: 500; }
 
-.secondary-btn:hover {
-  background: rgba(71, 85, 105, 0.8);
-}
+/* Mockups */
+.phone-mockup { margin: 0 auto 1rem; border: 2px solid var(--muted); border-radius: 12px; position: relative; background: rgba(51, 65, 85, 0.5); }
+.phone-mockup.small { width: 40px; height: 70px; }
+.phone-mockup.medium { width: 50px; height: 85px; }
+.phone-mockup.large { width: 60px; height: 100px; }
+.screen { position: absolute; top: 4px; left: 4px; right: 4px; bottom: 4px; background: linear-gradient(135deg, var(--brand-2), var(--brand-1)); border-radius: 8px; opacity: 0.8; }
 
 /* Navigation */
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.navigation { display: flex; justify-content: center; gap: 1.5rem; margin-top: 3rem; }
+.nav-btn { padding: 0.8rem 2rem; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; min-width: 140px; font-size: 1rem; transition: transform 0.2s; }
+.nav-btn.primary { background: linear-gradient(90deg, var(--brand-2), var(--brand-1)); color: white; box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3); }
+.nav-btn.secondary { background: rgba(51, 65, 85, 0.5); color: var(--text); border: 1px solid rgba(255,255,255,0.1); }
+.nav-btn:hover:not(:disabled) { transform: translateY(-2px); }
+.nav-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-.nav-btn {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-  min-width: 120px;
-}
+/* Animations */
+.slide-enter-active, .slide-leave-active { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-enter-from { opacity: 0; transform: translateX(40px); }
+.slide-leave-to { opacity: 0; transform: translateX(-40px); }
 
-.nav-btn.primary {
-  background: linear-gradient(90deg, var(--brand-2), var(--brand-1));
-  color: white;
-}
+/* Results */
+.results-step { width: 100%; }
+.recommendations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.recommendation-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.5rem; position: relative; animation: slideInUp 0.6s ease forwards; opacity: 0; transform: translateY(20px); text-align: left; backdrop-filter: blur(10px); }
+.match-badge { position: absolute; top: 1rem; right: 1rem; background: var(--brand-1); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+.phone-image { text-align: center; margin-bottom: 1rem; font-size: 3rem; background: rgba(0,0,0,0.2); border-radius: 12px; padding: 1rem; }
 
-.nav-btn.secondary {
-  background: rgba(51, 65, 85, 0.8);
-  color: var(--text);
-}
-
-.nav-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-}
-
-.nav-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 0.5rem;
-  }
-
-  .step h2 {
-    font-size: 1.5rem;
-  }
-
-  .budget-options,
-  .usage-options,
-  .battery-options,
-  .os-options,
-  .screen-options,
-  .storage-options {
-    grid-template-columns: 1fr;
-  }
-
-  .priorities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .recommendations-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .navigation {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .survey-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .priorities-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .action-buttons {
-    flex-direction: column;
-  }
-}
+@keyframes slideInUp { to { opacity: 1; transform: translateY(0); } }
 </style>
