@@ -10,7 +10,8 @@ echo "🚀 Starting backend and frontend..."
 (
   cd "$ROOT_DIR/server"
   echo "🟢 Starting backend..."
-  npm start
+  # If your Express app uses process.env.HOST / process.env.PORT
+  HOST=0.0.0.0 PORT=3000 npm start
 ) &
 
 BACK_PID=$!
@@ -19,7 +20,8 @@ BACK_PID=$!
 (
   cd "$ROOT_DIR/web"
   echo "🔵 Starting frontend..."
-  npm run dev
+  # Expose Vue dev server to the network
+  npm run dev -- --host 0.0.0.0 --port 5173
 ) &
 
 FRONT_PID=$!
@@ -27,6 +29,8 @@ FRONT_PID=$!
 echo "✅ Both servers are running."
 echo "   Backend PID: $BACK_PID"
 echo "   Frontend PID: $FRONT_PID"
+echo "   Backend:  http://YOUR_SERVER_IP:3000"
+echo "   Frontend: http://YOUR_SERVER_IP:5173"
 echo "   Press Ctrl+C to stop both."
 
 cleanup() {
