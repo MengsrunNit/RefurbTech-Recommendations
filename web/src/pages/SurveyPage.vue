@@ -144,23 +144,29 @@
               <p>Checking ecosystem compatibility and feature lists...</p>
             </div>
 
-            <div v-else-if="recommendations.length > 0" class="results">
+            <div v-else-if="recommendations.top_picks.length > 0" class="results">
               <h2>🎉 Your Perfect Phone Matches!</h2>
               <p>Based on your ecosystem and needs:</p>
 
+              <!-- Top Picks -->
+              <h3 class="section-title">🏆 Top Picks</h3>
               <div class="recommendations-grid">
                 <div
-                  v-for="(rec, index) in recommendations"
+                  v-for="(rec, index) in recommendations.top_picks"
                   :key="rec.phone.link"
                   class="recommendation-card"
                   :style="{ animationDelay: `${index * 0.1}s` }"
                 >
                   <div class="match-badge">{{ rec.score }}% match</div>
                   <div class="phone-image">
-                    <div class="img-placeholder">📱</div> 
+                    <img v-if="rec.phone.image" :src="rec.phone.image" alt="Phone" style="max-width: 100px; border-radius: 8px;" />
+                    <div v-else class="img-placeholder">📱</div> 
                   </div>
                   <div class="phone-info">
                     <h4>{{ rec.phone.title }}</h4>
+                    <div class="price-range" v-if="rec.phone.price_low">
+                      Est. Price: ${{ Math.round(rec.phone.price_low) }} - ${{ Math.round(rec.phone.price_high) }}
+                    </div>
                     <div class="reasons">
                       <h5>Why this fits:</h5>
                       <ul>
@@ -171,6 +177,78 @@
                     </div>
                     <div class="action-buttons">
                       <button class="view-specs-btn">Select Condition</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Alternatives -->
+              <div v-if="recommendations.alternatives.length > 0">
+                <h3 class="section-title">✨ Great Alternatives</h3>
+                <div class="recommendations-grid">
+                  <div
+                    v-for="(rec, index) in recommendations.alternatives"
+                    :key="rec.phone.link"
+                    class="recommendation-card"
+                    :style="{ animationDelay: `${index * 0.1}s` }"
+                  >
+                    <div class="match-badge">{{ rec.score }}% match</div>
+                    <div class="phone-image">
+                      <img v-if="rec.phone.image" :src="rec.phone.image" alt="Phone" style="max-width: 100px; border-radius: 8px;" />
+                      <div v-else class="img-placeholder">📱</div> 
+                    </div>
+                  <div class="phone-info">
+                    <h4>{{ rec.phone.title }}</h4>
+                    <div class="price-range" v-if="rec.phone.price_low">
+                      Est. Price: ${{ Math.round(rec.phone.price_low) }} - ${{ Math.round(rec.phone.price_high) }}
+                    </div>
+                    <div class="reasons">
+                        <h5>Why this fits:</h5>
+                        <ul>
+                          <li v-for="reason in rec.reasons" :key="reason">
+                            {{ reason }}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="action-buttons">
+                        <button class="view-specs-btn">Select Condition</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Runner Ups -->
+              <div v-if="recommendations.runner_ups.length > 0">
+                <h3 class="section-title">👍 Worth Considering</h3>
+                <div class="recommendations-grid">
+                  <div
+                    v-for="(rec, index) in recommendations.runner_ups"
+                    :key="rec.phone.link"
+                    class="recommendation-card"
+                    :style="{ animationDelay: `${index * 0.1}s` }"
+                  >
+                    <div class="match-badge">{{ rec.score }}% match</div>
+                    <div class="phone-image">
+                      <img v-if="rec.phone.image" :src="rec.phone.image" alt="Phone" style="max-width: 100px; border-radius: 8px;" />
+                      <div v-else class="img-placeholder">📱</div> 
+                    </div>
+                  <div class="phone-info">
+                    <h4>{{ rec.phone.title }}</h4>
+                    <div class="price-range" v-if="rec.phone.price_low">
+                      Est. Price: ${{ Math.round(rec.phone.price_low) }} - ${{ Math.round(rec.phone.price_high) }}
+                    </div>
+                    <div class="reasons">
+                        <h5>Why this fits:</h5>
+                        <ul>
+                          <li v-for="reason in rec.reasons" :key="reason">
+                            {{ reason }}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="action-buttons">
+                        <button class="view-specs-btn">Select Condition</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -214,15 +292,13 @@
 
 <script setup>
 import { ref, reactive, computed } from "vue";
+import axios from "axios";
 
 const currentStep = ref(1);
-const totalSteps = 6; // Reduced from 7 to 6
-const loading = ref(false);
-const recommendations = ref([]);
+const totalSteps = 7;
 
-// Updated State
 const survey = reactive({
-  budget: [],        // Changed to Array for Multi-select
+  budget: [],
   ecosystem: [],
   usage: [],
   screenSize: "",
@@ -233,10 +309,10 @@ const survey = reactive({
 // --- DATA OPTIONS ---
 
 const budgetOptions = [
-  { value: "budget", label: "Under $250", description: "Great value, older flagships", icon: "🏷️", maxPrice: 250 },
-  { value: "mid", label: "$250 - $500", description: "Modern features, great bang-for-buck", icon: "⚖️", maxPrice: 500 },
-  { value: "premium", label: "$500 - $800", description: "Recent pro models & flagships", icon: "💎", maxPrice: 800 },
-  { value: "flagship", label: "$800+", description: "The absolute latest & greatest", icon: "🚀", maxPrice: 9999 }
+  { value: "budget", label: "Under $250", description: "Great value, older flagships", icon: "🏷️" },
+  { value: "mid", label: "$250 - $500", description: "Modern features, great bang-for-buck", icon: "⚖️" },
+  { value: "premium", label: "$500 - $800", description: "Recent pro models & flagships", icon: "💎" },
+  { value: "flagship", label: "$800+", description: "The absolute latest & greatest", icon: "🚀" }
 ];
 
 const ecosystemOptions = [
@@ -270,16 +346,15 @@ const storageOptions = [
 ];
 
 const longevityOptions = [
-  { value: "1_year", label: "1 Year (Temporary)", description: "I need something cheap now", minYear: 2018 },
-  { value: "2_3_years", label: "2-3 Years", description: "Standard usage", minYear: 2020 },
-  { value: "4_plus_years", label: "4+ Years", description: "Max software updates", minYear: 2022 }
+  { value: "1_year", label: "1 Year (Temporary)", description: "I need something cheap now" },
+  { value: "2_3_years", label: "2-3 Years", description: "Standard usage" },
+  { value: "4_plus_years", label: "4+ Years", description: "Max software updates" }
 ];
 
-// --- LOGIC ---
-
+// Computed property to determine if the user can proceed to the next step
 const canProceed = computed(() => {
   switch (currentStep.value) {
-    case 1: return survey.budget.length > 0; // Check for at least 1 selection
+    case 1: return survey.budget.length > 0;
     case 2: return true; 
     case 3: return survey.usage.length > 0;
     case 4: return !!survey.screenSize;
@@ -310,6 +385,7 @@ function toggleSelection(field, value) {
   }
 }
 
+// Navigation functions
 function nextStep() {
   if (canProceed.value) {
     if (currentStep.value === 6) generateRecommendations();
@@ -318,9 +394,20 @@ function nextStep() {
 }
 
 function previousStep() {
-  if (currentStep.value > 1) currentStep.value--;
+  if (currentStep.value > 1) {
+    currentStep.value--;
+  }
 }
 
+// Survey reset function
+const loading = ref(false);
+const recommendations = ref({
+  top_picks: [],
+  alternatives: [],
+  runner_ups: []
+});
+
+// Updated State
 function resetSurvey() {
   Object.assign(survey, {
     budget: [],
@@ -331,117 +418,38 @@ function resetSurvey() {
     longevity: "",
   });
   currentStep.value = 1;
-  recommendations.value = [];
+  recommendations.value = { top_picks: [], alternatives: [], runner_ups: [] };
+}
+
+function getApiBase() {
+  const envBase = import.meta.env?.VITE_API_BASE_URL;
+  if (envBase && typeof envBase === "string" && envBase.trim().length > 0) {
+    return envBase.replace(/\/$/, "");
+  }
+  const origin = window.location?.origin;
+  if (typeof origin === "string" && /^https?:\/\//i.test(origin)) {
+    return origin;
+  }
+  return "http://localhost:3000";
 }
 
 async function generateRecommendations() {
   loading.value = true;
-  await new Promise((resolve) => setTimeout(resolve, 1500)); 
-
+  
   try {
-    const allPhones = getMockPhones(); 
-
-    const scoredPhones = allPhones
-      .map((phone) => ({
-        phone,
-        score: calculateMatchScore(phone, survey),
-        reasons: generateReasons(phone, survey),
-      }))
-      .filter((item) => item.score > 0) 
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 6);
-
-    recommendations.value = scoredPhones;
+    const base = getApiBase();
+    const { data } = await axios.post(`${base}/api/recommendations`, survey);
+    
+    recommendations.value = {
+      top_picks: data.top_picks || [],
+      alternatives: data.alternatives || [],
+      runner_ups: data.runner_ups || []
+    };
   } catch (error) {
     console.error("Error:", error);
   } finally {
     loading.value = false;
   }
-}
-
-// --- SCORING ENGINE ---
-
-function calculateMatchScore(phone, survey) {
-  let score = 100; 
-  const specs = phone.specs || {};
-  
-  // 1. LONGEVITY
-  const minYearObj = longevityOptions.find(l => l.value === survey.longevity);
-  if (minYearObj && phone.release_year < minYearObj.minYear) return 0;
-
-  // 2. ECOSYSTEM
-  if (survey.ecosystem.includes('apple_watch')) {
-      if (phone.os !== 'ios') score -= 1000; 
-      else score += 50;
-  }
-  if (survey.ecosystem.includes('galaxy_watch')) {
-      if (phone.brand === 'samsung') score += 50;
-      else if (phone.os === 'android') score += 20;
-      else score -= 1000;
-  }
-  if (survey.ecosystem.includes('mac_ipad') && phone.os === 'ios') score += 30;
-  if (survey.ecosystem.includes('windows') && phone.os === 'android') score += 15;
-
-  // 3. USAGE & SPECS
-  if (survey.usage.includes('pro_photo')) {
-      if (specs.has_telephoto) score += 20;
-      else score -= 20;
-  }
-  if (survey.usage.includes('heavy_gaming')) {
-      if (specs.processor_score > 800) score += 20;
-      else score -= 30;
-  }
-  
-  // 4. BUDGET (New Multi-Select Logic)
-  // Check if phone fits into ANY of the selected budget buckets
-  const isWithinBudget = survey.budget.some(budgetKey => {
-      const budgetObj = budgetOptions.find(b => b.value === budgetKey);
-      return budgetObj && phone.base_price <= budgetObj.maxPrice;
-  });
-
-  // Note: We are being lenient here. If a phone is $200, it fits in "Under 250" AND "250-500" technically. 
-  // But usually, users selecting higher tiers are OK with lower tier prices too.
-  // Strict check: 
-  if (!isWithinBudget) return 0;
-
-  return Math.max(0, score);
-}
-
-function generateReasons(phone, survey) {
-  const reasons = [];
-  if(survey.ecosystem.includes('apple_watch') && phone.os === 'ios') reasons.push("Works seamlessly with your Apple Watch");
-  if(survey.ecosystem.includes('galaxy_watch') && phone.brand === 'samsung') reasons.push("Best companion for your Galaxy Watch");
-  
-  if(survey.usage.includes('pro_photo') && phone.specs.has_telephoto) reasons.push("Includes Telephoto lens for pro shots");
-  
-  if(phone.base_price < 300) reasons.push("Great value for your budget");
-  
-  return reasons.slice(0, 3);
-}
-
-function getMockPhones() {
-    return [
-        { 
-            title: "iPhone 13 Pro", os: "ios", brand: "apple", release_year: 2021, base_price: 450, 
-            specs: { has_jack: false, has_sd_card: false, has_wireless_charging: true, has_telephoto: true, processor_score: 900 },
-            image: "https://via.placeholder.com/100"
-        },
-        { 
-            title: "Samsung S21 Ultra", os: "android", brand: "samsung", release_year: 2021, base_price: 380, 
-            specs: { has_jack: false, has_sd_card: false, has_wireless_charging: true, has_telephoto: true, processor_score: 880 },
-            image: "https://via.placeholder.com/100"
-        },
-        { 
-            title: "Google Pixel 5", os: "android", brand: "google", release_year: 2020, base_price: 200, 
-            specs: { has_jack: false, has_sd_card: false, has_wireless_charging: true, has_telephoto: false, processor_score: 600 },
-            image: "https://via.placeholder.com/100"
-        },
-        { 
-            title: "Sony Xperia 1 III", os: "android", brand: "sony", release_year: 2021, base_price: 400, 
-            specs: { has_jack: true, has_sd_card: true, has_wireless_charging: true, has_telephoto: true, processor_score: 850 },
-            image: "https://via.placeholder.com/100"
-        }
-    ];
 }
 </script>
 
@@ -577,6 +585,22 @@ function getMockPhones() {
 .recommendation-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.5rem; position: relative; animation: slideInUp 0.6s ease forwards; opacity: 0; transform: translateY(20px); text-align: left; backdrop-filter: blur(10px); }
 .match-badge { position: absolute; top: 1rem; right: 1rem; background: var(--brand-1); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
 .phone-image { text-align: center; margin-bottom: 1rem; font-size: 3rem; background: rgba(0,0,0,0.2); border-radius: 12px; padding: 1rem; }
+
+.section-title {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: var(--text);
+  font-weight: 700;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.price-range {
+  font-size: 0.9rem;
+  color: var(--brand-2);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
 
 @keyframes slideInUp { to { opacity: 1; transform: translateY(0); } }
 </style>

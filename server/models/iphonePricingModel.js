@@ -69,6 +69,58 @@ const MODELS = {
       Good: -0.03,
     },
   },
+  samsung_ultra: {
+    name: "Samsung S Ultra",
+    type: "linear",
+    samples: 409,
+    coefficients: {
+      intercept: -79.44986065016309,
+      Age_at_Sale: -0.010182,
+      Storage_num: -0.000023,
+      Year_of_Sale: 0.039584,
+      Month_of_Sale: -0.000677,
+      Condition: {
+        Excellent: 0.023901,
+        Good: -0.022320,
+        "Very Good": -0.001580,
+      },
+    },
+  },
+  samsung_plus: {
+    name: "Samsung S Plus",
+    type: "linear",
+    samples: 124,
+    coefficients: {
+      intercept: 0.6366065601433437,
+      Age_at_Sale: -0.010459,
+      Storage_num: 0.000035,
+      Year_of_Sale: 0.000000,
+      Month_of_Sale: 0.001773,
+      Condition: {
+        Excellent: 0.015390,
+        Good: -0.035805,
+        "Very Good": -0.011387,
+        nan: 0.031802,
+      },
+    },
+  },
+  samsung_base: {
+    name: "Samsung S Base",
+    type: "linear",
+    samples: 323,
+    coefficients: {
+      intercept: -235.01548684014813,
+      Age_at_Sale: -0.010452,
+      Storage_num: 0.000335,
+      Year_of_Sale: 0.116357,
+      Month_of_Sale: 0.000851,
+      Condition: {
+        Excellent: 0.024076,
+        Good: -0.023809,
+        "Very Good": -0.000267,
+      },
+    },
+  },
 };
 
 function monthsBetween(fromDate, toDate) {
@@ -98,10 +150,40 @@ function baseAgeRatio(modelKey, ageMonths) {
  * Compute ratio given age, storage, and condition for a specific iPhone family.
  * Mirrors Pixel's computeRatio behavior.
  */
-function computeRatio(modelKey, ageMonths, storageGb, condition) {
+function computeRatio(modelKey, ageMonths, storageGb, condition, releaseDate) {
   const model = MODELS[modelKey];
   if (!model) {
     throw new Error(`Unknown iPhone model key: ${modelKey}`);
+  }
+
+  if (model.type === "linear") {
+    // Linear Regression Model
+    const c = model.coefficients;
+    
+    // Calculate prediction date to get Year and Month
+    // releaseDate + ageMonths * 30.44 days
+    const msPerMonth = 30.44 * 24 * 60 * 60 * 1000;
+    // If releaseDate is not provided, default to now (which might be wrong for backtesting but ok for simple calls)
+    const baseDate = releaseDate || new Date();
+    const predDate = new Date(baseDate.getTime() + ageMonths * msPerMonth);
+    
+    const year = predDate.getFullYear();
+    const month = predDate.getMonth() + 1; // 1-12
+    
+    // Smooth out the "New Year" jump by using a continuous year value
+    // and applying the yearly trend continuously.
+    const continuousYear = year + (month - 1) / 12;
+
+    const condVal = (c.Condition && c.Condition[condition]) || 0;
+
+    const ratio =
+      c.intercept +
+      (ageMonths * c.Age_at_Sale) +
+      (storageGb * c.Storage_num) +
+      (continuousYear * c.Year_of_Sale) +
+      condVal;
+
+    return Math.max(0, Math.min(1.5, ratio));
   }
 
   const ageComponent = baseAgeRatio(modelKey, ageMonths);
@@ -153,7 +235,7 @@ function getPredictionSeries({
 
   const series = [];
   for (let age = startAge; age <= endAge + 1e-9; age += 1) {
-    const ratio = computeRatio(modelKey, age, storageGb, condition);
+    const ratio = computeRatio(modelKey, age, storageGb, condition, releaseDate);
     const priceUSD = Math.max(0, ratio * launchPrice);
     const priceLowUSD = Math.max(0, (1 - safeBand) * priceUSD);
     const priceHighUSD = Math.max(0, (1 + safeBand) * priceUSD);
@@ -204,7 +286,7 @@ function senseCurrentValue({
   const safeBand = Math.max(0, Math.min(0.9, band));
   const todayAge = Math.max(0, monthsBetween(releaseDate, new Date()));
 
-  const ratio = computeRatio(modelKey, todayAge, storageGb, condition);
+  const ratio = computeRatio(modelKey, todayAge, storageGb, condition, releaseDate);
   const priceUSD = Math.max(0, ratio * launchPrice);
   const priceLowUSD = Math.max(0, (1 - safeBand) * priceUSD);
   const priceHighUSD = Math.max(0, (1 + safeBand) * priceUSD);

@@ -24,6 +24,8 @@ export async function llmChat(messages, options = {}) {
     model = "gpt-4o-mini",
     temperature = 0.7,
     max_tokens, // optional
+    tools, // optional tools
+    tool_choice, // optional tool_choice
   } = options;
 
   const completion = await client.chat.completions.create({
@@ -31,7 +33,9 @@ export async function llmChat(messages, options = {}) {
     temperature,
     max_tokens,
     messages,
+    tools,
+    tool_choice,
   });
 
-  return completion.choices?.[0]?.message?.content ?? "";
+  return completion.choices?.[0]?.message;
 }

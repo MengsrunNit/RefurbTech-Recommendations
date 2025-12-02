@@ -58,6 +58,33 @@
                 {{ name }}
               </option>
             </optgroup>
+              <optgroup label="Samsung S Base">
+                <option
+                  v-for="(info, name) in samsungBaseModels"
+                  :key="name"
+                  :value="name"
+                >
+                  {{ name }}
+                </option>
+              </optgroup>
+              <optgroup label="Samsung S Plus">
+                <option
+                  v-for="(info, name) in samsungPlusModels"
+                  :key="name"
+                  :value="name"
+                >
+                  {{ name }}
+                </option>
+              </optgroup>
+              <optgroup label="Samsung S Ultra">
+                <option
+                  v-for="(info, name) in samsungUltraModels"
+                  :key="name"
+                  :value="name"
+                >
+                  {{ name }}
+                </option>
+              </optgroup>
               <optgroup label="iPhone Fits" v-if="phoneFits && phoneFits.length">
                 <option
                   v-for="fit in phoneFits"
@@ -345,6 +372,78 @@ const IPHONE_PRO_MAX_MODELS = {
   },
 };
 
+// Samsung S Base models
+const SAMSUNG_BASE_MODELS = {
+  "Galaxy S22": {
+    release: "2022-02-25",
+    launchByStorage: { 128: 799, 256: 849 },
+    fitModelKey: "samsung_base",
+  },
+  "Galaxy S23": {
+    release: "2023-02-17",
+    launchByStorage: { 128: 799, 256: 859 },
+    fitModelKey: "samsung_base",
+  },
+  "Galaxy S24": {
+    release: "2024-01-24",
+    launchByStorage: { 128: 799, 256: 859 },
+    fitModelKey: "samsung_base",
+  },
+  "Galaxy S25": {
+    release: "2025-02-03",
+    launchByStorage: { 128: 799, 256: 859 },
+    fitModelKey: "samsung_base",
+  },
+};
+
+// Samsung S Plus models
+const SAMSUNG_PLUS_MODELS = {
+  "Galaxy S22+": {
+    release: "2022-02-25",
+    launchByStorage: { 128: 999, 256: 1049 },
+    fitModelKey: "samsung_plus",
+  },
+  "Galaxy S23+": {
+    release: "2023-02-17",
+    launchByStorage: { 256: 999, 512: 1119 },
+    fitModelKey: "samsung_plus",
+  },
+  "Galaxy S24+": {
+    release: "2024-01-24",
+    launchByStorage: { 256: 999, 512: 1119 },
+    fitModelKey: "samsung_plus",
+  },
+  "Galaxy S25+": {
+    release: "2025-02-03",
+    launchByStorage: { 256: 999, 512: 1119 },
+    fitModelKey: "samsung_plus",
+  },
+};
+
+// Samsung S Ultra models
+const SAMSUNG_ULTRA_MODELS = {
+  "Galaxy S22 Ultra": {
+    release: "2022-02-25",
+    launchByStorage: { 128: 1199, 256: 1299, 512: 1399, 1024: 1599 },
+    fitModelKey: "samsung_ultra",
+  },
+  "Galaxy S23 Ultra": {
+    release: "2023-02-17",
+    launchByStorage: { 256: 1199, 512: 1379, 1024: 1619 },
+    fitModelKey: "samsung_ultra",
+  },
+  "Galaxy S24 Ultra": {
+    release: "2024-01-24",
+    launchByStorage: { 256: 1299, 512: 1419, 1024: 1659 },
+    fitModelKey: "samsung_ultra",
+  },
+  "Galaxy S25 Ultra": {
+    release: "2025-02-03",
+    launchByStorage: { 256: 1299, 512: 1419, 1024: 1659 },
+    fitModelKey: "samsung_ultra",
+  },
+};
+
 const DEFAULT_BAND = 0.1; // ±10%
 
 export default {
@@ -374,6 +473,9 @@ export default {
       iphoneProModels: { ...IPHONE_PRO_MODELS },
       iphoneBaseModels: { ...IPHONE_BASE_MODELS },
       iphoneProMaxModels: { ...IPHONE_PRO_MAX_MODELS },
+      samsungBaseModels: { ...SAMSUNG_BASE_MODELS },
+      samsungPlusModels: { ...SAMSUNG_PLUS_MODELS },
+      samsungUltraModels: { ...SAMSUNG_ULTRA_MODELS },
       activeModelType: "pixel", // 'pixel' or 'phone'
       meta: {},
       rawSeries: [],
@@ -592,6 +694,93 @@ export default {
         return;
       }
 
+      // Samsung Base
+      const sBase = this.samsungBaseModels[this.params.model];
+      if (sBase) {
+        this.activeModelType = "samsung_base";
+        this.params.release = sBase.release;
+        const map = sBase.launchByStorage || {};
+        const allowed = Object.keys(map).map((s) => Number(s));
+        if (allowed.length && !allowed.includes(this.params.storage)) {
+          const closest = allowed.reduce((best, s) =>
+            Math.abs(s - this.params.storage) < Math.abs(best - this.params.storage)
+              ? s
+              : best
+          , allowed[0]);
+          this.params.storage = closest;
+        }
+        const direct = map[this.params.storage];
+        if (direct != null) {
+          this.params.launch = direct;
+        } else if (allowed.length) {
+          const closest = allowed.reduce((best, s) =>
+            Math.abs(s - this.params.storage) < Math.abs(best - this.params.storage)
+              ? s
+              : best
+          , allowed[0]);
+          this.params.launch = map[closest];
+        }
+        return;
+      }
+
+      // Samsung Plus
+      const sPlus = this.samsungPlusModels[this.params.model];
+      if (sPlus) {
+        this.activeModelType = "samsung_plus";
+        this.params.release = sPlus.release;
+        const map = sPlus.launchByStorage || {};
+        const allowed = Object.keys(map).map((s) => Number(s));
+        if (allowed.length && !allowed.includes(this.params.storage)) {
+          const closest = allowed.reduce((best, s) =>
+            Math.abs(s - this.params.storage) < Math.abs(best - this.params.storage)
+              ? s
+              : best
+          , allowed[0]);
+          this.params.storage = closest;
+        }
+        const direct = map[this.params.storage];
+        if (direct != null) {
+          this.params.launch = direct;
+        } else if (allowed.length) {
+          const closest = allowed.reduce((best, s) =>
+            Math.abs(s - this.params.storage) < Math.abs(best - this.params.storage)
+              ? s
+              : best
+          , allowed[0]);
+          this.params.launch = map[closest];
+        }
+        return;
+      }
+
+      // Samsung Ultra
+      const sUltra = this.samsungUltraModels[this.params.model];
+      if (sUltra) {
+        this.activeModelType = "samsung_ultra";
+        this.params.release = sUltra.release;
+        const map = sUltra.launchByStorage || {};
+        const allowed = Object.keys(map).map((s) => Number(s));
+        if (allowed.length && !allowed.includes(this.params.storage)) {
+          const closest = allowed.reduce((best, s) =>
+            Math.abs(s - this.params.storage) < Math.abs(best - this.params.storage)
+              ? s
+              : best
+          , allowed[0]);
+          this.params.storage = closest;
+        }
+        const direct = map[this.params.storage];
+        if (direct != null) {
+          this.params.launch = direct;
+        } else if (allowed.length) {
+          const closest = allowed.reduce((best, s) =>
+            Math.abs(s - this.params.storage) < Math.abs(best - this.params.storage)
+              ? s
+              : best
+          , allowed[0]);
+          this.params.launch = map[closest];
+        }
+        return;
+      }
+
       // If selected is a phone fit (from backend), mark active as phone
       const fit = this.phoneFits.find((f) => f.key === this.params.model);
       if (fit) {
@@ -610,7 +799,17 @@ export default {
         const { data } = await axios.get(
           new URL("/api/phone-models", base).toString()
         );
-        this.phoneFits = Array.isArray(data.models) ? data.models : [];
+        const allModels = Array.isArray(data.models) ? data.models : [];
+        // Filter out the generic fit models that are now covered by specific catalogs
+        const hidden = [
+          "iPhone Base",
+          "iPhone Pro",
+          "iPhone Pro Max",
+          "Samsung S Ultra",
+          "Samsung S Plus",
+          "Samsung S Base",
+        ];
+        this.phoneFits = allModels.filter((m) => !hidden.includes(m.name));
       } catch (err) {
         console.warn("Failed to fetch phone fits", err);
       }
@@ -639,21 +838,28 @@ export default {
         this.activeModelType === "phone" ||
         this.activeModelType === "iphone_base_catalog" ||
         this.activeModelType === "iphone_pro_catalog" ||
-        this.activeModelType === "iphone_pro_max_catalog"
+        this.activeModelType === "iphone_pro_max_catalog" ||
+        this.activeModelType === "samsung_base" ||
+        this.activeModelType === "samsung_plus" ||
+        this.activeModelType === "samsung_ultra"
       ) {
         // Use phone predictions endpoint to compute today's predicted value
         const url = new URL("/api/phone-predictions", base);
-        const modelParam =
-          this.activeModelType === "iphone_base_catalog"
-            ? this.iphoneBaseModels[this.params.model]?.fitModelKey ||
-              "iphone_base"
-            : this.activeModelType === "iphone_pro_catalog"
-            ? this.iphoneProModels[this.params.model]?.fitModelKey ||
-              "iphone_pro"
-            : this.activeModelType === "iphone_pro_max_catalog"
-            ? this.iphoneProMaxModels[this.params.model]?.fitModelKey ||
-              "iphone_pro_max"
-            : this.params.model;
+        let modelParam = this.params.model;
+        if (this.activeModelType === "iphone_base_catalog") {
+          modelParam = this.iphoneBaseModels[this.params.model]?.fitModelKey || "iphone_base";
+        } else if (this.activeModelType === "iphone_pro_catalog") {
+          modelParam = this.iphoneProModels[this.params.model]?.fitModelKey || "iphone_pro";
+        } else if (this.activeModelType === "iphone_pro_max_catalog") {
+          modelParam = this.iphoneProMaxModels[this.params.model]?.fitModelKey || "iphone_pro_max";
+        } else if (this.activeModelType === "samsung_base") {
+          modelParam = this.samsungBaseModels[this.params.model]?.fitModelKey || "samsung_base";
+        } else if (this.activeModelType === "samsung_plus") {
+          modelParam = this.samsungPlusModels[this.params.model]?.fitModelKey || "samsung_plus";
+        } else if (this.activeModelType === "samsung_ultra") {
+          modelParam = this.samsungUltraModels[this.params.model]?.fitModelKey || "samsung_ultra";
+        }
+
         url.searchParams.set("model", modelParam);
         url.searchParams.set("release", release);
         url.searchParams.set("storage", String(storage));
@@ -665,7 +871,10 @@ export default {
         if (
           (this.activeModelType === "iphone_base_catalog" ||
             this.activeModelType === "iphone_pro_catalog" ||
-            this.activeModelType === "iphone_pro_max_catalog") &&
+            this.activeModelType === "iphone_pro_max_catalog" ||
+            this.activeModelType === "samsung_base" ||
+            this.activeModelType === "samsung_plus" ||
+            this.activeModelType === "samsung_ultra") &&
           this.params.launch
         ) {
           url.searchParams.set("launch", String(this.params.launch));
@@ -736,20 +945,27 @@ export default {
         this.activeModelType === "phone" ||
         this.activeModelType === "iphone_base_catalog" ||
         this.activeModelType === "iphone_pro_catalog" ||
-        this.activeModelType === "iphone_pro_max_catalog"
+        this.activeModelType === "iphone_pro_max_catalog" ||
+        this.activeModelType === "samsung_base" ||
+        this.activeModelType === "samsung_plus" ||
+        this.activeModelType === "samsung_ultra"
       ) {
         const url = new URL("/api/phone-predictions", base);
-        const modelParam =
-          this.activeModelType === "iphone_base_catalog"
-            ? this.iphoneBaseModels[this.params.model]?.fitModelKey ||
-              "iphone_base"
-            : this.activeModelType === "iphone_pro_catalog"
-            ? this.iphoneProModels[this.params.model]?.fitModelKey ||
-              "iphone_pro"
-            : this.activeModelType === "iphone_pro_max_catalog"
-            ? this.iphoneProMaxModels[this.params.model]?.fitModelKey ||
-              "iphone_pro_max"
-            : this.params.model;
+        let modelParam = this.params.model;
+        if (this.activeModelType === "iphone_base_catalog") {
+          modelParam = this.iphoneBaseModels[this.params.model]?.fitModelKey || "iphone_base";
+        } else if (this.activeModelType === "iphone_pro_catalog") {
+          modelParam = this.iphoneProModels[this.params.model]?.fitModelKey || "iphone_pro";
+        } else if (this.activeModelType === "iphone_pro_max_catalog") {
+          modelParam = this.iphoneProMaxModels[this.params.model]?.fitModelKey || "iphone_pro_max";
+        } else if (this.activeModelType === "samsung_base") {
+          modelParam = this.samsungBaseModels[this.params.model]?.fitModelKey || "samsung_base";
+        } else if (this.activeModelType === "samsung_plus") {
+          modelParam = this.samsungPlusModels[this.params.model]?.fitModelKey || "samsung_plus";
+        } else if (this.activeModelType === "samsung_ultra") {
+          modelParam = this.samsungUltraModels[this.params.model]?.fitModelKey || "samsung_ultra";
+        }
+
         url.searchParams.set("model", modelParam);
         url.searchParams.set("release", release);
         url.searchParams.set("storage", String(storage));
@@ -761,7 +977,10 @@ export default {
         if (
           (this.activeModelType === "iphone_base_catalog" ||
             this.activeModelType === "iphone_pro_catalog" ||
-            this.activeModelType === "iphone_pro_max_catalog") &&
+            this.activeModelType === "iphone_pro_max_catalog" ||
+            this.activeModelType === "samsung_base" ||
+            this.activeModelType === "samsung_plus" ||
+            this.activeModelType === "samsung_ultra") &&
           this.params.launch
         ) {
           url.searchParams.set("launch", String(this.params.launch));
@@ -1038,6 +1257,21 @@ export default {
         const arr = Object.keys(m?.launchByStorage || {}).map((s) => Number(s));
         return arr.length ? arr : [128, 256, 512, 1024];
       }
+      if (this.activeModelType === "samsung_base") {
+        const m = this.samsungBaseModels[this.params.model];
+        const arr = Object.keys(m?.launchByStorage || {}).map((s) => Number(s));
+        return arr.length ? arr : [128, 256];
+      }
+      if (this.activeModelType === "samsung_plus") {
+        const m = this.samsungPlusModels[this.params.model];
+        const arr = Object.keys(m?.launchByStorage || {}).map((s) => Number(s));
+        return arr.length ? arr : [256, 512];
+      }
+      if (this.activeModelType === "samsung_ultra") {
+        const m = this.samsungUltraModels[this.params.model];
+        const arr = Object.keys(m?.launchByStorage || {}).map((s) => Number(s));
+        return arr.length ? arr : [256, 512, 1024];
+      }
       return [128, 256, 512];
     },
     formattedPriceRange() {
@@ -1089,6 +1323,57 @@ export default {
         }
       } else if (this.activeModelType === "iphone_pro_max_catalog") {
         const info = this.iphoneProMaxModels[this.params.model];
+        if (info) {
+          const map = info.launchByStorage || {};
+          const direct = map[nv];
+          if (direct != null) {
+            this.params.launch = direct;
+          } else {
+            const sizes = Object.keys(map).map((s) => Number(s));
+            if (sizes.length) {
+              const closest = sizes.reduce((best, s) =>
+                Math.abs(s - nv) < Math.abs(best - nv) ? s : best
+              , sizes[0]);
+              this.params.launch = map[closest];
+            }
+          }
+        }
+      } else if (this.activeModelType === "samsung_base") {
+        const info = this.samsungBaseModels[this.params.model];
+        if (info) {
+          const map = info.launchByStorage || {};
+          const direct = map[nv];
+          if (direct != null) {
+            this.params.launch = direct;
+          } else {
+            const sizes = Object.keys(map).map((s) => Number(s));
+            if (sizes.length) {
+              const closest = sizes.reduce((best, s) =>
+                Math.abs(s - nv) < Math.abs(best - nv) ? s : best
+              , sizes[0]);
+              this.params.launch = map[closest];
+            }
+          }
+        }
+      } else if (this.activeModelType === "samsung_plus") {
+        const info = this.samsungPlusModels[this.params.model];
+        if (info) {
+          const map = info.launchByStorage || {};
+          const direct = map[nv];
+          if (direct != null) {
+            this.params.launch = direct;
+          } else {
+            const sizes = Object.keys(map).map((s) => Number(s));
+            if (sizes.length) {
+              const closest = sizes.reduce((best, s) =>
+                Math.abs(s - nv) < Math.abs(best - nv) ? s : best
+              , sizes[0]);
+              this.params.launch = map[closest];
+            }
+          }
+        }
+      } else if (this.activeModelType === "samsung_ultra") {
+        const info = this.samsungUltraModels[this.params.model];
         if (info) {
           const map = info.launchByStorage || {};
           const direct = map[nv];
