@@ -61,6 +61,13 @@ app.use("/api", RecommendationRouter);
 app.use((err, req, res, next) => {
   console.error(err);
   const payload = { error: "Internal Server Error" };
+
+  // Expose configuration errors even in production to help with deployment
+  if (err.message && (err.message.includes("OPENAI_API_KEY") || err.message.includes("Mongo"))) {
+    payload.error = "Configuration Error";
+    payload.message = err.message;
+  }
+
   if (process.env.NODE_ENV !== "production") {
     payload.message = err.message;
     payload.stack = err.stack;

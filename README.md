@@ -102,6 +102,27 @@ Python scripts responsible for gathering and cleaning market data.
     *   Frontend: `http://localhost:5173`
     *   Backend: `http://localhost:3000`
 
+## 🚀 Deployment & Troubleshooting
+
+### Common Issues
+**"AI Phone Finder is not working on server"**
+This usually happens because the `.env` file (containing your API keys) is not transferred to the server by Git for security reasons.
+
+### How to Fix
+1.  **SSH into your server.**
+2.  Navigate to the `server/` directory of the project.
+3.  Run the environment check script:
+    ```bash
+    node check-env.js
+    ```
+4.  If it reports missing variables, create the `.env` file manually:
+    ```bash
+    cp .env.example .env
+    nano .env
+    # Paste your OPENAI_API_KEY and MONGODB_URI
+    ```
+5.  Restart your server (e.g., `pm2 restart all` or `npm start`).
+
 ## 📂 Project Structure
 
 ```
