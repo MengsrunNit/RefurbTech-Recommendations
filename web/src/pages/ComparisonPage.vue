@@ -1,7 +1,7 @@
 <template>
   <div class="page comparison-page">
     <div class="container">
-      <div class="header">
+      <div class="page-header">
         <button @click="$router.back()" class="back-btn">← Back</button>
         <h1>Compare Devices</h1>
       </div>
@@ -13,7 +13,7 @@
 
       <div v-else-if="phones.length === 0" class="empty">
         <p>No phones selected for comparison.</p>
-        <button @click="$router.push('/chat')">Find Phones</button>
+        <button @click="$router.push('/phone')">Find Phones</button>
       </div>
 
       <div v-else class="comparison-table-wrapper">
@@ -23,9 +23,14 @@
               <th class="feature-col">Feature</th>
               <th v-for="phone in phones" :key="phone.title">
                 <div class="th-content">
-                  <img v-if="phone.image" :src="phone.image" alt="Phone" class="phone-thumb" />
+                  <img
+                    v-if="phone.image"
+                    :src="phone.image"
+                    alt="Phone"
+                    class="phone-thumb"
+                  />
                   <h3>{{ phone.title }}</h3>
-                  <div class="price-tag">${{ Math.round(phone.normalized.price) }}</div>
+                  <div class="price-tag">${{ getPrice(phone) }}</div>
                 </div>
               </th>
             </tr>
@@ -34,8 +39,12 @@
             <tr v-for="row in comparisonRows" :key="row.label">
               <td class="feature-label">{{ row.label }}</td>
               <td v-for="phone in phones" :key="phone.title">
-                <span v-if="row.key === 'score'" class="score-badge" :class="getScoreClass(phone.score)">
-                  {{ phone.score || 'N/A' }}
+                <span
+                  v-if="row.key === 'score'"
+                  class="score-badge"
+                  :class="getScoreClass(phone.score)"
+                >
+                  {{ phone.score || "N/A" }}
                 </span>
                 <span v-else>{{ getValue(phone, row.key) }}</span>
               </td>
@@ -48,77 +57,95 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import axios from 'axios'
+import { ref, onMounted, computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import axios from "axios";
 
-const route = useRoute()
-const router = useRouter()
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'
+const route = useRoute();
+const router = useRouter();
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
-const loading = ref(true)
-const phones = ref([])
+const loading = ref(true);
+const phones = ref([]);
 
 const comparisonRows = [
-  { label: 'Release Year', key: 'normalized.year' },
-  { label: 'Screen Size', key: 'specs.display.size_in' },
-  { label: 'Resolution', key: 'specs.display.resolution' },
-  { label: 'Processor', key: 'specs.platform.chipset' },
-  { label: 'RAM', key: 'specs.memory.ram' },
-  { label: 'Storage', key: 'specs.memory.internal' },
-  { label: 'Main Camera', key: 'specs.rear_camera_setup' },
-  { label: 'Battery', key: 'specs.battery.capacity' },
-  { label: 'OS', key: 'specs.platform.os' },
-]
+  { label: "Release Date", key: "specs.release_date" },
+  { label: "Screen Size", key: "specs.display.size_in" },
+  { label: "Resolution", key: "specs.display.resolution" },
+  { label: "Processor", key: "specs.performance.soc" },
+  { label: "RAM", key: "specs.performance.ram_gb" },
+  { label: "Storage", key: "specs.storage_options_gb" },
+  { label: "Main Camera", key: "specs.rear_camera_setup" },
+  { label: "Battery", key: "specs.battery_capacity_mah" },
+  { label: "OS", key: "specs.platform.os" },
+];
+
+function getPrice(phone) {
+  const price = phone.normalized?.price || phone.specs?.msrp_usd || 0;
+  return Math.round(price);
+}
 
 function getValue(phone, key) {
-  const keys = key.split('.')
-  let val = phone
+  const keys = key.split(".");
+  let val = phone;
   for (const k of keys) {
-    val = val?.[k]
+    val = val?.[k];
   }
-  
-  if (key === 'specs.rear_camera_setup' && Array.isArray(val)) {
-      return val.map(c => c.resolution).join(', ')
+
+  if (key === "specs.rear_camera_setup" && Array.isArray(val)) {
+    return val.map((c) => `${c.sensor_mp}MP ${c.type || ""}`).join(", ");
   }
-  
-  if (key === 'specs.display.size_in') return val ? `${val}"` : '-'
-  
-  return val || '-'
+
+  if (key === "specs.performance.ram_gb" && Array.isArray(val)) {
+    return val.join(", ") + " GB";
+  }
+
+  if (key === "specs.storage_options_gb" && Array.isArray(val)) {
+    return val.join(", ") + " GB";
+  }
+
+  if (key === "specs.battery_capacity_mah" && val) {
+    return val + " mAh";
+  }
+
+  if (key === "specs.display.size_in") return val ? `${val}"` : "-";
+
+  return val || "-";
 }
 
 function getScoreClass(score) {
-    if (score >= 90) return 'high'
-    if (score >= 70) return 'med'
-    return 'low'
+  if (score >= 90) return "high";
+  if (score >= 70) return "med";
+  return "low";
 }
 
 onMounted(async () => {
-  const phoneNames = (route.query.phones || '').split(',').filter(Boolean)
-  
+  const phoneNames = (route.query.phones || "").split(",").filter(Boolean);
+
   if (phoneNames.length === 0) {
-    loading.value = false
-    return
+    loading.value = false;
+    return;
   }
 
   try {
     // Fetch all phones (optimization: backend should support filtering by names)
     // For now, we fetch all and filter client side as dataset is small
-    const { data } = await axios.get(`${API_BASE}/api/recommendations/all`)
-    
-    const allPhones = data.phones || []
-    
-    // Filter matches
-    phones.value = phoneNames.map(name => {
-        return allPhones.find(p => p.title === name)
-    }).filter(Boolean)
+    const { data } = await axios.get(`${API_BASE}/api/recommendations/all`);
 
+    const allPhones = data.phones || [];
+
+    // Filter matches
+    phones.value = phoneNames
+      .map((name) => {
+        return allPhones.find((p) => p.title === name);
+      })
+      .filter(Boolean);
   } catch (err) {
-    console.error(err)
+    console.error(err);
   } finally {
-    loading.value = false
+    loading.value = false;
   }
-})
+});
 </script>
 
 <style scoped>
@@ -135,7 +162,7 @@ onMounted(async () => {
   padding: 2rem 1rem;
 }
 
-.header {
+.page-header {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -151,7 +178,10 @@ onMounted(async () => {
   cursor: pointer;
 }
 
-.back-btn:hover { border-color: #cbd5e1; color: #cbd5e1; }
+.back-btn:hover {
+  border-color: #cbd5e1;
+  color: #cbd5e1;
+}
 
 h1 {
   margin: 0;
@@ -175,7 +205,8 @@ h1 {
   min-width: 600px;
 }
 
-th, td {
+th,
+td {
   padding: 1.5rem;
   text-align: left;
   border-bottom: 1px solid #334155;
@@ -217,7 +248,8 @@ th {
   font-size: 1.2rem;
 }
 
-.loading, .empty {
+.loading,
+.empty {
   text-align: center;
   padding: 4rem;
   color: #94a3b8;
@@ -233,5 +265,9 @@ th {
   margin: 0 auto 1rem;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>

@@ -37,18 +37,29 @@
           search.
         </p>
       </div>
-      <TransitionGroup
-        v-else
-        tag="ul"
-        name="card-list"
-        class="phones"
-        appear
-      >
+      <TransitionGroup v-else tag="ul" name="card-list" class="phones" appear>
         <li
           v-for="(phone, index) in filteredPhones"
           :key="phone.link"
           :style="{ '--delay': index * 0.05 + 's' }"
         >
+          <div class="card-actions">
+            <label
+              class="compare-checkbox"
+              :title="
+                store.isSelected(phone)
+                  ? 'Remove from comparison'
+                  : 'Add to comparison'
+              "
+            >
+              <input
+                type="checkbox"
+                :checked="store.isSelected(phone)"
+                @change="store.togglePhone(phone)"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </div>
           <img :src="phone.image" :alt="phone.title" />
           <div class="card-text">
             <h3>{{ phone.title }}</h3>
@@ -65,6 +76,24 @@
           </div>
         </li>
       </TransitionGroup>
+
+      <!-- Comparison Floating Bar -->
+      <Transition name="slide-up">
+        <div v-if="store.selectedPhones.length > 0" class="compare-bar">
+          <div class="compare-info">
+            <span class="count">{{ store.selectedPhones.length }}</span>
+            <span>selected for comparison</span>
+          </div>
+          <div class="compare-actions">
+            <button class="clear-btn" @click="store.clearSelection()">
+              Clear
+            </button>
+            <button class="compare-btn" @click="goToComparison">
+              Compare Now
+            </button>
+          </div>
+        </div>
+      </Transition>
 
       <!-- Specs Modal -->
       <Transition name="modal-fade">
@@ -263,13 +292,21 @@
 
 <script setup>
 import { ref, onMounted, computed } from "vue";
+import { useRouter } from "vue-router";
+import { store } from "../store.js";
 
+const router = useRouter();
 const phones = ref([]);
 const loading = ref(true);
 const error = ref("");
 const selectedPhone = ref(null);
 const brand = ref("all");
 const searchQuery = ref("");
+
+const goToComparison = () => {
+  const phoneNames = store.selectedPhones.map((p) => p.title).join(",");
+  router.push({ path: "/comparison", query: { phones: phoneNames } });
+};
 
 const filteredPhones = computed(() => {
   let a = [...phones.value];
@@ -488,6 +525,7 @@ function closeSpecs() {
   gap: 1.5rem;
 }
 .phones li {
+  position: relative;
   background: #0f172a;
   border: 1px solid #1e293b;
   border-radius: 16px;
@@ -702,5 +740,158 @@ function closeSpecs() {
     width: 100%;
     height: auto;
   }
+}
+
+/* Comparison Features */
+.card-actions {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 20;
+}
+
+.compare-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+
+.compare-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28px;
+  width: 28px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.compare-checkbox:hover .checkmark {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.compare-checkbox input:checked ~ .checkmark {
+  background-color: #06b6d4;
+  border-color: #06b6d4;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.compare-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.compare-checkbox .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.compare-bar {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  min-width: 300px;
+  justify-content: space-between;
+}
+
+.compare-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.compare-info .count {
+  background: #06b6d4;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.compare-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.clear-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.clear-btn:hover {
+  color: #e2e8f0;
+  text-decoration: underline;
+}
+
+.compare-btn {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.compare-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translate(-50%, 20px);
 }
 </style>

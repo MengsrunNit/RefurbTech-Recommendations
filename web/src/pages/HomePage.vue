@@ -6,14 +6,15 @@
         <h1>Refurbished tech you can actually trust.</h1>
         <p class="subtitle">
           RefurbishTech helps you find the right phone at the right price by
-          comparing devices, specs, and offers from trusted sellers — in one place.
+          comparing devices, specs, and offers from trusted sellers — in one
+          place.
         </p>
 
         <div class="hero-actions">
           <router-link to="/survey" class="btn btn-primary">
             Find my phone
           </router-link>
-          <router-link to="/compare" class="btn btn-ghost">
+          <router-link to="/comparison" class="btn btn-ghost">
             Browse & compare
           </router-link>
         </div>
@@ -61,7 +62,8 @@
         </div>
 
         <p class="panel-footer">
-          Your real recommendations will use your budget, usage, and preferred brands.
+          Your real recommendations will use your budget, usage, and preferred
+          brands.
         </p>
       </div>
     </section>
@@ -70,8 +72,8 @@
       <header class="section-header">
         <h2>Why shop with RefurbishTech?</h2>
         <p>
-          A focused toolkit to help you buy refurbished confidently — without reading
-          hours of reviews.
+          A focused toolkit to help you buy refurbished confidently — without
+          reading hours of reviews.
         </p>
       </header>
 
@@ -79,24 +81,24 @@
         <article class="feature">
           <h3>Clear, honest recommendations</h3>
           <p>
-            Tell us how you use your phone and your budget. We highlight devices that
-            actually fit, not just the cheapest.
+            Tell us how you use your phone and your budget. We highlight devices
+            that actually fit, not just the cheapest.
           </p>
         </article>
 
         <article class="feature">
           <h3>Simple spec comparisons</h3>
           <p>
-            Compare options side by side with plain-language explanations instead of
-            spec-sheet jargon.
+            Compare options side by side with plain-language explanations
+            instead of spec-sheet jargon.
           </p>
         </article>
 
         <article class="feature">
           <h3>Price tracking in one place</h3>
           <p>
-            Keep an eye on price movements across multiple sellers and spot real deals
-            quickly.
+            Keep an eye on price movements across multiple sellers and spot real
+            deals quickly.
           </p>
         </article>
       </div>
@@ -163,8 +165,8 @@
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background 0.16s ease, border-color 0.16s ease,
-    color 0.16s ease, transform 0.12s ease;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease,
+    transform 0.12s ease;
 }
 
 .btn-primary {
