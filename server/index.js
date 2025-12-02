@@ -19,8 +19,19 @@ dotenvConfig({ override: true });
 dotenvConfig({ path: path.join(__dirname, '.env'), override: true });
 
 console.log("--- Environment Check ---");
-console.log("OPENAI_API_KEY set:", !!process.env.OPENAI_API_KEY);
-console.log("MONGODB_URI set:", !!process.env.MONGODB_URI);
+const apiKey = process.env.OPENAI_API_KEY || "";
+const mongoUri = process.env.MONGODB_URI || "";
+
+console.log("OPENAI_API_KEY set:", !!apiKey);
+console.log("OPENAI_API_KEY length:", apiKey.length);
+if (apiKey.endsWith(">")) {
+  console.error("❌ CRITICAL: OPENAI_API_KEY is truncated (ends with '>'). Please copy the full key.");
+}
+
+console.log("MONGODB_URI set:", !!mongoUri);
+if (mongoUri.endsWith(">")) {
+  console.error("❌ CRITICAL: MONGODB_URI is truncated (ends with '>'). Please copy the full URI.");
+}
 console.log("-------------------------");
 
 // Initialize Express app
