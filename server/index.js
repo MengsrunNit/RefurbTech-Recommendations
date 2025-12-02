@@ -8,7 +8,8 @@ import iphoneRouter from "./routes/iphoneRouter.js";
 import RecommendationRouter from "./routes/RecommendationRouter.js";
 import { config as dotenvConfig } from "dotenv";
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url';import dotenv from 'dotenv';
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

@@ -129,8 +129,8 @@ import { marked } from 'marked'
 import DOMPurify from 'dompurify'
 
 const router = useRouter()
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'
-const CHAT_URL = `${API_BASE}/api/chat`
+// const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'
+// const CHAT_URL = `${API_BASE}/api/chat`
 
 const input = ref('')
 const loading = ref(false)
@@ -226,12 +226,9 @@ async function search() {
     // We send the history as a single turn for this "Search" style
     const messages = [{ role: 'user', content: text }]
     
-    const payload = {
-      messages,
-      options: { model: 'gpt-4o-mini', temperature: 0.7 }
-    }
-
-    const { data } = await axios.post(CHAT_URL, payload)
+    const { data } = await axios.post('/api/chat', {
+      messages
+    })
 
     summary.value = data.reply
     recommendations.value = data.recommendations || []
