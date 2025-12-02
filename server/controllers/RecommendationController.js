@@ -165,12 +165,6 @@ const loadPhones = async () => {
               else resolvedLaunch = resolveIphoneBaseLaunch(key, baseStorage);
             }
 
-            if (p.title.toLowerCase().includes("iphone 14 pro")) {
-              throw new Error(
-                `DEBUG: ${p.title} -> Key: ${key}, BaseStorage: ${baseStorage}, Resolved: ${resolvedLaunch}, OldLaunch: ${launchPrice}`
-              );
-            }
-
             if (resolvedLaunch) {
               launchPrice = resolvedLaunch;
             }
