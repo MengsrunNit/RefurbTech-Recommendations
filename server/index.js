@@ -7,8 +7,21 @@ import PixelModelRouter from "./routes/PixelModelRouter.js";
 import iphoneRouter from "./routes/iphoneRouter.js";
 import RecommendationRouter from "./routes/RecommendationRouter.js";
 import { config as dotenvConfig } from "dotenv";
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Load .env and override any existing env var (helps when a stale OPENAI_API_KEY is exported in shell)
+// Try loading from current working directory first, then explicitly from the server directory
 dotenvConfig({ override: true });
+dotenvConfig({ path: path.join(__dirname, '.env'), override: true });
+
+console.log("--- Environment Check ---");
+console.log("OPENAI_API_KEY set:", !!process.env.OPENAI_API_KEY);
+console.log("MONGODB_URI set:", !!process.env.MONGODB_URI);
+console.log("-------------------------");
 
 // Initialize Express app
 const app = express();
